@@ -13,7 +13,7 @@ const Partners = () => {
       level: 'Gold',
       color: 'from-orange-500 to-orange-600',
       bgColor: 'bg-orange-500',
-      logo: '/main-images/lenovo-logo.png'
+      logo: '/icons/technology.png'
     },
     {
       name: 'Lenovo',
@@ -21,7 +21,7 @@ const Partners = () => {
       level: 'Platinum',
       color: 'from-blue-500 to-blue-600',
       bgColor: 'bg-blue-500',
-      logo: '/main-images/lenovo-logo.png'
+      logo: '/icons/company.png'
     },
     {
       name: 'VMware',
@@ -29,7 +29,7 @@ const Partners = () => {
       level: 'Principal Partner',
       color: 'from-green-500 to-blue-500',
       bgColor: 'bg-white',
-      logo: '/main-images/vmware-logo.png'
+      logo: '/icons/data-center.png'
     },
     {
       name: 'VMware',
@@ -37,7 +37,7 @@ const Partners = () => {
       level: 'Principal Partner',
       color: 'from-green-500 to-blue-500',
       bgColor: 'bg-white',
-      logo: '/main-images/vmware-logo.png'
+      logo: '/icons/local-area.png'
     },
     {
       name: 'VMware',
@@ -45,7 +45,7 @@ const Partners = () => {
       level: 'Principal Partner',
       color: 'from-green-500 to-blue-500',
       bgColor: 'bg-white',
-      logo: '/main-images/vmware-logo.png'
+      logo: '/icons/privacy.png'
     },
     {
       name: 'Microsoft',
@@ -53,7 +53,7 @@ const Partners = () => {
       level: 'Gold',
       color: 'from-blue-600 to-blue-700',
       bgColor: 'bg-blue-600',
-      logo: '/main-images/microsoft-logo.png'
+      logo: '/icons/consultant.png'
     },
     {
       name: 'Cisco',
@@ -61,7 +61,7 @@ const Partners = () => {
       level: 'Silver',
       color: 'from-blue-500 to-blue-600',
       bgColor: 'bg-blue-500',
-      logo: '/main-images/cisco-logo.png'
+      logo: '/icons/processor.avif'
     },
     {
       name: 'Dell',
@@ -69,7 +69,7 @@ const Partners = () => {
       level: 'Platinum',
       color: 'from-blue-600 to-blue-700',
       bgColor: 'bg-blue-600',
-      logo: '/main-images/dell-logo.png'
+      logo: '/icons/human3.png'
     }
   ];
 

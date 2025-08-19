@@ -26,7 +26,7 @@ const solutions = [
     services: [
       'Private Cloud',
       'Hybrid Multi-Cloud',
-      'Infrastructure as a Service (IaaS)',
+      'Infrastructure as a Service',
       'Software as a Service (SaaS)',
       'DevOps'
     ],
