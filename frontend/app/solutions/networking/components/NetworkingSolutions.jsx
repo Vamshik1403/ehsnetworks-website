@@ -165,41 +165,6 @@ export default function NetworkingSolutions() {
           </div>
         </motion.div>
 
-        {/* Technology Stack */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h3 className="text-3xl font-bold text-gray-900 mb-8">Trusted Technology Partners</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-gray-600">C</span>
-              </div>
-              <p className="text-gray-600 font-medium">Cisco</p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-gray-600">J</span>
-              </div>
-              <p className="text-gray-600 font-medium">Juniper</p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-gray-600">A</span>
-              </div>
-              <p className="text-gray-600 font-medium">Aruba</p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-gray-600">F</span>
-              </div>
-              <p className="text-gray-600 font-medium">Fortinet</p>
-            </div>
-          </div>
-        </motion.div>
 
         {/* CTA Section */}
         <motion.div

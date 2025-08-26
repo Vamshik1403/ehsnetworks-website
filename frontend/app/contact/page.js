@@ -34,14 +34,14 @@ export default function ContactUs() {
       <section className="w-full bg-gradient-to-br from-blue-50 via-white to-purple-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Contact Us
-            </h1>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                  Contact Us
+                </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Ready to transform your business? Let's discuss how our technology solutions can drive your success.
             </p>
-          </div>
-
+                  </div>
+                  
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Contact Information */}
             <div className="space-y-8">
@@ -56,7 +56,7 @@ export default function ContactUs() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
-                    </div>
+                  </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Our Address</h3>
                       <p className="text-gray-600">
@@ -65,46 +65,46 @@ export default function ContactUs() {
                         New Link Road, Kandivali West<br />
                         Mumbai MH 400067, India
                       </p>
-                    </div>
-                  </div>
-
+                </div>
+              </div>
+              
                   {/* Phone */}
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                       <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
-                    </div>
+                              </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Phone Number</h3>
                       <a href="tel:+917718811771" className="text-green-600 hover:text-green-700 font-semibold text-lg">
                         +91 771-8811-771
                       </a>
-                    </div>
-                  </div>
-
+                            </div>
+                          </div>
+                          
                   {/* Email */}
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
                       <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
-                    </div>
+                            </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Email Address</h3>
-                      <a href="mailto:info@electrohelps.com" className="text-purple-600 hover:text-purple-700 font-semibold">
-                        sales@electrohelps.com
+                      <a href="mailto:sales@ehsnetworks.in" className="text-purple-600 hover:text-purple-700 font-semibold">
+                        sales@ehsnetworks.in
                       </a>
-                    </div>
-                  </div>
-
+                          </div>
+                        </div>
+                        
                   {/* Business Hours */}
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
                       <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    </div>
+                            </svg>
+                          </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Business Hours</h3>
                       <p className="text-gray-600">
@@ -112,11 +112,11 @@ export default function ContactUs() {
                         Saturday: 10:00 AM - 6:00 PM<br />
                         Sunday: Closed
                       </p>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
 
             {/* Contact Form */}
             <div className="bg-white rounded-2xl shadow-lg p-8">
@@ -128,8 +128,8 @@ export default function ContactUs() {
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                       Full Name *
                     </label>
-                    <input
-                      type="text"
+                    <input 
+                      type="text" 
                       id="name"
                       name="name"
                       value={formData.name}
@@ -144,8 +144,8 @@ export default function ContactUs() {
                     <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                       Company Name
                     </label>
-                    <input
-                      type="text"
+                    <input 
+                      type="text" 
                       id="company"
                       name="company"
                       value={formData.company}
@@ -155,14 +155,14 @@ export default function ContactUs() {
                     />
                   </div>
                 </div>
-
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                       Email Address *
                     </label>
-                    <input
-                      type="email"
+                    <input 
+                      type="email" 
                       id="email"
                       name="email"
                       value={formData.email}
@@ -177,8 +177,8 @@ export default function ContactUs() {
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                       Phone Number
                     </label>
-                    <input
-                      type="tel"
+                    <input 
+                      type="tel" 
                       id="phone"
                       name="phone"
                       value={formData.phone}
@@ -188,12 +188,12 @@ export default function ContactUs() {
                     />
                   </div>
                 </div>
-
+                
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                     Message *
                   </label>
-                  <textarea
+                  <textarea 
                     id="message"
                     name="message"
                     value={formData.message}
@@ -204,13 +204,13 @@ export default function ContactUs() {
                     placeholder="Tell us how we can help you..."
                   />
                 </div>
-
-                <button
-                  type="submit"
+                
+                  <button 
+                    type="submit" 
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                >
+                  >
                   Send Message
-                </button>
+                  </button>
               </form>
             </div>
           </div>
@@ -218,27 +218,59 @@ export default function ContactUs() {
       </section>
 
       {/* CTA Section */}
-      <section className="w-full bg-gradient-to-r from-blue-600 to-purple-600 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Contact us today for a consultation and take the first step towards transforming your business with our technology solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+917718811771"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
-            >
-              Call Now
-            </a>
-            {/* <a
-              href="mailto:info@electrohelps.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300"
-            >
-              Email Us
-            </a> */}
+      <section className="w-full bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-24 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 blur-3xl animate-pulse-slow" />
+        </div>
+        
+        {/* Yellow Accent Line */}
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full shadow-lg" />
+        
+        <div className="relative z-10 px-4">
+          <div className="max-w-6xl mx-auto text-center">
+            {/* Subtitle */}
+            <div className="mb-8">
+              <h3 className="text-lg font-medium text-yellow-400 mb-2 tracking-wider uppercase">
+                Let's Get in Touch
+              </h3>
+              <div className="w-16 h-0.5 bg-yellow-400 mx-auto rounded-full" />
+            </div>
+            
+            {/* Main Heading */}
+            <div className="mb-8">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                LET'S TALK ABOUT YOUR
+                <span className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                  BUSINESS IT SERVICES NEEDS
+                </span>
+              </h2>
+            </div>
+            
+            {/* Description */}
+            <div className="mb-12">
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Our team of experts will create custom solutions to meet your every business needs.
+              </p>
+            </div>
+            
+            {/* CTA Button */}
+            <div>
+              <a href="tel:+917718811771">
+                <button className="group relative bg-white text-gray-900 px-10 py-5 rounded-2xl shadow-2xl hover:shadow-yellow-400/25 transition-all duration-500 font-bold text-lg border-2 border-yellow-400 hover:bg-yellow-400 hover:text-gray-900 transform hover:scale-110 hover:-translate-y-1">
+                  {/* Button Background Glow */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
+                  
+                  {/* Button Content */}
+                  <span className="relative flex items-center space-x-3">
+                    <span>Contact Us</span>
+                    <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </section>

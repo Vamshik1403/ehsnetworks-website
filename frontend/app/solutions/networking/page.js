@@ -6,6 +6,7 @@ import NetworkingOverview from './components/NetworkingOverview';
 import NetworkingServices from './components/NetworkingServices';
 import NetworkingSolutions from './components/NetworkingSolutions';
 import NetworkingBenefits from './components/NetworkingBenefits';
+import Partners from '../../components/Partners';
 import NetworkingCTA from './components/NetworkingCTA';
 
 export default function NetworkingSolutionsPage() {
@@ -17,6 +18,7 @@ export default function NetworkingSolutionsPage() {
       <NetworkingServices />
       <NetworkingSolutions />
       <NetworkingBenefits />
+      <Partners />
       <NetworkingCTA />
       <Footer />
     </>

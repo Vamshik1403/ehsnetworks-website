@@ -9,60 +9,53 @@ import { createPortal } from "react-dom";
 import { usePathname } from "next/navigation";
 
 const menu = [
-  {
-    label: "About Us" , href: "/about" ,
-  },
-  {
-    label: "Products",
-    dropdown: [
-      { label: "Laptops, Desktops & Mobile Devices", href: "/end-points/devices" },
-      { label: "ENPL’s IoT & Physical Security Services", href: "/end-points/iot-security" },
-    ],
-  },
-  {
-    label: "Solutions",
-    dropdown: [
-      { label: "Monitoring Solutions", href: "/solutions/monitoring" },
-      { label: "Artificial Intelligence", href: "/solutions/ai" },
-      { label: "Data Center Solutions", href: "/solutions/datacenter" },
-      { label: "App Modernisation Services", href: "/solutions/app-modernisation" },
-      { label: "Cloud Solutions", dropdown: [
-        { label: "Public Cloud", href: "/solutions/cloud/public" },
-        { label: "Private Cloud", href: "/solutions/cloud/private" },
-      ] },
-      { label: "Cybersecurity Solutions", href: "/solutions/cybersecurity" },
-      { label: "Modern Workplaces", href: "/solutions/workplaces" },
-      { label: "Networking Solutions", href: "/solutions/networking" },
-    ],
-  },
-  {
-    label: "Consulting",
-    dropdown: [
-      { label: "Cloud", dropdown: [
-        { label: "Cloud Migration", href: "/consulting/cloud/migration" },
-        { label: "Cloud Strategy", href: "/consulting/cloud/strategy" },
-      ] },
-      { label: "Assessments Audits", href: "/consulting/audits" },
-      { label: "IT Consulting", href: "/consulting/it" },
-    ],
-  },
-  {
-    label: "Managed Services",
-    dropdown: [
-      { label: "Support Services", dropdown: [
-        { label: "Remote Support", href: "/managed-services/support/remote" },
-        { label: "Onsite Support", href: "/managed-services/support/onsite" },
-      ] },
-      { label: "Cloud Services", dropdown: [
-        { label: "Network Infrastructure Management Services", href: "/managed-services/cloud/network" },
-        { label: "Remote Managed Services", href: "/managed-services/cloud/remote" },
-      ] },
-    ],
-  },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Solutions", href: "/solutions" },
+  { label: "Contact", href: "/contact" },
+  
+
+  // {
+  //   label: "Products", href: "/products/devices" ,
+  // },
+
+
+  // {
+  //   label: "Solutions",
+  //   dropdown: [
+  //     { label: "Wireless", href: "/solutions/wireless" },
+  //     { label: "Networking", href: "/solutions/networking" },
+  //     { label: "Telephony", href: "/solutions/telephony" },
+  //     { label: "Video Surveillance (CCTV)", href: "/solutions/video-surveillance" },
+  //     { label: "Access Controls", href: "/solutions/access-controls" },
+  //     { label: "Cloud & Computing", href: "/solutions/cloud-computing" },
+  //     { label: "Softwares", href: "/solutions/softwares" },
+  //   ],
+  // },
+
+
+
+  // {
+  //   label: "Consulting",
+  //   dropdown: [
+  //     { label: "IT Consulting", href: "/consulting/it" },
+  //     { label: "Software & Automation Consulting", href: "/consulting/software-automation" },
+  //   ],
+  // },
+
+
+
+  // {
+  //   label: "Managed Services",
+  //   dropdown: [
+  //     { label: "Support Services", href: "/managed-services/support/onsite" },
+  //     { label: "Cloud Services", href: "/managed-services/cloud/network" },
+  //   ]
+  // },
   
 
   // { label: "Careers", href: "/careers" },
-  { label: "Contact", href: "/contact" },
+  
 ];
 
 function Dropdown({ items, isResources, parentRect }) {
@@ -93,7 +86,7 @@ function Dropdown({ items, isResources, parentRect }) {
   return (
     <div
       ref={containerRef}
-      className={`absolute left-0 top-full min-w-[220px] bg-white rounded-lg shadow-xl border border-gray-100 z-50 animate-fade-in transition-all duration-300 ${isTopLevelResources ? 'max-h-[300px] overflow-y-auto' : ''}`}
+      className={`absolute left-0 top-full min-w-[220px] bg-white rounded-lg shadow-xl border border-gray-100 z-[9999] animate-fade-in transition-all duration-300 ${isTopLevelResources ? 'max-h-[300px] overflow-y-auto' : ''}`}
       style={isTopLevelResources ? { overscrollBehavior: 'contain' } : {}}
     >
       {items.map((item, idx) => (
@@ -106,7 +99,7 @@ function Dropdown({ items, isResources, parentRect }) {
           {item.dropdown ? (
             <>
               <button
-                className="w-full text-left px-4 py-3 font-medium text-gray-900 flex items-center justify-between rounded-md transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 group"
+                className="w-full text-left px-4 py-3 font-medium text-gray-900 flex items-center justify-between rounded-md transition-all duration-300 hover:bg-purple-50 hover:text-purple-600 group"
                 style={{ boxShadow: openIndex === idx ? '0 2px 8px rgba(0,0,0,0.08)' : undefined }}
               >
                 {item.label}
@@ -136,7 +129,7 @@ function Dropdown({ items, isResources, parentRect }) {
                   )
                 : openIndex === idx && (
                     <div
-                      className="absolute left-full top-0 min-w-[200px] bg-white rounded-lg shadow-xl border border-gray-100 animate-fade-in transition-all duration-300 z-50"
+                      className="absolute left-full top-0 min-w-[200px] bg-white rounded-lg shadow-xl border border-gray-100 animate-fade-in transition-all duration-300 z-[9999]"
                       style={{ marginLeft: '-4px' }}
                     >
                       <Dropdown items={item.dropdown} isResources={false} />
@@ -145,9 +138,13 @@ function Dropdown({ items, isResources, parentRect }) {
             </>
           ) : (
             <Link href={item.href || "#"}>
-              <span className={`block px-4 py-3 font-medium transition-colors duration-200 cursor-pointer rounded-md
-                ${isActive(item.href) ? "text-blue-700 bg-blue-50 border-l-4 border-blue-500" : "text-gray-900 hover:bg-blue-50 hover:text-blue-700"}`}>
+              <span className={`block px-4 py-3 font-medium transition-colors duration-200 cursor-pointer rounded-md relative
+                ${isActive(item.href) ? "text-purple-600 bg-purple-50" : "text-gray-900 hover:text-purple-600"}`}>
                 {item.label}
+                                 {/* Clean underline effect */}
+                 <span className={`absolute bottom-0 left-4 right-4 h-0.5 bg-purple-600 transform transition-all duration-300 ${
+                   isActive(item.href) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                 }`}></span>
               </span>
             </Link>
           )}
@@ -180,46 +177,51 @@ export default function Navbar() {
     });
   };
   return (
-    <nav className="w-full bg-gradient-to-r from-white via-blue-50 to-pink-50 shadow-lg border-b border-gray-100 sticky top-0 z-50">
-      <div className="flex items-center justify-between px-4 sm:px-6 md:px-8 py-3 md:py-4">
+    <>
+    <nav className="w-full bg-gradient-to-r from-white via-blue-50 to-pink-50 shadow-lg border-b border-gray-100 sticky top-0 z-[9999]">
+      <div className="flex items-center justify-between px-4 sm:px-6 md:px-8 py-3 md:py-4 min-w-0">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 sm:gap-4 group/logo cursor-pointer select-none">
           <img
             src="/icons/Enpl-logo.jpeg"
             alt="ENPL Logo"
-            className="h-10 sm:h-12 w-10 sm:w-12 drop-shadow-lg rounded-full border-2 border-blue-100 group-hover/logo:border-blue-400 group-hover/logo:shadow-xl transition-all duration-300 ease-in-out group-hover/logo:scale-110 group-hover/logo:rotate-3"
-            style={{ boxShadow: '0 4px 16px 0 rgba(30,64,175,0.08)' }}
+            className="h-10 sm:h-12 w-10 sm:w-12 drop-shadow-lg rounded-full border-2 border-indigo-200"
+            style={{ boxShadow: '0 4px 16px 0 rgba(79,70,229,0.12)' }}
           />
           <div>
-            <span
-              className="font-extrabold text-lg sm:text-lg tracking-widest bg-gradient-to-r from-blue-900 via-blue-500 to-pink-500 bg-clip-text text-transparent group-hover/logo:from-pink-600 group-hover/logo:to-blue-700 group-hover/logo:scale-110 group-hover/logo:drop-shadow-lg transition-all duration-300 ease-in-out animate-gradient-x block"
-              style={{ letterSpacing: '0.08em' }}
-            >
+          <span
+              className="text-lg sm:text-xl lg:text-2xl text-indigo-700 block font-bold tracking-wide"
+            style={{ letterSpacing: '0.01em', fontFamily: 'Montserrat, Open Sans, system-ui, sans-serif' }}
+          >
               Electrohelps Networks
-            </span>
-            <p className="text-xs sm:text-sm text-gray-600 group-hover/logo:text-gray-700 transition-colors duration-300">
-              Solution | Cloud | Consulting | Assist
+          </span>
+            <p className="text-xs sm:text-sm text-gray-600 font-medium">
+              Solution | Cloud | Consult | Assist
             </p>
           </div>
         </Link>
         {/* Desktop Menu */}
-        <div className="hidden lg:flex gap-2 md:gap-6 items-center flex-1 justify-end ml-8">
+        <div className="hidden lg:flex gap-1 xl:gap-2 2xl:gap-4 items-center flex-1 justify-end ml-4 xl:ml-6 2xl:ml-8 min-w-0">
           {menu.map((item, idx) =>
             item.dropdown ? (
               <div
                 key={idx}
-                className="relative group flex items-center"
+                className="relative group flex items-center flex-shrink-0"
                 onMouseEnter={() => setActiveDropdown(idx)}
                 onMouseLeave={() => setActiveDropdown(null)}
+                style={{ position: 'relative' }}
               >
                 <button
-                  className={`px-3 py-2 font-semibold text-base rounded-lg transition-all duration-300 bg-transparent border border-transparent flex items-center
-                    ${activeDropdown === idx ? "text-pink-600 bg-blue-50" : isDropdownActive(item.dropdown) ? "text-blue-600 bg-blue-50 border-blue-200" : "text-gray-900"}
-                    hover:bg-gradient-to-r hover:from-blue-100 hover:to-pink-100 hover:text-blue-800 hover:shadow-lg hover:scale-105
-                    focus:outline-none focus:ring-2 focus:ring-blue-300
-                    group-hover:shadow-xl group-hover:scale-110`}
+                  className={`px-2 xl:px-3 py-2 font-semibold text-xs xl:text-sm 2xl:text-base rounded-lg transition-all duration-300 bg-transparent border border-transparent flex items-center whitespace-nowrap relative
+                    ${activeDropdown === idx ? "text-purple-600" : isDropdownActive(item.dropdown) ? "text-purple-600" : "text-gray-900"}
+                    hover:text-purple-600
+                    focus:outline-none focus:ring-2 focus:ring-purple-300`}
                 >
                   {item.label}
+                                     {/* Clean underline effect */}
+                   <span className={`absolute bottom-0 left-2 xl:left-3 right-2 xl:right-3 h-0.5 bg-purple-600 transform transition-all duration-300 ${
+                     activeDropdown === idx || isDropdownActive(item.dropdown) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                   }`}></span>
                   <span
                     className={`ml-1 transition-transform duration-300 ease-in-out ${activeDropdown === idx ? (item.label === 'Cloud Solutions' ? 'rotate-270' : 'translate-y-1') : ''}`}
                   >
@@ -229,17 +231,22 @@ export default function Navbar() {
                   </span>
                 </button>
                 {activeDropdown === idx && (
-                  <Dropdown items={item.dropdown} isResources={item.label === 'Resources'} />
+                  <div className="absolute top-full left-0 z-[9999] navbar-dropdown">
+                    <Dropdown items={item.dropdown} isResources={item.label === 'Resources'} />
+                  </div>
                 )}
               </div>
             ) : (
-              <Link key={idx} href={item.href || "#"}>
-                <span className={`px-3 py-2 font-semibold text-base rounded-lg transition-all duration-300 bg-transparent border border-transparent cursor-pointer flex items-center
-                  ${isActive(item.href) ? "text-blue-600 bg-blue-50 border-blue-200 shadow-md" : "text-gray-900"}
-                  hover:bg-gradient-to-r hover:from-pink-100 hover:to-blue-100 hover:text-pink-700 hover:shadow-lg hover:scale-105
-                  focus:outline-none focus:ring-2 focus:ring-pink-300
-                  group-hover:shadow-xl group-hover:scale-110`}>
+                              <Link key={idx} href={item.href || "#"}>
+                <span className={`group px-2 xl:px-3 py-2 font-semibold text-xs xl:text-sm 2xl:text-base rounded-lg transition-all duration-300 bg-transparent border border-transparent cursor-pointer flex items-center whitespace-nowrap flex-shrink-0 relative
+                  ${isActive(item.href) ? "text-purple-600" : "text-gray-900"}
+                  hover:text-purple-600
+                  focus:outline-none focus:ring-2 focus:ring-purple-300`}>
                   {item.label}
+                                     {/* Clean underline effect */}
+                  <span className={`absolute bottom-0 left-2 xl:left-3 right-2 xl:right-3 h-0.5 bg-purple-600 transform transition-all duration-300 ${
+                     isActive(item.href) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                   }`}></span>
                 </span>
               </Link>
             )
@@ -250,10 +257,7 @@ export default function Navbar() {
           {/* Contact Dropdown */}
           <div className="relative group/contact">
             <button
-              className="bg-gradient-to-r from-blue-900 via-blue-500 to-pink-500 text-white px-4 py-2 rounded-lg shadow-lg transition-all duration-500 text-sm font-semibold
-                hover:from-pink-600 hover:to-blue-700 hover:shadow-2xl hover:scale-110 focus:outline-none focus:ring-2 focus:ring-pink-300
-                group-hover/contact:shadow-blue-200 group-hover/contact:ring-4 group-hover/contact:ring-blue-300/30
-                transform hover:-translate-y-1"
+              className="bg-gradient-to-r from-blue-900 via-blue-500 to-pink-500 text-white px-3 xl:px-4 py-2 rounded-lg shadow-lg transition-all duration-500 text-xs xl:text-sm font-semibold whitespace-nowrap flex-shrink-0 hover:from-pink-600 hover:to-blue-700 hover:shadow-2xl hover:scale-110 focus:outline-none focus:ring-2 focus:ring-pink-300  group-hover/contact:shadow-blue-200 group-hover/contact:ring-4 group-hover/contact:ring-blue-300/30 transform hover:-translate-y-1"  
               style={{ backgroundSize: '200% 200%' }}
             >
               <div className="flex items-center space-x-2">
@@ -268,7 +272,7 @@ export default function Navbar() {
             </button>
             
             {/* Dropdown Menu */}
-            <div className="absolute right-0 top-full mt-2 w-80 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover/contact:opacity-100 group-hover/contact:visible transition-all duration-500 transform scale-95 group-hover/contact:scale-100 translate-y-2 group-hover/contact:translate-y-0 z-50">
+            <div className="absolute right-0 top-full mt-2 w-80 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover/contact:opacity-100 group-hover/contact:visible transition-all duration-500 transform scale-95 group-hover/contact:scale-100 translate-y-2 group-hover/contact:translate-y-0 z-[9999]">
               {/* Arrow */}
               <div className="absolute -top-2 right-6 w-4 h-4 bg-white border-l border-t border-gray-100 transform rotate-45"></div>
               
@@ -284,11 +288,11 @@ export default function Navbar() {
                     <h3 className="text-lg font-bold text-gray-800 group-hover/sales:text-green-600 transition-colors duration-300">Sales</h3>
                   </div>
                   <div className="ml-11 space-y-2">
-                    <a href="mailto:sales@electrohelps.com" className="flex items-center space-x-2 text-gray-600 hover:text-green-600 transition-colors duration-300 group-hover/sales:translate-x-1 cursor-pointer">
+                    <a href="mailto:sales@ehsnetworks.in" className="flex items-center space-x-2 text-gray-600 hover:text-green-600 transition-colors duration-300 group-hover/sales:translate-x-1 cursor-pointer">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
-                      <span className="text-sm">sales@electrohelps.com</span>
+                      <span className="text-sm">sales@ehsnetworks.in</span>
                     </a>
                     <a href="tel:+917718811771" className="flex items-center space-x-2 text-gray-600 hover:text-green-600 transition-colors duration-300 group-hover/sales:translate-x-1 cursor-pointer">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -310,17 +314,23 @@ export default function Navbar() {
                     <h3 className="text-lg font-bold text-gray-800 group-hover/support:text-blue-600 transition-colors duration-300">Support</h3>
                   </div>
                   <div className="ml-11 space-y-2">
-                    <a href="mailto:support@electrohelps.com" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors duration-300 group-hover/support:translate-x-1 cursor-pointer">
+                    <a href="mailto:support@ehsnetworks.in" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors duration-300 group-hover/support:translate-x-1 cursor-pointer">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
-                      <span className="text-sm">support@electrohelps.com</span>
+                      <span className="text-sm">support@ehsnetworks.in</span>
                     </a>
-                    <a href="tel:+917718811771" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors duration-300 group-hover/support:translate-x-1 cursor-pointer">
+                    <a href="tel:+917718811747" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors duration-300 group-hover/support:translate-x-1 cursor-pointer">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
-                      <span className="text-sm font-semibold">+91 771-8811-7474</span>
+                      <span className="text-sm font-semibold">+91 771-8811-747</span>
+                    </a>
+                    <a href="tel:+917718823606" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors duration-300 group-hover/support:translate-x-1 cursor-pointer">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      <span className="text-sm font-semibold">+91 771-8823-606</span>
                     </a>
                   </div>
                 </div>
@@ -355,13 +365,17 @@ export default function Navbar() {
                item.dropdown ? (
                  <div key={idx} className="relative animate-fade-in-up" style={{ animationDelay: `${idx * 0.1}s` }}>
                                      <button
-                     className={`w-full text-left px-3 py-3 font-semibold text-base rounded-lg transition-all duration-500 bg-transparent border border-transparent flex items-center justify-between
-                       hover:bg-gradient-to-r hover:from-blue-100 hover:to-pink-100 hover:text-blue-800 hover:shadow-lg hover:scale-105
-                       focus:outline-none focus:ring-2 focus:ring-blue-300 group
-                       ${isDropdownActive(item.dropdown) ? "text-blue-600 bg-blue-50 border-blue-200" : ""}`}
+                     className={`w-full text-left px-3 py-3 font-semibold text-base rounded-lg transition-all duration-500 bg-transparent border border-transparent flex items-center justify-between relative
+                       hover:bg-purple-50 hover:text-purple-600
+                       focus:outline-none focus:ring-2 focus:ring-purple-300 group
+                       ${isDropdownActive(item.dropdown) ? "text-purple-600 bg-purple-50" : ""}`}
                      onClick={() => setActiveDropdown(activeDropdown === idx ? null : idx)}
                    >
                     {item.label}
+                                         {/* Clean underline effect for mobile */}
+                     <span className={`absolute bottom-0 left-3 right-3 h-0.5 bg-purple-600 transform transition-all duration-300 ${
+                       isDropdownActive(item.dropdown) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                     }`}></span>
                                          <span className={`ml-1 transition-transform duration-500 ease-in-out ${activeDropdown === idx ? 'rotate-180' : ''} group-hover:scale-110`}>
                       <svg width="14" height="14" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 8L10 12L14 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -375,9 +389,7 @@ export default function Navbar() {
                           {subItem.dropdown ? (
                                                          <div className="relative">
                                <button
-                                 className="w-full text-left px-3 py-2 font-medium text-sm rounded-md transition-all duration-500 bg-transparent border border-transparent flex items-center justify-between
-                                   hover:bg-blue-50 hover:text-blue-700 hover:shadow-md hover:scale-105
-                                   focus:outline-none focus:ring-2 focus:ring-blue-300 group"
+                                 className="w-full text-left px-3 py-2 font-medium text-sm rounded-md transition-all duration-500 bg-transparent border border-transparent flex items-center justify-between hover:bg-purple-50 hover:text-purple-600 hover:shadow-md hover:scale-105  focus:outline-none focus:ring-2 focus:ring-purple-300 group"
                                  onClick={() => setMobileSubDropdown(mobileSubDropdown === `${idx}-${subIdx}` ? null : `${idx}-${subIdx}`)}
                                >
                                 {subItem.label}
@@ -391,9 +403,13 @@ export default function Navbar() {
                                  <div className="mt-1 ml-4 border-l-2 border-gray-200 pl-4 animate-fade-in-up">
                                   {subItem.dropdown.map((subSubItem, subSubIdx) => (
                                                                          <Link key={subSubIdx} href={subSubItem.href || "#"}>
-                                       <span className={`block px-3 py-2 text-sm transition-all duration-300 cursor-pointer rounded-md
-                                         ${isActive(subSubItem.href) ? "text-blue-700 bg-blue-50 border-l-4 border-blue-500" : "text-gray-700 hover:bg-gray-50 hover:text-gray-900 hover:shadow-sm hover:scale-105"}`}>
-                                         {subSubItem.label}
+                                       <span className={`block px-3 py-2 text-sm transition-all duration-300 cursor-pointer rounded-md relative
+                                         ${isActive(subSubItem.href) ? "text-purple-600 bg-purple-50" : "text-gray-700 hover:text-purple-600 hover:bg-purple-50"}`}>
+                                                                                   {/* Clean underline effect for mobile sub-sub items */}
+                                          <span className={`absolute bottom-0 left-3 right-3 h-0.5 bg-purple-600 transform transition-all duration-300 ${
+                                            isActive(subSubItem.href) ? 'scale-x-100' : 'scale-x-0 hover:scale-x-100'
+                                          }`}></span>
+                                         <span className="relative z-10">{subSubItem.label}</span>
                                        </span>
                                      </Link>
                                   ))}
@@ -402,9 +418,13 @@ export default function Navbar() {
                             </div>
                           ) : (
                                                          <Link href={subItem.href || "#"}>
-                               <span className={`block px-3 py-2 font-medium text-sm transition-all duration-300 cursor-pointer rounded-md
-                                 ${isActive(subItem.href) ? "text-blue-700 bg-blue-50 border-l-4 border-blue-500" : "text-gray-700 hover:bg-blue-50 hover:text-blue-700 hover:shadow-sm hover:scale-105"}`}>
-                                 {subItem.label}
+                               <span className={`block px-3 py-2 font-medium text-sm transition-all duration-300 cursor-pointer rounded-md relative
+                                 ${isActive(subItem.href) ? "text-purple-600 bg-purple-50" : "text-gray-700 hover:text-purple-600 hover:bg-purple-50"}`}>
+                                 {/* Clean underline effect for mobile dropdown items */}
+                                 <span className={`absolute bottom-0 left-3 right-3 h-0.5 bg-purple-600 transform transition-all duration-300 ${
+                                   isActive(subItem.href) ? 'scale-x-100' : 'scale-x-100'
+                                 }`}></span>
+                                 <span className="relative z-10">{subItem.label}</span>
                                </span>
                              </Link>
                           )}
@@ -415,11 +435,15 @@ export default function Navbar() {
                 </div>
                              ) : (
                  <Link key={idx} href={item.href || "#"}>
-                   <span className={`block px-3 py-3 font-semibold text-base rounded-lg transition-all duration-500 bg-transparent border border-transparent cursor-pointer
-                     hover:bg-gradient-to-r hover:from-pink-100 hover:to-blue-100 hover:text-pink-700 hover:shadow-lg hover:scale-105
-                     focus:outline-none focus:ring-2 focus:ring-pink-300 animate-fade-in-up
-                     ${isActive(item.href) ? "text-blue-600 bg-blue-50 border-blue-200 shadow-md" : "text-gray-900"}`} style={{ animationDelay: `${idx * 0.1}s` }}>
+                   <span className={`group block px-3 py-3 font-semibold text-base rounded-lg transition-all duration-500 bg-transparent border border-transparent cursor-pointer relative
+                     hover:text-purple-600 hover:bg-purple-50
+                     focus:outline-none focus:ring-2 focus:ring-purple-300 animate-fade-in-up
+                     ${isActive(item.href) ? "text-purple-600 bg-purple-50" : "text-gray-900"}`} style={{ animationDelay: `${idx * 0.1}s` }}>
                      {item.label}
+                                           {/* Clean underline effect for mobile main items */}
+                      <span className={`absolute bottom-0 left-3 right-3 h-0.5 bg-purple-600 transform transition-all duration-300 ${
+                        isActive(item.href) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                      }`}></span>
                    </span>
                  </Link>
                )
@@ -428,5 +452,31 @@ export default function Navbar() {
         </div>
       )}
     </nav>
+      
+      <style jsx global>{`
+        @keyframes fade-in {
+          0% { opacity: 0; transform: translateY(-10px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+          animation: fade-in 0.3s ease-out;
+        }
+        
+        @keyframes fade-in-up {
+          0% { opacity: 0; transform: translateY(10px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+          animation: fade-in-up 0.5s ease-out;
+        }
+        
+        /* Ensure dropdowns are always on top */
+        .navbar-dropdown {
+          position: absolute !important;
+          z-index: 99999 !important;
+          pointer-events: auto !important;
+        }
+      `}</style>
+    </>
   );
 }

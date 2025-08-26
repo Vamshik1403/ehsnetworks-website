@@ -4,10 +4,10 @@ import "./globals.css";
 const jost = Jost({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Electronics Website",
-  description: "Electronic Shop",
+  title: "EHS Networks",
+  description: "EHS Networks",
 };
-
+  
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

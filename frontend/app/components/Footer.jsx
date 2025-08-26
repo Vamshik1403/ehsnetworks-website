@@ -44,14 +44,21 @@ const Footer = () => {
       <div className="relative z-10 px-4 py-12">
         {/* Main Footer Content - 6 Columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
+          {/* ABOUT US */}
+          <div className="animate-fade-in-up">
+            <h3 className="text-lg font-semibold mb-4 text-white">ABOUT US</h3>
+            <div className="space-y-2 text-white/80">
+              <p>Electrohelps Networks is a leading technology solutions provider, specializing in IT services, consulting, and custom software development.</p>
+            </div>
+          </div>
+
           {/* OUR ADDRESS */}
           <div className="animate-fade-in-up">
             <h3 className="text-lg font-semibold mb-4 text-white">OUR ADDRESS</h3>
             <div className="space-y-2 text-white/80">
-              <p>509, Ghanshyam Enclave. Nr.</p>
-              <p>Laljipada Police Chowki</p>
-              <p>New Link Road, Kandivali</p>
-              <p>West</p>
+              <p>509, Ghanshyam Enclave.</p>
+              <p>Nr. Laljipada Police Chowki</p>
+              <p>New Link Road, Kandivali West</p>
               <p>Mumbai MH 400067</p>
               <p>India</p>
             </div>
@@ -61,82 +68,165 @@ const Footer = () => {
           <div className="animate-fade-in-up" style={{ animationDelay: '100ms' }}>
             <h3 className="text-lg font-semibold mb-4 text-white">OUR CONTACTS</h3>
             <div className="space-y-2 text-white/80">
-              <p>SALES | SUPPORT</p>
+              <p>SALES</p>
               <p className="text-xl font-bold text-blue-300">771-8811-771</p>
             </div>
-          </div>
-
-          {/* OUR SERVICES */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-            <h3 className="text-lg font-semibold mb-4 text-white">OUR SERVICES</h3>
-            <div className="space-y-2 text-white/80">
-              <div className="block">
-                <a href="#" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
-                  <span className="relative z-10">IT Consulting</span>
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
-                </a>
-              </div>
-              <div className="block">
-                <a href="#" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
-                  <span className="relative z-10">System Integration</span>
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
-                </a>
-              </div>
-              <div className="block">
-                <a href="#" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
-                  <span className="relative z-10">Tech Support</span>
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
-                </a>
-              </div>
+            <div className="space-y-2 mt-2 text-white/80">
+              <p>SUPPORT</p>
+              <p className="text-xl font-bold text-blue-300">771-8811-747</p>
+              <p className="text-xl font-bold text-blue-300">771-8823-606</p>
             </div>
           </div>
 
-          {/* OUR SOLUTIONS */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+           {/* OUR SOLUTIONS */}
+           <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
             <h3 className="text-lg font-semibold mb-4 text-white">OUR SOLUTIONS</h3>
             <div className="space-y-2 text-white/80">
               <div className="block">
-                <a href="#" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
-                  <span className="relative z-10">Managed IT Services</span>
+                <a href="/solutions" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
+                  <span className="relative z-10">Wireless</span>
                   <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
                 </a>
               </div>
               <div className="block">
-                <a href="#" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
-                  <span className="relative z-10">Cloud Infrastructure</span>
+                <a href="/solutions" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
+                  <span className="relative z-10">Networking</span>
                   <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
                 </a>
               </div>
               <div className="block">
-                <a href="#" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
-                  <span className="relative z-10">Automation & IoT</span>
+                <a href="/solutions" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
+                  <span className="relative z-10">Telephony</span>
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
+                </a>
+              </div>
+              <div className="block">
+                <a href="/solutions" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
+                  <span className="relative z-10">Video Surveillance(CCTV)</span>
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
+                </a>
+              </div>
+              <div className="block">
+                <a href="/solutions" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
+                  <span className="relative z-10">Access Control</span>
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
+                </a>
+              </div>
+              <div className="block">
+                <a href="/solutions" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
+                  <span className="relative z-10">Cloud & Computing</span>
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
+                </a>
+              </div>
+              <div className="block">
+                <a href="/solutions" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
+                  <span className="relative z-10">Softwares</span>
                   <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
                 </a>
               </div>
             </div>
           </div>
 
-          {/* ABOUT */}
+          {/* QUICK LINKS */}
           <div className="animate-fade-in-up" style={{ animationDelay: '400ms' }}>
-            <h3 className="text-lg font-semibold mb-4 text-white">RESOURCES</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">QUICK LINKS</h3>
+            <div className="space-y-2 text-white/80">
+              <div className="block">
+                <a href="/" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
+                  <span className="relative z-10">Home</span>
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
+                </a>
+              </div>
+              <div className="block">
+                <a href="/about" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
+                  <span className="relative z-10">About Us</span>
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
+                </a>
+              </div>
+              <div className="block">
+                <a href="/solutions" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
+                  <span className="relative z-10">Solutions</span>
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
+                </a>
+              </div>
+              <div className="block">
+                <a href="/contact" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
+                  <span className="relative z-10">Contact</span>
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* GET IN TOUCH */}
+          <div className="animate-fade-in-up" style={{ animationDelay: '500ms' }}>
+            <h3 className="text-lg font-semibold mb-4 text-white">GET IN TOUCH</h3>
+            <div className="space-y-3 text-white/80">
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 bg-blue-400/20 rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <span className="text-sm">sales@ehsnetworks.in</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 bg-blue-400/20 rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <span className="text-sm">support@ehsnetworks.in</span>
+              </div>
+            </div>
+          </div>
+{/* 
+          OUR SOFTWARES
+          <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+            <h3 className="text-lg font-semibold mb-4 text-white">OUR SOFTWARES</h3>
+            <div className="space-y-2 text-white/80">
+              <div className="block">
+                <a href="https://openwi.in/" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
+                  <span className="relative z-10">Open WI</span>
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
+                </a>
+              </div>
+              <div className="block">
+                <a href="#" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
+                  <span className="relative z-10"></span>
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
+                </a>
+              </div>
+              <div className="block">
+                <a href="#" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
+                  <span className="relative z-10"></span>
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* LINKS */}
+          {/* <div className="animate-fade-in-up" style={{ animationDelay: '400ms' }}>
+            <h3 className="text-lg font-semibold mb-4 text-white">LINKS</h3>
             <div className="space-y-2 text-white/80">
               <div className="block">
                 <a href="#" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
-                  <span className="relative z-10">res</span>
+                  <span className="relative z-10"></span>
                   <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
                 </a>
               </div>
               <div className="block">
                 <a href="#" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
-                  <span className="relative z-10">res1</span>
+                  <span className="relative z-10"></span>
                   <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
                 </a>
               </div>
             </div>
-          </div>
+          </div>  */}
 
           {/* SOCIAL MEDIA */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '500ms' }}>
+          {/* <div className="animate-fade-in-up" style={{ animationDelay: '500ms' }}>
             <h3 className="text-lg font-semibold mb-4 text-white">SOCIAL MEDIA:</h3>
             <div className="flex space-x-4">
               {socialMediaIcons.map((social, index) => (
@@ -148,13 +238,13 @@ const Footer = () => {
                   <div className="hover:animate-bounce transition-transform duration-300">
                     {social.icon}
                   </div>
-                  {/* Glow effect */}
+              
                   <div className="absolute inset-0 bg-blue-400 rounded-full opacity-0 hover:opacity-20 transition-opacity duration-500 blur-sm" />
                 </a>
               ))}
             </div>
-          </div>
-        </div>
+          </div> */}
+        </div> 
 
         {/* Bottom Section - Logo and Copyright */}
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/20">
@@ -172,7 +262,7 @@ const Footer = () => {
             </div>
             
             <div>
-              <h2 className="text-xl font-bold text-white mb-1 hover:text-blue-200 transition-colors duration-300">
+              <h2 className="text-  xl font-bold text-white mb-1 hover:text-blue-200 transition-colors duration-300">
                 Electrohelps Networks
               </h2>
               <p className="text-sm text-white/80 hover:text-white/90 transition-colors duration-300">
