@@ -7,11 +7,11 @@ export default function VideoSurveillanceServices() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Our Video Surveillance <span className="text-blue-600">Services</span>
+            Our CMS & VMS <span className="text-blue-600">Services</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From initial consultation to ongoing support, we provide end-to-end video surveillance solutions 
-            that transform your security infrastructure.
+            From CMS installation to VMS configuration, we provide comprehensive video surveillance management solutions 
+            that transform your security infrastructure with centralized control and intelligent monitoring.
           </p>
         </div>
 
@@ -19,35 +19,35 @@ export default function VideoSurveillanceServices() {
           <div className="space-y-8">
             <div className="space-y-6">
               <h3 className="text-3xl font-bold text-gray-900">
-                Comprehensive CCTV Solutions
+                Comprehensive CMS & VMS Solutions
               </h3>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Our video surveillance services encompass every aspect of modern security, ensuring your premises 
-                have the protection needed to maintain safety and compliance.
+                Our CMS and VMS services provide centralized management and professional video surveillance capabilities, 
+                ensuring your security infrastructure operates at peak efficiency with intelligent monitoring and control.
               </p>
             </div>
 
             <div className="space-y-6">
               {[
                 {
-                  icon: '🔍',
-                  title: 'Security Assessment',
-                  description: 'Comprehensive analysis of your current security infrastructure and surveillance requirements.'
+                  icon: '🏢',
+                  title: 'CMS Installation & Configuration',
+                  description: 'Professional installation of Central Management System on dedicated servers with up to 5000 server connections.'
                 },
                 {
-                  icon: '📐',
-                  title: 'Strategic Planning',
-                  description: 'Custom surveillance strategy aligned with your security objectives and compliance needs.'
+                  icon: '📹',
+                  title: 'VMS Setup & Integration',
+                  description: 'Complete Video Management System setup with professional TRASSIR interface and web/mobile access.'
                 },
                 {
-                  icon: '🚀',
-                  title: 'Installation & Setup',
-                  description: 'Professional deployment of CCTV systems with minimal business disruption.'
+                  icon: '🌐',
+                  title: 'Cloud Access Setup',
+                  description: 'Configure web and mobile interfaces for remote access from anywhere in the world.'
                 },
                 {
                   icon: '🔄',
-                  title: 'Monitoring & Support',
-                  description: 'Continuous monitoring and optimization for peak surveillance performance.'
+                  title: 'System Monitoring & Support',
+                  description: '24/7 monitoring, technical support, and system optimization for peak performance.'
                 }
               ].map((service, index) => (
                 <div key={index} className="flex items-start space-x-4">
@@ -65,15 +65,15 @@ export default function VideoSurveillanceServices() {
 
           <div className="relative">
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6">Why Choose Our CCTV Solutions?</h3>
+              <h3 className="text-2xl font-bold mb-6">Why Choose Our CMS & VMS Solutions?</h3>
               <div className="space-y-4">
                 {[
-                  'Industry-leading expertise in surveillance technologies',
-                  'Proven track record of successful deployments',
-                  '24/7 monitoring and support services',
-                  'Scalable solutions that grow with your business',
-                  'Compliance with international security standards',
-                  'Cost-effective implementation strategies'
+                  'Centralized management of multiple locations',
+                  'Professional TRASSIR VMS interface',
+                  'User-friendly web and mobile access',
+                  'Free technical support included',
+                  'Scalable from 300 to 5000+ servers',
+                  'Direct camera connection capabilities'
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <span className="w-2 h-2 bg-white rounded-full"></span>

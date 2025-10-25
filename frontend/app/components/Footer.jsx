@@ -65,7 +65,7 @@ const Footer = () => {
           </div>
 
           {/* OUR CONTACTS */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+          {/* <div className="animate-fade-in-up" style={{ animationDelay: '100ms' }}>
             <h3 className="text-lg font-semibold mb-4 text-white">OUR CONTACTS</h3>
             <div className="space-y-2 text-white/80">
               <p>SALES</p>
@@ -76,7 +76,7 @@ const Footer = () => {
               <p className="text-xl font-bold text-blue-300">771-8811-747</p>
               <p className="text-xl font-bold text-blue-300">771-8823-606</p>
             </div>
-          </div>
+          </div> */}
 
            {/* OUR SOLUTIONS */}
            <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
@@ -90,7 +90,7 @@ const Footer = () => {
               </div>
               <div className="block">
                 <a href="/solutions" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
-                  <span className="relative z-10">Networking</span>
+                 <span className="relative z-10">Networking</span>
                   <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
                 </a>
               </div>
@@ -121,6 +121,31 @@ const Footer = () => {
               <div className="block">
                 <a href="/solutions" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
                   <span className="relative z-10">Softwares</span>
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* OUR SOFTWARES */}
+          <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+            <h3 className="text-lg font-semibold mb-4 text-white">OUR SOFTWARES</h3>
+            <div className="space-y-2 text-white/80">
+              <div className="block">
+                <a href="https://openwi.in/" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
+                  <span className="relative z-10">Open WI</span>
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
+                </a>
+              </div>
+              <div className="block">
+                <a href="#" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
+                  <span className="relative z-10"></span>
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
+                </a>
+              </div>
+              <div className="block">
+                <a href="#" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
+                  <span className="relative z-10"></span>
                   <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
                 </a>
               </div>
@@ -180,31 +205,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
-{/* 
-          OUR SOFTWARES
-          <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
-            <h3 className="text-lg font-semibold mb-4 text-white">OUR SOFTWARES</h3>
-            <div className="space-y-2 text-white/80">
-              <div className="block">
-                <a href="https://openwi.in/" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
-                  <span className="relative z-10">Open WI</span>
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
-                </a>
-              </div>
-              <div className="block">
-                <a href="#" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
-                  <span className="relative z-10"></span>
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
-                </a>
-              </div>
-              <div className="block">
-                <a href="#" className="inline-block text-white/80 hover:text-white transition-all duration-300 hover:scale-105 relative cursor-pointer group">
-                  <span className="relative z-10"></span>
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
-                </a>
-              </div>
-            </div>
-          </div>
+
+          
 
           {/* LINKS */}
           {/* <div className="animate-fade-in-up" style={{ animationDelay: '400ms' }}>
@@ -224,7 +226,7 @@ const Footer = () => {
               </div>
             </div>
           </div>  */}
-
+          
           {/* SOCIAL MEDIA */}
           {/* <div className="animate-fade-in-up" style={{ animationDelay: '500ms' }}>
             <h3 className="text-lg font-semibold mb-4 text-white">SOCIAL MEDIA:</h3>

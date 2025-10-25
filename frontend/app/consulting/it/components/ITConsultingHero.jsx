@@ -1,196 +1,122 @@
 "use client";
 import React from 'react';
-import { motion } from 'framer-motion';
-import { useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
-import { Code, Database, Server, Network, Shield, Users } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ITConsultingHero() {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"]
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-
   return (
-    <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50">
+    <section className="relative bg-gradient-to-br from-blue-50 via-white to-cyan-50 overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23f3f4f6%22%20fill-opacity%3D%220.3%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        
-        {/* Floating Elements */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 0.1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="absolute top-20 left-20 w-4 h-4 bg-purple-400 rounded-full"
-        />
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 0.1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
-          className="absolute top-32 right-16 w-3 h-3 bg-blue-400 rounded-full"
-        />
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 0.1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.9 }}
-          className="absolute bottom-32 left-32 w-2 h-2 bg-indigo-400 rounded-full"
-        />
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 blur-3xl" />
       </div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-          {/* Left Side - Text Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
-          >
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="mb-6"
-            >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-purple-600 mb-4">
+      
+      {/* Floating Elements */}
+      <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-20 animate-float-slow" />
+      <div className="absolute top-40 right-20 w-16 h-16 bg-cyan-200 rounded-full opacity-20 animate-float-slow" style={{ animationDelay: '2s' }} />
+      <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-200 rounded-full opacity-20 animate-float-slow" style={{ animationDelay: '4s' }} />
+      
+      <div className="relative z-10 px-4 py-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="space-y-8">
+              {/* Badge */}
+              <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
                 IT Consulting
-              </h1>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                Strategic Technology Solutions for Business Growth
-              </h2>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="mb-8"
-            >
-              <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Expert IT consulting services to help your business leverage cutting-edge technology, optimize infrastructure, and drive digital transformation for sustainable growth and competitive advantage.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                Get IT Consultation
-              </button>
-            </motion.div>
-          </motion.div>
-
-          {/* Right Side - Isometric Illustration */}
-          <motion.div
-            style={{ y, opacity }}
-            className="relative flex justify-center lg:justify-end"
-          >
-            <div className="relative w-full max-w-lg h-96">
-              {/* Central Server Tower */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-32 bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg relative"
-              >
-                {/* Server Racks */}
-                <div className="absolute inset-2 bg-gray-600 rounded flex flex-col gap-1">
-                  {[...Array(6)].map((_, i) => (
-                    <div key={i} className="h-1 bg-blue-400 rounded opacity-60"></div>
-                  ))}
-                </div>
+              </div>
+              
+              {/* Main Heading */}
+              <div className="space-y-6">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
+                  Strategic Technology Solutions &
+                  <span className="block bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                    Business Growth
+                  </span>
+                </h1>
+              </div>
+              
+              {/* Description */}
+              <div className="space-y-6">
+                <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
+                  Expert IT consulting services to help your business leverage cutting-edge technology, 
+                  optimize infrastructure, and drive digital transformation for sustainable growth and competitive advantage.
+                </p>
+              </div>
+              
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/contact">
+                  <button className="group relative bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-blue-500/25 transition-all duration-500 transform hover:scale-110 hover:-translate-y-1">
+                    <span className="relative flex items-center space-x-3">
+                      <span>Get IT Consultation</span>
+                      <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
+                  </button>
+                </Link>
                 
-                {/* Glowing Lights */}
-                <div className="absolute top-2 left-2 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <div className="absolute top-2 right-2 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-                <div className="absolute bottom-2 left-2 w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
-              </motion.div>
-
-              {/* Network Connections */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.7 }}
-                className="absolute top-8 left-8 w-16 h-12 bg-blue-500 rounded-lg opacity-80"
-              />
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-                className="absolute top-8 right-8 w-16 h-12 bg-purple-500 rounded-lg opacity-80"
-              />
-
-              {/* Human Figures */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.9 }}
-                className="absolute bottom-8 left-8 w-8 h-12 bg-blue-200 rounded-full flex items-center justify-center"
-              >
-                <div className="w-6 h-8 bg-blue-300 rounded-full"></div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 1.0 }}
-                className="absolute bottom-16 right-16 w-8 h-12 bg-green-200 rounded-full flex items-center justify-center"
-              >
-                <div className="w-6 h-8 bg-green-300 rounded-full"></div>
-              </motion.div>
-
-              {/* Network Connections */}
-              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 300">
-                <motion.path
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  transition={{ duration: 2, delay: 1.2 }}
-                  d="M 200 150 L 100 80 L 200 150 L 300 80 M 100 200 L 200 150 L 300 200"
-                  stroke="#00D4FF"
-                  strokeWidth="2"
-                  fill="none"
-                  opacity="0.8"
-                />
-              </svg>
-
-              {/* Floating Data Elements */}
-              <div className="absolute inset-0">
-                {[...Array(8)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.3, delay: 1.4 + i * 0.1 }}
-                    className="absolute w-2 h-2 bg-purple-400 rounded-full"
-                    style={{
-                      left: `${20 + (i % 4) * 20}%`,
-                      top: `${15 + Math.floor(i / 4) * 20}%`
-                    }}
-                  />
-                ))}
+                <a href="tel:+917718811771">
+                  <button className="group px-8 py-4 border-2 border-blue-600 text-blue-600 font-bold text-lg rounded-2xl hover:bg-blue-600 hover:text-white transition-all duration-500 transform hover:scale-110 hover:-translate-y-1">
+                    <span className="flex items-center space-x-3">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      <span>Call Now</span>
+                    </span>
+                  </button>
+                </a>
+              </div>
+              
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-8 pt-8">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">100+</div>
+                  <div className="text-gray-600 text-sm">IT Projects</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyan-600 mb-2">95%</div>
+                  <div className="text-gray-600 text-sm">Success Rate</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>
+                  <div className="text-gray-600 text-sm">IT Support</div>
+                </div>
               </div>
             </div>
-          </motion.div>
+            
+            {/* Right Content - Illustration */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-blue-500 to-cyan-600 rounded-3xl p-8 text-white relative overflow-hidden">
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-10">
+                  <div className="absolute inset-0 bg-gradient-to-r from-white via-blue-200 to-cyan-200 blur-3xl" />
+                </div>
+                
+                <div className="relative z-10">
+                  <h3 className="text-3xl font-bold mb-6">Why Choose Our IT Consulting Solutions?</h3>
+                  <div className="space-y-4">
+                    {[
+                      'Strategic IT consulting tailored to your business needs',
+                      'Infrastructure optimization for improved performance',
+                      'Security assessment and compliance management',
+                      'Expert team with proven track record',
+                      '24/7 support and monitoring services',
+                      'Cutting-edge technologies and best practices'
+                    ].map((benefit, index) => (
+                      <div key={index} className="flex items-center space-x-3">
+                        <span className="w-2 h-2 bg-white rounded-full"></span>
+                        <span>{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      {/* Watermark */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.1 }}
-        transition={{ duration: 1, delay: 1.5 }}
-        className="absolute top-10 right-10 text-gray-400 text-center"
-      >
-        <div className="text-2xl font-bold">ENPL</div>
-        <div className="text-sm">Integrating Technology | Driving Growth</div>
-      </motion.div>
     </section>
   );
 }

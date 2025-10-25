@@ -4,7 +4,7 @@ import Footer from '../../../components/Footer';
 import OnsiteSupportHero from '../components/OnsiteSupportHero';
 import OnsiteSupportServices from '../components/OnsiteSupportServices';
 import OnsiteSupportBenefits from '../components/OnsiteSupportBenefits';
-import OnsiteSupportCTA from '../components/OnsiteSupportCTA';
+import OnsiteSupportLetsGetInTouch from '../components/OnsiteSupportLetsGetInTouch';
 import Partners from '../../../components/Partners';
 
 export default function OnsiteSupportPage() {
@@ -15,7 +15,7 @@ export default function OnsiteSupportPage() {
       <OnsiteSupportServices />
       <OnsiteSupportBenefits />
       <Partners />
-      <OnsiteSupportCTA />
+      <OnsiteSupportLetsGetInTouch />
       <Footer />
     </>
   );

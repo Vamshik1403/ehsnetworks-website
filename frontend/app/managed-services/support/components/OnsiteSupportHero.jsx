@@ -16,119 +16,117 @@ export default function OnsiteSupportHero() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
+    <section ref={ref} className="relative py-24 bg-gradient-to-br from-purple-900 via-indigo-900 to-pink-900 text-white overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23f3f4f6%22%20fill-opacity%3D%220.3%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        
-        {/* Floating Elements */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 0.1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="absolute top-20 left-20 w-4 h-4 bg-green-400 rounded-full"
-        />
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 0.1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
-          className="absolute top-32 right-16 w-3 h-3 bg-emerald-400 rounded-full"
-        />
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 0.1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.9 }}
-          className="absolute bottom-32 left-32 w-2 h-2 bg-teal-400 rounded-full"
-        />
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-indigo-400 to-pink-400 blur-3xl" />
       </div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-          {/* Left Side - Text Content */}
+      
+      {/* Floating Elements */}
+      <div className="absolute top-20 left-10 w-20 h-20 bg-purple-200 rounded-full opacity-20 animate-float-slow" />
+      <div className="absolute top-40 right-20 w-16 h-16 bg-indigo-200 rounded-full opacity-20 animate-float-slow" style={{ animationDelay: '2s' }} />
+      <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-pink-200 rounded-full opacity-20 animate-float-slow" style={{ animationDelay: '4s' }} />
+      
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
+            className="space-y-8"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="mb-6"
-            >
-              <div className="bg-white rounded-2xl p-8 shadow-2xl border border-gray-100">
-                <div className="w-16 h-1 bg-green-500 rounded-full mb-4"></div>
-                <h1 className="text-2xl font-bold text-gray-600 mb-2">ENPL's</h1>
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            {/* Badge */}
+            <div className="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
+              <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+              Onsite Support
+            </div>
+            
+            {/* Main Heading */}
+            <div className="space-y-6">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+                Professional
+                <span className="block bg-gradient-to-r from-purple-400 via-indigo-400 to-pink-400 bg-clip-text text-transparent">
                   Onsite Support
-                </h2>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="mb-8"
-            >
-              <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Professional on-site technical support and maintenance services. Our expert engineers visit your location to provide hands-on assistance and ensure your IT infrastructure operates at peak performance.
+                </span>
+              </h1>
+            </div>
+            
+            {/* Description */}
+            <div className="space-y-6">
+              <p className="text-xl text-purple-100 leading-relaxed">
+                Professional on-site technical support and maintenance services. Our expert engineers visit your location to provide hands-on assistance 
+                and ensure your IT infrastructure operates at peak performance with minimal downtime.
               </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                Schedule Onsite Visit
+            </div>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="group relative bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-purple-500/25 transition-all duration-500 transform hover:scale-110 hover:-translate-y-1">
+                <span className="relative flex items-center space-x-3">
+                  <span>Schedule Onsite Visit</span>
+                  <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
               </button>
-            </motion.div>
+              
+              <button className="group px-8 py-4 border-2 border-purple-400 text-purple-400 font-bold text-lg rounded-2xl hover:bg-purple-400 hover:text-white transition-all duration-500 transform hover:scale-110 hover:-translate-y-1">
+                <span className="flex items-center space-x-3">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <span>Call Now</span>
+                </span>
+              </button>
+            </div>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-8 pt-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
+                <div className="text-gray-300 text-sm">Availability</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-indigo-400 mb-2">&lt;2hrs</div>
+                <div className="text-gray-300 text-sm">Response Time</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-pink-400 mb-2">100+</div>
+                <div className="text-gray-300 text-sm">Onsite Visits</div>
+              </div>
+            </div>
           </motion.div>
-
-          {/* Right Side - Isometric Illustration */}
+          
+          {/* Right Content - Onsite Support Capabilities Preview */}
           <motion.div
             style={{ y, opacity }}
-            className="relative flex justify-center lg:justify-end"
+            className="relative"
           >
-            <div className="relative w-full max-w-lg h-96">
-              {/* Central Onsite Support Scene */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                className="absolute inset-0 bg-gradient-to-br from-green-400 to-emerald-600 rounded-3xl shadow-2xl"
-              >
-                {/* Engineer */}
-                <div className="absolute bottom-8 left-8 w-16 h-24 bg-white rounded-full relative">
-                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-12 h-16 bg-gray-200 rounded-full"></div>
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-10 bg-gray-300 rounded-full"></div>
+            <div className="bg-gradient-to-br from-purple-500 to-indigo-600 rounded-3xl p-8 text-white relative overflow-hidden">
+              {/* Background Pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0 bg-gradient-to-r from-white via-purple-200 to-indigo-200 blur-3xl" />
+              </div>
+              
+              <div className="relative z-10">
+                <h3 className="text-3xl font-bold mb-6">Why Choose Our Onsite Support?</h3>
+                <div className="space-y-4">
+                  {[
+                    'Expert engineers with hands-on experience',
+                    'Fast response times with guaranteed SLA commitments',
+                    'Comprehensive equipment and tool availability',
+                    'Detailed documentation and reporting',
+                    'Preventive maintenance and system optimization',
+                    '24/7 emergency support when needed'
+                  ].map((benefit, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <span className="w-2 h-2 bg-white rounded-full"></span>
+                      <span>{benefit}</span>
+                    </div>
+                  ))}
                 </div>
-                
-                {/* Server Rack */}
-                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-20 h-24 bg-gray-800 rounded-lg border-2 border-gray-600">
-                  <div className="absolute inset-1 bg-green-500 rounded flex items-center justify-center">
-                    <Server size={20} className="text-white" />
-                  </div>
-                </div>
-
-                {/* Location Pin */}
-                <div className="absolute top-16 left-16 w-8 h-8 bg-red-400 rounded-lg opacity-80 flex items-center justify-center">
-                  <MapPin size={16} className="text-white" />
-                </div>
-
-                {/* Clock Icon */}
-                <div className="absolute top-24 right-16 w-8 h-8 bg-yellow-400 rounded-lg opacity-80 flex items-center justify-center">
-                  <Clock size={16} className="text-white" />
-                </div>
-
-                {/* Tools */}
-                <div className="absolute top-32 left-24 w-8 h-8 bg-blue-400 rounded-lg opacity-80 flex items-center justify-center">
-                  <span className="text-xs font-bold text-white">🔧</span>
-                </div>
-              </motion.div>
+              </div>
             </div>
           </motion.div>
         </div>

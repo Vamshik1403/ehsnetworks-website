@@ -7,11 +7,11 @@ export default function TelephonyCapabilities() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Telephony <span className="text-blue-600">Capabilities</span>
+            Telecom & Telephony <span className="text-blue-600">Capabilities</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our comprehensive telephony solutions cover every aspect of modern communication, 
-            ensuring your business stays connected with cutting-edge voice and video technologies.
+            Our comprehensive telecom and telephony solutions cover every aspect of modern communication infrastructure, 
+            ensuring seamless integration between traditional and IP-based systems with advanced security and reliability.
           </p>
         </div>
 
@@ -19,39 +19,39 @@ export default function TelephonyCapabilities() {
           {[
             {
               icon: '📞',
-              title: 'VoIP Systems',
-              description: 'Enterprise-grade Voice over IP solutions with HD audio quality and advanced features.',
-              features: ['HD Audio Quality', 'Call Recording', 'Voicemail', 'Call Forwarding']
+              title: 'Fixed Media Gateways',
+              description: 'Vital components facilitating seamless integration of traditional PSTN and ISDN infrastructure with IP-based communication solutions.',
+              features: ['PSTN Integration', 'ISDN Support', 'Circuit-switched Conversion', 'IP Packet Conversion']
             },
             {
-              icon: '🎧',
-              title: 'Unified Communications',
-              description: 'Integrated communication platform combining voice, video, chat, and collaboration tools.',
-              features: ['Video Conferencing', 'Instant Messaging', 'File Sharing', 'Team Collaboration']
+              icon: '🌐',
+              title: 'Multi-Network Integration',
+              description: 'Seamless connectivity between PSTN, VoIP (SIP), and GSM/3G/4G networks for comprehensive communication coverage.',
+              features: ['PSTN Connectivity', 'VoIP/SIP Support', 'GSM/3G/4G Integration', 'Network Bridging']
             },
             {
-              icon: '💬',
-              title: 'Video Calling',
-              description: 'High-definition video calling with screen sharing and recording capabilities.',
-              features: ['HD Video', 'Screen Sharing', 'Recording', 'Multi-party Calls']
+              icon: '🔗',
+              title: 'Seamless Interoperability',
+              description: 'Seamless integration with third-party PBXs, servers, and hardware systems to utilize existing infrastructure.',
+              features: ['Third-party PBX Integration', 'Server Compatibility', 'Hardware Integration', 'Legacy System Support']
             },
             {
-              icon: '📱',
-              title: 'Mobile Integration',
-              description: 'Seamless mobile connectivity with softphone apps and mobile number portability.',
-              features: ['Softphone Apps', 'Mobile Numbers', 'Call Transfer', 'Presence Management']
-            },
-            {
-              icon: '🔄',
-              title: 'Call Center Solutions',
-              description: 'Advanced call center features with analytics, reporting, and workforce management.',
-              features: ['Call Analytics', 'Performance Reports', 'Workforce Management', 'Quality Monitoring']
+              icon: '📊',
+              title: 'Dynamic Call Management',
+              description: 'Implement features like Least Cost Routing (LCR), Time-based routing, and Number translation for efficient call management.',
+              features: ['Least Cost Routing', 'Time-based Routing', 'Number Translation', 'Call Optimization']
             },
             {
               icon: '🛡️',
-              title: 'Security & Compliance',
-              description: 'Enterprise-grade security with encryption, authentication, and compliance standards.',
-              features: ['Call Encryption', 'Authentication', 'Compliance Standards', 'Audit Logs']
+              title: 'Secure Communication',
+              description: 'SRTP and TLS protocols for end-to-end encryption, protecting voice communication from unauthorized access.',
+              features: ['SRTP Encryption', 'TLS Security', 'End-to-end Protection', 'Access Control']
+            },
+            {
+              icon: '🎧',
+              title: 'Customer Support Services',
+              description: 'Comprehensive customer support services with advanced call center features and workforce management.',
+              features: ['Call Center Solutions', 'Customer Service', 'Support Analytics', 'Workforce Management']
             }
           ].map((capability, index) => (
             <div 

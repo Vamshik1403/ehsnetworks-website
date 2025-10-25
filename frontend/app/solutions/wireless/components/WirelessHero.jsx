@@ -54,16 +54,16 @@ export default function WirelessHero() {
         }`}>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
-              Wireless
+              WiFi
             </span>
             <br />
             <span className="text-white">Solutions</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Revolutionize your connectivity with cutting-edge wireless technologies. From 5G networks to 
-            IoT connectivity, we deliver seamless wireless solutions that keep your business connected 
-            and competitive in the digital age.
+            Transform your business connectivity with advanced WiFi solutions. From WiFi 5 to WiFi 7, 
+            we provide enterprise-grade WiFi services from leading manufacturers including NETGEAR, Ubiquiti, 
+            Sophos, Cisco Meraki, and HPE Aruba for optimal performance and reliability.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -77,13 +77,13 @@ export default function WirelessHero() {
             </button>
           </div>
 
-          {/* Wireless Capabilities Preview */}
+          {/* WiFi Capabilities Preview */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
             {[
-              { icon: '📶', label: '5G Networks', color: 'from-blue-400 to-blue-600' },
+              { icon: '📶', label: 'WiFi 5', color: 'from-blue-400 to-blue-600' },
               { icon: '🌐', label: 'WiFi 6', color: 'from-purple-400 to-purple-600' },
-              { icon: '📡', label: 'Satellite', color: 'from-indigo-400 to-indigo-600' },
-              { icon: '🔗', label: 'IoT Connectivity', color: 'from-cyan-400 to-cyan-600' }
+              { icon: '⚡', label: 'WiFi 7', color: 'from-indigo-400 to-indigo-600' },
+              { icon: '🏢', label: 'Enterprise', color: 'from-cyan-400 to-cyan-600' }
             ].map((capability, index) => (
               <div 
                 key={index}

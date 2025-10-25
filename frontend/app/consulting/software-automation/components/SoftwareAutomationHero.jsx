@@ -72,7 +72,7 @@ export default function SoftwareAutomationHero() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-8 pt-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">100+</div>
                   <div className="text-gray-600 text-sm">Projects Delivered</div>
                 </div>
                 <div className="text-center">

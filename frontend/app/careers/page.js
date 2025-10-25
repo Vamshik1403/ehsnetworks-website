@@ -3,6 +3,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Partners from "@/components/Partners";
+import Clients from "@/components/Clients";
+import LetsGetInTouch from "@/components/LetsGetInTouch";
 import Image from "next/image";
 import Link from "next/link";
 import { TrophyIcon, SparklesIcon, StarIcon, UsersIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
@@ -114,20 +116,8 @@ export default function CareersPage() {
           <Image src="/images/networking6.jpg" alt="Team" width={1600} height={900} className="w-full h-[360px] md:h-[420px] object-cover" />
           <div className="absolute inset-0 z-[2] flex flex-col items-center justify-center text-center px-6">
             <p className="max-w-3xl text-white/90 text-sm md:text-base leading-relaxed animate-fade-in">ENPL is driven by the belief that employees are the backbone of our organisation. We keep our teams happy emotionally, professionally and financially. If we know a candidate is worth it, we don’t hold back on making it happen.</p>
-            <div className="mt-6 flex gap-4 md:gap-8">
-              <div className="life-card">
-                <TrophyIcon className="w-8 h-8 text-yellow-300" />
-                <span>Wall Of Fame</span>
-              </div>
-              <div className="life-card">
-                <StarIcon className="w-8 h-8 text-yellow-200" />
-                <span>Employee Awards</span>
-              </div>
-              <div className="life-card">
-                <UsersIcon className="w-8 h-8 text-blue-200" />
-                <span>Celebrations</span>
-              </div>
-            </div>
+            {/* <div className="mt-6 flex gap-4 md:gap-8">
+            </div> */}
           </div>
         </div>
       </section>
@@ -196,21 +186,13 @@ export default function CareersPage() {
         <Partners />
       </div>
 
-      {/* Connect With Us CTA */}
-      <section className="relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-          <div className="rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-r from-blue-900 via-indigo-700 to-pink-700 p-8 md:p-12 relative">
-            <div className="absolute inset-0 opacity-40 animated-diagonal" />
-            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
-              <h4 className="text-white text-2xl md:text-3xl font-extrabold">Connect With Us</h4>
-              <Link href="/contact" className="group inline-flex items-center rounded-full bg-white text-blue-900 font-semibold px-6 py-3 shadow-lg hover:shadow-2xl transition-all hover:scale-105">
-                Contact Us
-                <ArrowRightIcon width={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Clients Section */}
+      <div className="py-6">
+        <Clients />
+      </div>
+
+      {/* Let's Get In Touch Section */}
+      <LetsGetInTouch />
 
       <Footer />
 

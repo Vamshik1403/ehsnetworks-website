@@ -55,11 +55,16 @@ export default function OnsiteSupportServices() {
   ];
 
   return (
-    <section ref={ref} className="py-20 bg-white relative overflow-hidden">
+    <section ref={ref} className="py-20 bg-gradient-to-br from-purple-50 via-white to-indigo-50 relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23f3f4f6%22%20fill-opacity%3D%220.3%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-indigo-400 to-pink-400 blur-3xl" />
       </div>
+      
+      {/* Floating Elements */}
+      <div className="absolute top-20 left-10 w-20 h-20 bg-purple-200 rounded-full opacity-20 animate-float-slow" />
+      <div className="absolute top-40 right-20 w-16 h-16 bg-indigo-200 rounded-full opacity-20 animate-float-slow" style={{ animationDelay: '2s' }} />
+      <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-pink-200 rounded-full opacity-20 animate-float-slow" style={{ animationDelay: '4s' }} />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Main Heading */}
@@ -69,11 +74,11 @@ export default function OnsiteSupportServices() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Onsite Support Services
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Onsite Support <span className="text-purple-600">Services</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Professional technical support delivered directly to your location by certified engineers
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional technical support delivered directly to your location by certified engineers with comprehensive expertise and modern tools.
           </p>
         </motion.div>
 
@@ -85,13 +90,13 @@ export default function OnsiteSupportServices() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: service.delay }}
-              className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2"
+              className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2"
             >
               <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 {React.createElement(service.icon, { size: 32, className: "text-white" })}
               </div>
               
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors duration-300">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors duration-300">
                 {service.title}
               </h3>
               
@@ -103,37 +108,44 @@ export default function OnsiteSupportServices() {
         </div>
 
         {/* Coverage Areas */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.7 }}
           className="mt-20 text-center"
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-8">
+          <h3 className="text-3xl font-bold text-gray-900 mb-8">
             Service Coverage Areas
           </h3>
           
-          <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl p-8 border border-green-100">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <MapPin size={24} className="text-green-600" />
-              <h4 className="text-xl font-semibold text-gray-900">Available in All Metro Cities</h4>
+          <div className="bg-gradient-to-br from-purple-500 to-indigo-600 rounded-3xl p-8 text-white relative overflow-hidden"> */}
+            {/* Background Pattern */}
+            {/* <div className="absolute inset-0 opacity-10">
+              <div className="absolute inset-0 bg-gradient-to-r from-white via-purple-200 to-indigo-200 blur-3xl" />
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-              {["Mumbai", "Delhi", "Bangalore", "Chennai", "Hyderabad", "Kolkata", "Pune", "Ahmedabad"].map((city, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-                  className="bg-white rounded-xl p-4 shadow-md border border-green-100"
-                >
-                  <span className="text-gray-700 font-medium">{city}</span>
-                </motion.div>
-              ))}
+            <div className="relative z-10">
+              <div className="flex items-center justify-center gap-3 mb-8">
+                <MapPin size={28} className="text-white" />
+                <h4 className="text-2xl font-bold">Available in All Metro Cities</h4>
+              </div> */}
+              
+              {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                {["Mumbai", "Delhi", "Bangalore", "Chennai", "Hyderabad", "Kolkata", "Pune", "Ahmedabad"].map((city, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                    transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                    className="bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/30 hover:bg-white/30 transition-all duration-300"
+                  >
+                    <span className="text-white font-medium">{city}</span>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

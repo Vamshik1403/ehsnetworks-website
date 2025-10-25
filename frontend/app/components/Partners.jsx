@@ -8,64 +8,64 @@ import { Autoplay, Pagination } from 'swiper/modules';
 const Partners = () => {
   const partners = [
     {
-      name: 'HPE',
-      logo: '/partners/HPE.png'
+      name: 'Alcatel Lucent',
+      logo: '/partners/partner1.png'
     },
     {
       name: 'Aruba',
-      logo: '/partners/Aruba.png'
-    },
-    {
-      name: 'Matrix Telecom',
-      logo: '/partners/Matrix.png'
-    },
-    {
-      name: 'Hikvision',
-      logo: '/partners/Hikvision-Logo.png'
-    },
-    {
-      name: 'Mikrotik',
-      logo: '/partners/Mikrotik-Logo.jpg'
-    },
-    {
-      name: 'Syntel',
-      logo: '/partners/syntel.jpg'
-    },
-    {
-      name: 'Cisco',
-      logo: '/partners/cisco1.png'
-    },
-    {
-      name: 'PeopleLink',
-      logo: '/partners/PeopleLink-Logo.webp'
-    },
-    {
-      name: 'Sophos',
-      logo: '/partners/sophos.png'
-    },
-    {
-      name: 'Alcatel Lucent',
-      logo: '/partners/alcatellucententerprise_logo.jpg'
-    },
-    {
-      name: 'Synology',
-      logo: '/partners/synology.png'
-    },
-    {
-      name: 'QNAP',
-      logo: '/partners/qnap.png'
+      logo: '/partners/partner2.png'
     },
     {
       name: 'CP Plus',
-      logo: '/partners/cp-plus2.jpg'
-    },
-    {
-      name: 'TP-Link',
-      logo: '/partners/tp-link.png'
+      logo: '/partners/partner3.jpg'
     },
     {
       name: 'D-Link',
-      logo: '/partners/d-link1.jpg'
+      logo: '/partners/partner4.png'
+    },
+    {
+      name: 'Hewlett Packard Enterprise',
+      logo: '/partners/partner5.png'
+    },
+    {
+      name: 'Hikvision',
+      logo: '/partners/partner6.png'
+    },
+    {
+      name: 'Matrix Telecom',
+      logo: '/partners/partner7.png'
+    },
+    {
+      name: 'Mikrotik',
+      logo: '/partners/partner8.png'
+    },
+    {
+      name: 'PeopleLink',
+      logo: '/partners/partner9.webp'
+    },
+    {
+      name: 'QNAP',
+      logo: '/partners/partner10.png'
+    },
+    {
+      name: 'Sophos',
+      logo: '/partners/partner11.png'
+    },
+    {
+      name: 'Synology',
+      logo: '/partners/partner12.png'
+    },
+    {
+      name: 'Syntel',
+      logo: '/partners/partner13.png'
+    },
+    {
+      name: 'TP-Link',
+      logo: '/partners/partner14.png'
+    },
+    {
+      name: 'Cisco',
+      logo: '/partners/partner15.png'
     }
   ];
 

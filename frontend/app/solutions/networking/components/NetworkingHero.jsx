@@ -100,9 +100,9 @@ export default function NetworkingHero() {
             variants={itemVariants}
             className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight"
           >
-            Next-Generation
+            Network Infrastructure
             <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Network Infrastructure
+              Solutions
             </span>
           </motion.h1>
 
@@ -110,9 +110,9 @@ export default function NetworkingHero() {
             variants={itemVariants}
             className="text-xl md:text-2xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed"
           >
-            Transform your business with cutting-edge networking solutions that deliver 
-            lightning-fast connectivity, enterprise-grade security, and seamless scalability 
-            for the digital age.
+            Transform your business with comprehensive networking solutions including indoor and outdoor 
+            WiFi Access Points, network switches, and routers designed for enterprise-grade performance 
+            and reliability.
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">

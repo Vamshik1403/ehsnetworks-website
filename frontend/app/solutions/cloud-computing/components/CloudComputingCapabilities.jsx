@@ -42,10 +42,10 @@ export default function CloudComputingCapabilities() {
               features: ['Data Encryption', 'Identity Management', 'Compliance Standards', 'Threat Detection']
             },
             {
-              icon: '🔄',
-              title: 'DevOps Integration',
-              description: 'Seamless integration with CI/CD pipelines and development workflows.',
-              features: ['CI/CD Pipelines', 'Container Orchestration', 'Infrastructure as Code', 'Automated Deployment']
+              icon: '💾',
+              title: 'Data Management',
+              description: 'Comprehensive data storage, backup, and management solutions for business continuity.',
+              features: ['Data Backup', 'Storage Solutions', 'Data Recovery', 'Database Management']
             },
             {
               icon: '📊',

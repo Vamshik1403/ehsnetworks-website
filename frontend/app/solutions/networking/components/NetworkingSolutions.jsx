@@ -12,44 +12,44 @@ export default function NetworkingSolutions() {
   const solutions = [
     {
       icon: Wifi,
-      title: "Enterprise Wi-Fi 6",
-      description: "Next-generation wireless networking with Wi-Fi 6/6E technology for maximum performance and capacity.",
-      benefits: ["10x faster speeds", "Better coverage", "Reduced latency", "Increased capacity"],
+      title: "Indoor WiFi Access Points",
+      description: "High-performance indoor WiFi access points with WiFi 6/6E technology, advanced security features, and seamless roaming capabilities.",
+      benefits: ["WiFi 6/6E Technology", "High-density support", "Seamless roaming", "Advanced security"],
       delay: 0.1
     },
     {
-      icon: Router,
-      title: "SD-WAN Solutions",
-      description: "Software-defined wide area networking for intelligent traffic routing and optimal performance.",
-      benefits: ["Intelligent routing", "Cost optimization", "Centralized management", "Quick deployment"],
+      icon: Globe,
+      title: "Outdoor WiFi Access Points",
+      description: "Weatherproof outdoor WiFi access points with extended range coverage, designed for challenging outdoor environments.",
+      benefits: ["Weatherproof design", "Extended range", "Outdoor durability", "High performance"],
       delay: 0.2
     },
     {
-      icon: Shield,
-      title: "Network Security Suite",
-      description: "Comprehensive security solutions including firewalls, VPNs, and threat detection systems.",
-      benefits: ["Advanced protection", "Real-time monitoring", "Threat prevention", "Compliance ready"],
+      icon: Network,
+      title: "Network Switches",
+      description: "Layer 2 and Layer 3 managed network switches with PoE support, VLAN capabilities, and advanced management features.",
+      benefits: ["PoE support", "VLAN support", "Layer 2/3 switching", "Centralized management"],
       delay: 0.3
     },
     {
-      icon: Server,
-      title: "Data Center Networks",
-      description: "High-speed, low-latency networking solutions designed for modern data center environments.",
-      benefits: ["Ultra-low latency", "High bandwidth", "Scalable design", "Redundant paths"],
+      icon: Router,
+      title: "Enterprise Routers",
+      description: "High-performance routers with advanced security features, VPN support, QoS, and intelligent traffic management.",
+      benefits: ["Advanced security", "VPN support", "QoS features", "Traffic management"],
       delay: 0.4
     },
     {
-      icon: Cloud,
-      title: "Cloud Networking",
-      description: "Hybrid and multi-cloud networking with seamless integration and centralized management.",
-      benefits: ["Multi-cloud support", "Seamless integration", "Centralized control", "Cost optimization"],
+      icon: Shield,
+      title: "Network Security",
+      description: "Comprehensive security features including firewalls, threat detection, access control, and network segmentation.",
+      benefits: ["Firewall protection", "Threat detection", "Access control", "Network segmentation"],
       delay: 0.5
     },
     {
-      icon: Database,
-      title: "Network Analytics",
-      description: "AI-powered network monitoring and analytics for proactive optimization and troubleshooting.",
-      benefits: ["Predictive insights", "Automated optimization", "Performance monitoring", "Quick resolution"],
+      icon: Zap,
+      title: "Performance Optimization",
+      description: "Advanced QoS, load balancing, traffic optimization, and monitoring tools for maximum network performance.",
+      benefits: ["QoS optimization", "Load balancing", "Traffic optimization", "Performance monitoring"],
       delay: 0.6
     }
   ];
@@ -82,12 +82,12 @@ export default function NetworkingSolutions() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Proven
-            <span className="block text-blue-600">Network Solutions</span>
+            Professional Network
+            <span className="block text-blue-600">Infrastructure Products</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Our battle-tested networking solutions have been deployed across hundreds of 
-            enterprises, delivering consistent performance, security, and reliability.
+            Our comprehensive range of networking products includes indoor and outdoor WiFi Access Points, 
+            network switches, and enterprise routers designed for reliable, secure, and high-performance networking.
           </p>
         </motion.div>
 
@@ -134,9 +134,9 @@ export default function NetworkingSolutions() {
           className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-12 mb-16"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Why Our Solutions Stand Out</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Network Infrastructure</h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Built on decades of networking expertise and cutting-edge technology
+              Built on industry-leading technology and proven expertise in networking infrastructure
             </p>
           </div>
           

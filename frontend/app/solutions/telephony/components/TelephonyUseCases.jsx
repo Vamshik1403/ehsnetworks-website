@@ -7,11 +7,11 @@ export default function TelephonyUseCases() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Telephony <span className="text-blue-600">Use Cases</span>
+            Telecom & Telephony <span className="text-blue-600">Use Cases</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how our telephony solutions are transforming businesses across various industries 
-            and creating new opportunities for growth and innovation.
+            Discover how our telecom and telephony solutions are transforming businesses across various industries 
+            with reliable communication infrastructure and customer support services.
           </p>
         </div>
 
@@ -19,39 +19,39 @@ export default function TelephonyUseCases() {
           {[
             {
               icon: '🏢',
-              title: 'Corporate Offices',
-              description: 'Enterprise communication solutions with unified messaging and collaboration tools.',
-              benefits: ['Unified Communications', 'Team Collaboration', 'Professional Presence', 'Cost Savings']
+              title: 'Enterprise Communication',
+              description: 'Fixed media gateway solutions for seamless PSTN and VoIP integration in corporate environments.',
+              benefits: ['PSTN Integration', 'VoIP Connectivity', 'Cost Optimization', 'Reliable Communication']
+            },
+            {
+              icon: '🎧',
+              title: 'Customer Support Centers',
+              description: 'Advanced call center solutions with customer support services and workforce management.',
+              benefits: ['Call Center Solutions', 'Customer Service', 'Support Analytics', 'Workforce Management']
             },
             {
               icon: '🏥',
-              title: 'Healthcare',
-              description: 'Secure telephony systems for patient communication and medical team coordination.',
+              title: 'Healthcare Communication',
+              description: 'Secure telecom systems for patient communication and medical team coordination.',
               benefits: ['HIPAA Compliance', 'Patient Communication', 'Team Coordination', 'Emergency Response']
             },
             {
               icon: '🏭',
-              title: 'Manufacturing',
-              description: 'Reliable communication systems for production floor coordination and safety.',
+              title: 'Manufacturing Operations',
+              description: 'Reliable telecom infrastructure for production floor coordination and safety communication.',
               benefits: ['Production Coordination', 'Safety Communication', 'Quality Control', 'Shift Management']
             },
             {
               icon: '🏪',
-              title: 'Retail',
-              description: 'Customer service telephony with call center integration and analytics.',
-              benefits: ['Customer Service', 'Call Analytics', 'Sales Support', 'Inventory Management']
+              title: 'Retail Customer Service',
+              description: 'Customer support telephony with call center integration and customer analytics.',
+              benefits: ['Customer Service', 'Call Analytics', 'Sales Support', 'Customer Experience']
             },
             {
               icon: '🏫',
-              title: 'Education',
-              description: 'Distance learning platforms with video conferencing and student communication.',
-              benefits: ['Distance Learning', 'Student Communication', 'Parent Engagement', 'Administrative Support']
-            },
-            {
-              icon: '🏗️',
-              title: 'Construction',
-              description: 'Mobile telephony solutions for field workers and project coordination.',
-              benefits: ['Field Communication', 'Project Coordination', 'Safety Alerts', 'Resource Management']
+              title: 'Educational Institutions',
+              description: 'Telecom solutions for administrative communication and student support services.',
+              benefits: ['Administrative Support', 'Student Communication', 'Parent Engagement', 'Emergency Alerts']
             }
           ].map((useCase, index) => (
             <div 

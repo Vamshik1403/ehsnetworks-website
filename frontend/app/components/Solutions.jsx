@@ -169,10 +169,10 @@ const Solutions = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   return (
-    <section className="w-full bg-gradient-to-r from-blue-50 via-white to-blue-50 py-20">
+    <section className="w-full bg-gradient-to-r from-blue-50 via-white to-blue-50 py-16 pb-20">
       <div className="w-full px-0">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 animate-fade-in-up">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 animate-fade-in-up text-glow premium-hover">
             Best in class Solutions and Services for your business ...
           </h2>
           <p className="text-lg text-gray-600 animate-fade-in-up delay-200">
@@ -180,7 +180,7 @@ const Solutions = () => {
           </p>
         </div>
         
-        <div className="relative">
+        <div className="relative mb-16 pb-8">
           <Swiper
             onSwiper={swiper => (swiperRef.current = swiper)}
             spaceBetween={24}
@@ -197,12 +197,12 @@ const Solutions = () => {
             autoplay={{ delay: 4000, disableOnInteraction: false }}
             pagination={{ clickable: true, el: '.solutions-swiper-pagination' }}
             modules={[Autoplay, Pagination]}
-            className="w-full"
+            className="w-full pb-8"
           >
                          {solutions.map((sol, i) => (
-               <SwiperSlide key={sol.title} className="mx-0 sm:mx-1">
+               <SwiperSlide key={sol.title} className="mx-0 sm:mx-1 mb-8">
                 <div
-                  className="group relative bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 h-[480px] sm:h-[530px] md:h-[580px] w-full transition-all duration-700 animate-sol-fade-in-up overflow-hidden hover:z-20 cursor-pointer"
+                  className="group relative bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 h-[480px] sm:h-[530px] md:h-[580px] w-full transition-all duration-700 animate-sol-fade-in-up overflow-hidden hover:z-20 cursor-pointer premium-card"
                   style={{ animationDelay: `${0.2 + i * 0.15}s` }}
                   onMouseEnter={() => setHoveredCard(i)}
                   onMouseLeave={() => setHoveredCard(null)}
@@ -233,7 +233,7 @@ const Solutions = () => {
 
                   {/* Title with sliding underline */}
                   <div className="relative z-10 mb-3 sm:mb-4 md:mb-6">
-                    <h3 className={`text-base sm:text-lg md:text-xl font-bold text-center text-gray-800 transition-transform duration-300`}>
+                    <h3 className={`text-base sm:text-lg md:text-xl font-bold text-center text-gray-800 transition-transform duration-300 text-glow`}>
                       {sol.title}
                       <span className="block h-0.5 bg-gradient-to-r from-black/10 to-black/20 w-10 mx-auto mt-2 rounded-full transition-all duration-500 group-hover:w-24" />
                     </h3>
@@ -265,7 +265,7 @@ const Solutions = () => {
           </Swiper>
           
           {/* Enhanced Pagination */}
-          <div className="solutions-swiper-pagination flex justify-center mt-12" />
+          <div className="solutions-swiper-pagination flex justify-center mt-12 mb-16" />
         </div>
         
         {/* CTA Button */}
@@ -319,7 +319,7 @@ const Solutions = () => {
           animation: fade-in-up 1s cubic-bezier(0.23, 1, 0.32, 1);
         }
         
-  .solutions-swiper-pagination { position: static !important; margin-top: 2rem !important; }
+  .solutions-swiper-pagination { position: static !important; margin-top: 2rem !important; margin-bottom: 4rem !important; }
         .swiper-pagination-bullet {
           width: 14px;
           height: 14px;

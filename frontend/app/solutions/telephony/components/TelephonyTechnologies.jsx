@@ -7,38 +7,38 @@ export default function TelephonyTechnologies() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Telephony <span className="text-blue-600">Technologies</span>
+            Telecom & Telephony <span className="text-blue-600">Technologies</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We leverage the latest telephony technologies and standards to deliver cutting-edge 
-            solutions that meet the most demanding business communication requirements.
+            We leverage advanced telecom technologies and protocols to deliver comprehensive solutions 
+            that meet the most demanding business communication and customer support requirements.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
             <h3 className="text-3xl font-bold text-gray-900 mb-6">
-              Core Technologies
+              Telecom Core Technologies
             </h3>
             <div className="space-y-6">
               {[
                 {
                   icon: '📞',
-                  title: 'VoIP Protocols',
-                  description: 'Advanced Voice over IP protocols with HD audio and video capabilities.',
-                  specs: ['SIP Protocol', 'H.264 Video', 'Opus Audio', 'WebRTC Support']
+                  title: 'PSTN & ISDN Integration',
+                  description: 'Traditional circuit-switched networks integrated with modern IP-based communication systems.',
+                  specs: ['PSTN Connectivity', 'ISDN Support', 'Circuit-switched Conversion', 'Legacy Integration']
                 },
                 {
                   icon: '🌐',
-                  title: 'Cloud Telephony',
-                  description: 'Cloud-based communication platforms with global reach and scalability.',
-                  specs: ['Global Infrastructure', 'Auto Scaling', '99.9% Uptime', 'Multi-region Support']
+                  title: 'VoIP & SIP Protocols',
+                  description: 'Voice over IP and Session Initiation Protocol for modern communication infrastructure.',
+                  specs: ['SIP Protocol', 'VoIP Technology', 'HD Audio Quality', 'Multi-codec Support']
                 },
                 {
-                  icon: '📱',
-                  title: 'Mobile Integration',
-                  description: 'Seamless mobile connectivity with native apps and cross-platform support.',
-                  specs: ['iOS & Android', 'Push Notifications', 'Offline Mode', 'Battery Optimization']
+                  icon: '🛡️',
+                  title: 'Security Protocols',
+                  description: 'Advanced security measures including SRTP and TLS for secure communication.',
+                  specs: ['SRTP Encryption', 'TLS Security', 'Authentication', 'Access Control']
                 }
               ].map((tech, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
@@ -65,27 +65,27 @@ export default function TelephonyTechnologies() {
 
           <div className="space-y-8">
             <h3 className="text-3xl font-bold text-gray-900 mb-6">
-              Advanced Features
+              Advanced Telecom Features
             </h3>
             <div className="space-y-6">
               {[
                 {
-                  icon: '🔒',
-                  title: 'Security Protocols',
-                  description: 'Enterprise-grade security with advanced encryption and authentication.',
-                  features: ['End-to-end encryption', 'Multi-factor authentication', 'Call encryption', 'Secure signaling']
-                },
-                {
                   icon: '📊',
-                  title: 'Analytics & Reporting',
-                  description: 'Comprehensive call analytics and performance monitoring systems.',
-                  features: ['Call quality metrics', 'Usage analytics', 'Performance reports', 'Real-time monitoring']
+                  title: 'Call Management',
+                  description: 'Advanced call routing and management features for optimal communication efficiency.',
+                  features: ['Least Cost Routing', 'Time-based Routing', 'Number Translation', 'Call Analytics']
                 },
                 {
                   icon: '🔄',
-                  title: 'Integration APIs',
-                  description: 'RESTful APIs for seamless integration with business applications.',
-                  features: ['CRM Integration', 'ERP Systems', 'Custom Apps', 'Webhook Support']
+                  title: 'Multi-Network Integration',
+                  description: 'Seamless integration between PSTN, VoIP, and GSM/3G/4G networks.',
+                  features: ['PSTN Connectivity', 'VoIP/SIP Support', 'GSM/3G/4G Integration', 'Network Bridging']
+                },
+                {
+                  icon: '🎧',
+                  title: 'Customer Support Features',
+                  description: 'Comprehensive customer support and call center management capabilities.',
+                  features: ['Call Center Solutions', 'Customer Service', 'Support Analytics', 'Workforce Management']
                 }
               ].map((feature, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 shadow-md border border-gray-100">

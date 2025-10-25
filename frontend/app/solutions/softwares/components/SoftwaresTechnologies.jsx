@@ -82,10 +82,10 @@ export default function SoftwaresTechnologies() {
                   features: ['Performance Monitoring', 'User Analytics', 'Error Tracking', 'Real-time Alerts']
                 },
                 {
-                  icon: '🔄',
-                  title: 'DevOps & CI/CD',
-                  description: 'Automated deployment and continuous integration pipelines.',
-                  features: ['CI/CD Pipelines', 'Automated Testing', 'Deployment Automation', 'Version Control']
+                  icon: '🔧',
+                  title: 'System Integration',
+                  description: 'Seamless integration with existing systems and third-party applications.',
+                  features: ['API Development', 'Data Migration', 'System Compatibility', 'Real-time Sync']
                 }
               ].map((feature, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 shadow-md border border-gray-100">

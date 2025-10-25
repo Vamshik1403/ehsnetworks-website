@@ -7,11 +7,11 @@ export default function VideoSurveillanceUseCases() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Video Surveillance <span className="text-blue-600">Use Cases</span>
+            CMS & VMS <span className="text-blue-600">Use Cases</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how our video surveillance solutions are transforming security across various industries 
-            and creating safer environments for businesses and communities.
+            Discover how our Central Management System (CMS) and Video Management System (VMS) solutions 
+            are transforming security across various industries with centralized control and intelligent monitoring.
           </p>
         </div>
 
@@ -19,39 +19,39 @@ export default function VideoSurveillanceUseCases() {
           {[
             {
               icon: '🏢',
-              title: 'Corporate Offices',
-              description: 'Comprehensive security monitoring for office buildings with access control integration.',
-              benefits: ['Perimeter Security', 'Access Control', 'Employee Safety', 'Asset Protection']
-            },
-            {
-              icon: '🏪',
-              title: 'Retail Stores',
-              description: 'Loss prevention and customer safety with advanced analytics and monitoring.',
-              benefits: ['Loss Prevention', 'Customer Safety', 'Inventory Protection', 'Staff Monitoring']
+              title: 'Multi-Location Enterprises',
+              description: 'Centralized management of video surveillance across multiple office locations with unified CMS control.',
+              benefits: ['Centralized Control', 'Multi-site Monitoring', 'Unified Dashboard', 'Cost Reduction']
             },
             {
               icon: '🏭',
-              title: 'Manufacturing',
-              description: 'Production floor monitoring and safety compliance for industrial facilities.',
-              benefits: ['Safety Compliance', 'Production Monitoring', 'Quality Control', 'Incident Prevention']
+              title: 'Large-Scale Manufacturing',
+              description: 'Professional VMS with CMS integration for comprehensive production floor monitoring and safety compliance.',
+              benefits: ['Production Monitoring', 'Safety Compliance', 'Centralized Management', 'Real-time Alerts']
             },
             {
               icon: '🏥',
-              title: 'Healthcare',
-              description: 'Patient safety and facility security with HIPAA-compliant surveillance systems.',
-              benefits: ['Patient Safety', 'Facility Security', 'HIPAA Compliance', 'Emergency Response']
+              title: 'Healthcare Facilities',
+              description: 'HIPAA-compliant CMS and VMS solutions for patient safety and facility security across multiple buildings.',
+              benefits: ['Patient Safety', 'HIPAA Compliance', 'Multi-building Control', 'Emergency Response']
             },
             {
               icon: '🏫',
-              title: 'Educational Institutions',
-              description: 'Campus security and student safety with comprehensive monitoring solutions.',
-              benefits: ['Campus Security', 'Student Safety', 'Access Control', 'Emergency Management']
+              title: 'Educational Campuses',
+              description: 'Campus-wide video surveillance management with CMS for centralized control of multiple buildings.',
+              benefits: ['Campus Security', 'Centralized Control', 'Student Safety', 'Emergency Management']
+            },
+            {
+              icon: '🏪',
+              title: 'Retail Chains',
+              description: 'Chain-wide surveillance management with CMS for loss prevention and customer safety across all locations.',
+              benefits: ['Loss Prevention', 'Chain Management', 'Customer Safety', 'Centralized Monitoring']
             },
             {
               icon: '🏗️',
-              title: 'Construction Sites',
-              description: 'Site security and safety monitoring for construction and development projects.',
-              benefits: ['Site Security', 'Safety Monitoring', 'Equipment Protection', 'Progress Tracking']
+              title: 'Construction Projects',
+              description: 'Temporary CMS setup for construction site security with mobile VMS access for project managers.',
+              benefits: ['Site Security', 'Mobile Access', 'Project Monitoring', 'Equipment Protection']
             }
           ].map((useCase, index) => (
             <div 

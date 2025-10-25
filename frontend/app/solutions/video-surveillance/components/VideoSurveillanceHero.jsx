@@ -57,12 +57,12 @@ export default function VideoSurveillanceHero() {
               Video Surveillance
             </span>
             <br />
-            <span className="text-white">(CCTV) Solutions</span>
+            <span className="text-white">Solutions</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Protect your assets and ensure safety with advanced video surveillance systems. From IP cameras to 
-            AI-powered analytics, we deliver comprehensive CCTV solutions that provide 24/7 monitoring and security.
+            Transform your security infrastructure with our advanced CMS (Central Management System) and VMS (Video Management System) solutions. 
+            Experience centralized control, intelligent monitoring, and seamless integration for comprehensive video surveillance management.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -76,13 +76,13 @@ export default function VideoSurveillanceHero() {
             </button>
           </div>
 
-          {/* CCTV Capabilities Preview */}
+          {/* CMS & VMS Capabilities Preview */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
             {[
-              { icon: '📹', label: 'IP Cameras', color: 'from-blue-400 to-blue-600' },
-              { icon: '🎥', label: 'HD Recording', color: 'from-purple-400 to-purple-600' },
-              { icon: '🔍', label: 'AI Analytics', color: 'from-indigo-400 to-indigo-600' },
-              { icon: '🌐', label: 'Remote Access', color: 'from-cyan-400 to-cyan-600' }
+              { icon: '🏢', label: 'CMS', color: 'from-blue-400 to-blue-600' },
+              { icon: '📹', label: 'VMS', color: 'from-purple-400 to-purple-600' },
+              { icon: '🌐', label: 'Cloud Access', color: 'from-indigo-400 to-indigo-600' },
+              { icon: '📱', label: 'Mobile Apps', color: 'from-cyan-400 to-cyan-600' }
             ].map((capability, index) => (
               <div 
                 key={index}

@@ -12,44 +12,44 @@ export default function NetworkingServices() {
   const services = [
     {
       icon: Wifi,
-      title: "Wireless Networking",
-      description: "Enterprise-grade Wi-Fi 6/6E solutions with seamless roaming, advanced security, and intelligent traffic management.",
-      features: ["Wi-Fi 6/6E Technology", "Seamless Roaming", "Advanced Security", "Traffic Management"],
+      title: "Indoor WiFi Access Points",
+      description: "Professional indoor WiFi access points with WiFi 6/6E technology, advanced security features, and seamless roaming capabilities.",
+      features: ["WiFi 6/6E Technology", "High-density support", "Seamless roaming", "Advanced security"],
       delay: 0.1
     },
     {
-      icon: Router,
-      title: "Routing & Switching",
-      description: "High-performance routing and switching solutions for optimal network performance and traffic flow optimization.",
-      features: ["Layer 2/3 Switching", "Dynamic Routing", "QoS Management", "Traffic Optimization"],
+      icon: Globe,
+      title: "Outdoor WiFi Access Points",
+      description: "Weatherproof outdoor WiFi access points with extended range coverage, designed for challenging outdoor environments.",
+      features: ["Weatherproof design", "Extended range", "Outdoor durability", "High performance"],
       delay: 0.2
+    },
+    {
+      icon: Network,
+      title: "Network Switches",
+      description: "Layer 2 and Layer 3 managed network switches with PoE support, VLAN capabilities, and advanced management features.",
+      features: ["PoE support", "VLAN support", "Layer 2/3 switching", "Centralized management"],
+      delay: 0.3
+    },
+    {
+      icon: Router,
+      title: "Enterprise Routers",
+      description: "High-performance routers with advanced security features, VPN support, QoS, and intelligent traffic management.",
+      features: ["Advanced security", "VPN support", "QoS features", "Traffic management"],
+      delay: 0.4
     },
     {
       icon: Shield,
       title: "Network Security",
-      description: "Comprehensive security solutions including firewalls, VPNs, intrusion detection, and threat prevention.",
-      features: ["Next-Gen Firewalls", "VPN Solutions", "Intrusion Detection", "Threat Prevention"],
-      delay: 0.3
-    },
-    {
-      icon: Server,
-      title: "Data Center Networking",
-      description: "High-speed, low-latency networking solutions designed for modern data center environments.",
-      features: ["High-Speed Connectivity", "Low Latency", "Scalable Architecture", "Redundancy"],
-      delay: 0.4
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Networking",
-      description: "Hybrid and multi-cloud networking solutions with seamless integration and management.",
-      features: ["Hybrid Cloud", "Multi-Cloud", "Seamless Integration", "Centralized Management"],
+      description: "Comprehensive security features including firewalls, threat detection, access control, and network segmentation.",
+      features: ["Firewall protection", "Threat detection", "Access control", "Network segmentation"],
       delay: 0.5
     },
     {
-      icon: Database,
-      title: "Network Management",
-      description: "AI-powered network monitoring, automation, and optimization for peak performance.",
-      features: ["AI Monitoring", "Automation", "Performance Optimization", "Predictive Analytics"],
+      icon: Zap,
+      title: "Performance Optimization",
+      description: "Advanced QoS, load balancing, traffic optimization, and monitoring tools for maximum network performance.",
+      features: ["QoS optimization", "Load balancing", "Traffic optimization", "Performance monitoring"],
       delay: 0.6
     }
   ];
@@ -70,12 +70,12 @@ export default function NetworkingServices() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Comprehensive
-            <span className="block text-blue-600">Network Services</span>
+            Professional Network
+            <span className="block text-blue-600">Infrastructure Services</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            From wireless networking to data center solutions, we provide end-to-end 
-            networking services that keep your business connected, secure, and competitive.
+            From indoor and outdoor WiFi Access Points to network switches and enterprise routers, 
+            we provide comprehensive networking services that keep your business connected, secure, and competitive.
           </p>
         </motion.div>
 
@@ -121,7 +121,7 @@ export default function NetworkingServices() {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold mb-2">500+</div>
+              <div className="text-4xl font-bold mb-2">100+</div>
               <div className="text-blue-100">Networks Deployed</div>
             </div>
             <div>

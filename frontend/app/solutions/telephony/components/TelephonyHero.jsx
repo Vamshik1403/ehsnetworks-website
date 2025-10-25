@@ -54,15 +54,16 @@ export default function TelephonyHero() {
         }`}>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
-              Telephony
+              Telecom & Telephony
             </span>
             <br />
             <span className="text-white">Solutions</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your communication infrastructure with modern telephony solutions. From VoIP systems to 
-            unified communications, we deliver seamless connectivity that enhances collaboration and productivity.
+            Transform your communication infrastructure with comprehensive telecom and telephony solutions. 
+            From PSTN and ISDN integration to VoIP systems and customer support services, we deliver 
+            seamless connectivity that enhances business communication and customer experience.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -76,13 +77,13 @@ export default function TelephonyHero() {
             </button>
           </div>
 
-          {/* Telephony Capabilities Preview */}
+          {/* Telecom & Telephony Capabilities Preview */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
             {[
-              { icon: '📞', label: 'VoIP Systems', color: 'from-blue-400 to-blue-600' },
-              { icon: '🎧', label: 'Unified Comms', color: 'from-purple-400 to-purple-600' },
-              { icon: '💬', label: 'Video Calling', color: 'from-indigo-400 to-indigo-600' },
-              { icon: '📱', label: 'Mobile Integration', color: 'from-cyan-400 to-cyan-600' }
+              { icon: '📞', label: 'PSTN/ISDN', color: 'from-blue-400 to-blue-600' },
+              { icon: '🌐', label: 'VoIP/SIP', color: 'from-purple-400 to-purple-600' },
+              { icon: '🛡️', label: 'Security', color: 'from-indigo-400 to-indigo-600' },
+              { icon: '🎧', label: 'Customer Support', color: 'from-cyan-400 to-cyan-600' }
             ].map((capability, index) => (
               <div 
                 key={index}

@@ -6,7 +6,7 @@ import NetworkInfrastructureOverview from '../components/NetworkInfrastructureOv
 import NetworkInfrastructureChallenges from '../components/NetworkInfrastructureChallenges';
 import NetworkInfrastructureSolutions from '../components/NetworkInfrastructureSolutions';
 import NetworkInfrastructureServices from '../components/NetworkInfrastructureServices';
-import NetworkInfrastructureContact from '../components/NetworkInfrastructureContact';
+import NetworkInfrastructureLetsGetInTouch from '../components/NetworkInfrastructureLetsGetInTouch';
 import Partners from '../../../components/Partners';
 
 export default function NetworkInfrastructurePage() {
@@ -19,7 +19,7 @@ export default function NetworkInfrastructurePage() {
       <NetworkInfrastructureSolutions />
       <NetworkInfrastructureServices />
       <Partners />
-      <NetworkInfrastructureContact />
+      <NetworkInfrastructureLetsGetInTouch />
       <Footer />
     </>
   );

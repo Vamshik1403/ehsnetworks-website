@@ -7,38 +7,38 @@ export default function WirelessTechnologies() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Wireless <span className="text-blue-600">Technologies</span>
+            WiFi <span className="text-blue-600">Technologies</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We leverage the latest wireless technologies and standards to deliver cutting-edge 
-            solutions that meet the most demanding business requirements.
+            We leverage the latest WiFi technologies and standards to deliver enterprise-grade solutions 
+            that meet the most demanding business connectivity requirements.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
             <h3 className="text-3xl font-bold text-gray-900 mb-6">
-              Core Technologies
+              WiFi Technology Standards
             </h3>
             <div className="space-y-6">
               {[
                 {
-                  icon: '📱',
-                  title: '5G Networks',
-                  description: 'Next-generation cellular networks with ultra-low latency and massive device connectivity.',
-                  specs: ['Sub-1ms latency', '10Gbps speeds', '1M devices/km²']
+                  icon: '📶',
+                  title: 'WiFi 5 (802.11ac)',
+                  description: 'Established WiFi standard providing reliable high-speed connectivity for business applications.',
+                  specs: ['Up to 3.5 Gbps', 'MU-MIMO Support', '5 GHz Band', 'WPA2 Security']
                 },
                 {
                   icon: '🌐',
-                  title: 'WiFi 6/6E',
-                  description: 'Advanced WiFi standards for high-density environments and IoT applications.',
-                  specs: ['9.6Gbps throughput', 'OFDMA technology', 'Target Wake Time']
+                  title: 'WiFi 6 (802.11ax)',
+                  description: 'Next-generation WiFi standard with improved efficiency and performance for high-density environments.',
+                  specs: ['Up to 9.6 Gbps', 'OFDMA Technology', 'Target Wake Time', 'WPA3 Security']
                 },
                 {
-                  icon: '📡',
-                  title: 'LPWAN',
-                  description: 'Low-power wide-area networks for long-range IoT connectivity.',
-                  specs: ['10km+ range', '10+ year battery life', 'Low cost deployment']
+                  icon: '⚡',
+                  title: 'WiFi 7 (802.11be)',
+                  description: 'Latest WiFi standard offering unprecedented speeds and ultra-low latency for future applications.',
+                  specs: ['Up to 46 Gbps', '320 MHz Channels', 'Multi-Link Operation', 'Enhanced Security']
                 }
               ].map((tech, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
@@ -65,27 +65,27 @@ export default function WirelessTechnologies() {
 
           <div className="space-y-8">
             <h3 className="text-3xl font-bold text-gray-900 mb-6">
-              Advanced Features
+              Enterprise WiFi Features
             </h3>
             <div className="space-y-6">
               {[
                 {
                   icon: '🔄',
                   title: 'Mesh Networking',
-                  description: 'Self-healing network topologies for robust and scalable wireless coverage.',
-                  features: ['Automatic failover', 'Load balancing', 'Dynamic routing']
+                  description: 'Self-healing mesh networks for robust coverage and automatic failover capabilities.',
+                  features: ['Automatic Failover', 'Load Balancing', 'Dynamic Routing', 'Seamless Roaming']
                 },
                 {
                   icon: '🛡️',
-                  title: 'Security Protocols',
-                  description: 'Enterprise-grade security with advanced encryption and authentication.',
-                  features: ['WPA3 encryption', '802.1X authentication', 'Threat detection']
+                  title: 'Enterprise Security',
+                  description: 'Advanced security protocols with WPA3 encryption and enterprise authentication.',
+                  features: ['WPA3 Encryption', '802.1X Authentication', 'RADIUS Integration', 'Threat Detection']
                 },
                 {
                   icon: '📊',
-                  title: 'Analytics & Monitoring',
-                  description: 'Real-time network performance monitoring and predictive analytics.',
-                  features: ['Performance metrics', 'Predictive maintenance', 'Capacity planning']
+                  title: 'Analytics & Management',
+                  description: 'Comprehensive network management with real-time analytics and performance monitoring.',
+                  features: ['Real-time Analytics', 'Performance Monitoring', 'Capacity Planning', 'User Management']
                 }
               ].map((feature, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 shadow-md border border-gray-100">

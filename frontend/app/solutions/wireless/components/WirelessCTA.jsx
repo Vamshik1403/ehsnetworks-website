@@ -18,7 +18,7 @@ export default function WirelessCTA() {
           {/* Subtitle */}
           <div className="mb-8">
             <h3 className="text-lg font-medium text-yellow-400 mb-2 tracking-wider uppercase">
-              Ready to Transform Your Connectivity?
+              Ready to Upgrade Your WiFi Infrastructure?
             </h3>
             <div className="w-16 h-0.5 bg-yellow-400 mx-auto rounded-full" />
           </div>
@@ -26,9 +26,9 @@ export default function WirelessCTA() {
           {/* Main Heading */}
           <div className="mb-8">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              LET'S BUILD THE FUTURE OF
+              LET'S IMPLEMENT ENTERPRISE
               <span className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-                WIRELESS CONNECTIVITY
+                WIFI SOLUTIONS
               </span>
             </h2>
           </div>
@@ -36,8 +36,8 @@ export default function WirelessCTA() {
           {/* Description */}
           <div className="mb-12">
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our expert team is ready to help you implement cutting-edge wireless solutions that will 
-              revolutionize your business operations and drive unprecedented growth.
+              Our expert team is ready to help you implement cutting-edge WiFi solutions from leading manufacturers 
+              that will transform your business connectivity with WiFi 5, WiFi 6, and WiFi 7 technologies.
             </p>
           </div>
           
@@ -73,7 +73,7 @@ export default function WirelessCTA() {
           {/* Additional Info */}
           <div className="mt-12 pt-8 border-t border-white/20">
             <p className="text-gray-400 text-sm">
-              Join hundreds of businesses that have already transformed their connectivity with our wireless solutions.
+              Join hundreds of businesses that have already upgraded their WiFi infrastructure with our enterprise solutions.
             </p>
           </div>
         </div>

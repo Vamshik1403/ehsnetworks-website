@@ -9,10 +9,10 @@ import { createPortal } from "react-dom";
 import { usePathname } from "next/navigation";
 
 const menu = [
-  { label: "Home", href: "/" },
+  // { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Solutions", href: "/solutions" },
-  { label: "Contact", href: "/contact" },
+  // { label: "Solutions", href: "/solutions" },
+
   
 
   // {
@@ -20,41 +20,50 @@ const menu = [
   // },
 
 
-  // {
-  //   label: "Solutions",
-  //   dropdown: [
-  //     { label: "Wireless", href: "/solutions/wireless" },
-  //     { label: "Networking", href: "/solutions/networking" },
-  //     { label: "Telephony", href: "/solutions/telephony" },
-  //     { label: "Video Surveillance (CCTV)", href: "/solutions/video-surveillance" },
-  //     { label: "Access Controls", href: "/solutions/access-controls" },
-  //     { label: "Cloud & Computing", href: "/solutions/cloud-computing" },
-  //     { label: "Softwares", href: "/solutions/softwares" },
-  //   ],
-  // },
+  {
+    label: "Solutions",
+    dropdown: [
+      { label: "Wireless", href: "/solutions/wireless" },
+      { label: "Networking", href: "/solutions/networking" },
+      { label: "Telephony", href: "/solutions/telephony" },
+      { label: "Video Surveillance", href: "/solutions/video-surveillance" },
+      { label: "Access Controls", href: "/solutions/access-controls" },
+      { label: "Cloud & Computing", href: "/solutions/cloud-computing" },
+      { label: "Softwares", href: "/solutions/softwares" },
+    ],
+  },
 
 
 
-  // {
-  //   label: "Consulting",
-  //   dropdown: [
-  //     { label: "IT Consulting", href: "/consulting/it" },
-  //     { label: "Software & Automation Consulting", href: "/consulting/software-automation" },
-  //   ],
-  // },
+  {
+    label: "Consulting",
+    dropdown: [
+      { label: "IT Consulting", href: "/consulting/it" },
+      { label: "Software & Automation Consulting", href: "/consulting/software-automation" },
+    ],
+  },
 
 
 
-  // {
-  //   label: "Managed Services",
-  //   dropdown: [
-  //     { label: "Support Services", href: "/managed-services/support/onsite" },
-  //     { label: "Cloud Services", href: "/managed-services/cloud/network" },
-  //   ]
-  // },
+  {
+    label: "Managed Services",
+    dropdown: [
+      { label: "Support Services", href: "/managed-services/support/onsite" },
+      { label: "Cloud Services", href: "/managed-services/cloud/network" },
+    ]
+  },
   
+  {
+    label: "End Points",
+    dropdown: [
+      { label: "Laptops, Desktops & Mobile", href: "/end-points/laptops-desktops-mobile" },
+      { label: "IoT Security", href: "/end-points/iot-security" },
+      { label: "ENPL's IoT Physical Security", href: "/end-points/galaxys-iot-physical-security-services" },
+      ]
+  },
 
-  // { label: "Careers", href: "/careers" },
+  { label: "Careers", href: "/careers" },
+  { label: "Contact", href: "/contact" }
   
 ];
 
@@ -70,7 +79,9 @@ function Dropdown({ items, isResources, parentRect }) {
   // Function to check if a menu item is active
   const isActive = (href) => {
     if (!href) return false;
-    return pathname === href;
+    // Only show as active if we're exactly on that page, not on parent pages
+    const isCurrentlyActive = pathname === href;
+    return isCurrentlyActive;
   };
 
   // Helper to get bounding rect for submenu positioning
@@ -141,10 +152,6 @@ function Dropdown({ items, isResources, parentRect }) {
               <span className={`block px-4 py-3 font-medium transition-colors duration-200 cursor-pointer rounded-md relative
                 ${isActive(item.href) ? "text-purple-600 bg-purple-50" : "text-gray-900 hover:text-purple-600"}`}>
                 {item.label}
-                                 {/* Clean underline effect */}
-                 <span className={`absolute bottom-0 left-4 right-4 h-0.5 bg-purple-600 transform transition-all duration-300 ${
-                   isActive(item.href) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                 }`}></span>
               </span>
             </Link>
           )}
@@ -169,34 +176,54 @@ export default function Navbar() {
   // Function to check if any dropdown item is active
   const isDropdownActive = (dropdownItems) => {
     if (!dropdownItems) return false;
+    // Only show as active if we're actually on one of the dropdown pages
     return dropdownItems.some(item => {
       if (item.dropdown) {
         return isDropdownActive(item.dropdown);
       }
-      return isActive(item.href);
+      // Check if current pathname matches the dropdown item href
+      return pathname === item.href;
+    });
+  };
+
+  // Function to check if we're on a specific dropdown section
+  const isOnDropdownSection = (dropdownItems) => {
+    if (!dropdownItems) return false;
+    return dropdownItems.some(item => {
+      if (item.dropdown) {
+        return isOnDropdownSection(item.dropdown);
+      }
+      // Check if current pathname starts with the dropdown item href
+      return pathname.startsWith(item.href);
     });
   };
   return (
     <>
-    <nav className="w-full bg-gradient-to-r from-white via-blue-50 to-pink-50 shadow-lg border-b border-gray-100 sticky top-0 z-[9999]">
-      <div className="flex items-center justify-between px-4 sm:px-6 md:px-8 py-3 md:py-4 min-w-0">
+    <nav className="w-full bg-gradient-to-r from-white via-blue-50 to-pink-50 shadow-lg border-b border-gray-100 sticky top-0 z-50">
+      <div className="flex items-center justify-between px-4 sm:px-6 md:px-8 py-3 md:py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 sm:gap-4 group/logo cursor-pointer select-none">
-          <img
-            src="/icons/Enpl-logo.jpeg"
-            alt="ENPL Logo"
-            className="h-10 sm:h-12 w-10 sm:w-12 drop-shadow-lg rounded-full border-2 border-indigo-200"
-            style={{ boxShadow: '0 4px 16px 0 rgba(79,70,229,0.12)' }}
-          />
+          <div className="relative">
+            <img
+              src="/icons/Enpl-logo.jpeg"
+              alt="ENPL Logo"
+              className="h-10 sm:h-12 w-10 sm:w-12 drop-shadow-lg rounded-full border-2 border-blue-100 group-hover/logo:border-blue-400 group-hover/logo:shadow-xl transition-all duration-300 ease-in-out group-hover/logo:scale-110 group-hover/logo:rotate-3"
+              style={{ boxShadow: '0 4px 16px 0 rgba(30,64,175,0.08)' }}
+            />
+            {/* Real-time shine effect */}
+            <div className="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -skew-x-12 animate-logo-shine-sweep"></div>
+            </div>
+          </div>
           <div>
-          <span
-              className="text-lg sm:text-xl lg:text-2xl text-indigo-700 block font-bold tracking-wide"
-            style={{ letterSpacing: '0.01em', fontFamily: 'Montserrat, Open Sans, system-ui, sans-serif' }}
-          >
+            <span
+              className="font-extrabold text-xl sm:text-2xl tracking-tight bg-gradient-to-r from-blue-900 via-blue-500 to-pink-500 bg-clip-text text-transparent group-hover/logo:from-pink-600 group-hover/logo:to-blue-700 group-hover/logo:scale-110 group-hover/logo:drop-shadow-lg transition-all duration-300 ease-in-out animate-gradient-x block"
+              style={{ letterSpacing: '0.02em' }}
+            >
               Electrohelps Networks
-          </span>
-            <p className="text-xs sm:text-sm text-gray-600 font-medium">
-              Solution | Cloud | Consult | Assist
+            </span>
+            <p className="text-sm sm:text-sm text-gray-600 group-hover/logo:text-gray-700 transition-colors duration-300">
+              Solution | Cloud | Consulting | Assist
             </p>
           </div>
         </Link>
@@ -213,15 +240,11 @@ export default function Navbar() {
               >
                 <button
                   className={`px-2 xl:px-3 py-2 font-semibold text-xs xl:text-sm 2xl:text-base rounded-lg transition-all duration-300 bg-transparent border border-transparent flex items-center whitespace-nowrap relative
-                    ${activeDropdown === idx ? "text-purple-600" : isDropdownActive(item.dropdown) ? "text-purple-600" : "text-gray-900"}
+                    ${activeDropdown === idx ? "text-purple-600" : "text-gray-900"}
                     hover:text-purple-600
                     focus:outline-none focus:ring-2 focus:ring-purple-300`}
                 >
                   {item.label}
-                                     {/* Clean underline effect */}
-                   <span className={`absolute bottom-0 left-2 xl:left-3 right-2 xl:right-3 h-0.5 bg-purple-600 transform transition-all duration-300 ${
-                     activeDropdown === idx || isDropdownActive(item.dropdown) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                   }`}></span>
                   <span
                     className={`ml-1 transition-transform duration-300 ease-in-out ${activeDropdown === idx ? (item.label === 'Cloud Solutions' ? 'rotate-270' : 'translate-y-1') : ''}`}
                   >
@@ -243,10 +266,10 @@ export default function Navbar() {
                   hover:text-purple-600
                   focus:outline-none focus:ring-2 focus:ring-purple-300`}>
                   {item.label}
-                                     {/* Clean underline effect */}
+                  {/* Clean underline effect for main navbar links only */}
                   <span className={`absolute bottom-0 left-2 xl:left-3 right-2 xl:right-3 h-0.5 bg-purple-600 transform transition-all duration-300 ${
-                     isActive(item.href) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                   }`}></span>
+                    isActive(item.href) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                  }`}></span>
                 </span>
               </Link>
             )
@@ -372,10 +395,6 @@ export default function Navbar() {
                      onClick={() => setActiveDropdown(activeDropdown === idx ? null : idx)}
                    >
                     {item.label}
-                                         {/* Clean underline effect for mobile */}
-                     <span className={`absolute bottom-0 left-3 right-3 h-0.5 bg-purple-600 transform transition-all duration-300 ${
-                       isDropdownActive(item.dropdown) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                     }`}></span>
                                          <span className={`ml-1 transition-transform duration-500 ease-in-out ${activeDropdown === idx ? 'rotate-180' : ''} group-hover:scale-110`}>
                       <svg width="14" height="14" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 8L10 12L14 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -405,10 +424,6 @@ export default function Navbar() {
                                                                          <Link key={subSubIdx} href={subSubItem.href || "#"}>
                                        <span className={`block px-3 py-2 text-sm transition-all duration-300 cursor-pointer rounded-md relative
                                          ${isActive(subSubItem.href) ? "text-purple-600 bg-purple-50" : "text-gray-700 hover:text-purple-600 hover:bg-purple-50"}`}>
-                                                                                   {/* Clean underline effect for mobile sub-sub items */}
-                                          <span className={`absolute bottom-0 left-3 right-3 h-0.5 bg-purple-600 transform transition-all duration-300 ${
-                                            isActive(subSubItem.href) ? 'scale-x-100' : 'scale-x-0 hover:scale-x-100'
-                                          }`}></span>
                                          <span className="relative z-10">{subSubItem.label}</span>
                                        </span>
                                      </Link>
@@ -420,10 +435,6 @@ export default function Navbar() {
                                                          <Link href={subItem.href || "#"}>
                                <span className={`block px-3 py-2 font-medium text-sm transition-all duration-300 cursor-pointer rounded-md relative
                                  ${isActive(subItem.href) ? "text-purple-600 bg-purple-50" : "text-gray-700 hover:text-purple-600 hover:bg-purple-50"}`}>
-                                 {/* Clean underline effect for mobile dropdown items */}
-                                 <span className={`absolute bottom-0 left-3 right-3 h-0.5 bg-purple-600 transform transition-all duration-300 ${
-                                   isActive(subItem.href) ? 'scale-x-100' : 'scale-x-100'
-                                 }`}></span>
                                  <span className="relative z-10">{subItem.label}</span>
                                </span>
                              </Link>
@@ -440,10 +451,10 @@ export default function Navbar() {
                      focus:outline-none focus:ring-2 focus:ring-purple-300 animate-fade-in-up
                      ${isActive(item.href) ? "text-purple-600 bg-purple-50" : "text-gray-900"}`} style={{ animationDelay: `${idx * 0.1}s` }}>
                      {item.label}
-                                           {/* Clean underline effect for mobile main items */}
-                      <span className={`absolute bottom-0 left-3 right-3 h-0.5 bg-purple-600 transform transition-all duration-300 ${
-                        isActive(item.href) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                      }`}></span>
+                     {/* Clean underline effect for mobile main navbar links only */}
+                     <span className={`absolute bottom-0 left-3 right-3 h-0.5 bg-purple-600 transform transition-all duration-300 ${
+                       isActive(item.href) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                     }`}></span>
                    </span>
                  </Link>
                )
@@ -468,6 +479,63 @@ export default function Navbar() {
         }
         .animate-fade-in-up {
           animation: fade-in-up 0.5s ease-out;
+        }
+        
+        /* Premium Logo Animations */
+        @keyframes float-1 {
+          0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); opacity: 0.6 }
+          50% { transform: translateY(-8px) rotate(180deg) scale(1.2); opacity: 1 }
+        }
+        .animate-float-1 { animation: float-1 3s ease-in-out infinite; }
+
+        @keyframes float-2 {
+          0%, 100% { transform: translateY(0px) scale(1); opacity: 0.4 }
+          50% { transform: translateY(-6px) scale(1.1); opacity: 0.8 }
+        }
+        .animate-float-2 { animation: float-2 4s ease-in-out infinite 0.5s; }
+
+        @keyframes float-3 {
+          0%, 100% { transform: translateY(0px) scale(1); opacity: 0.5 }
+          50% { transform: translateY(-10px) scale(1.3); opacity: 0.9 }
+        }
+        .animate-float-3 { animation: float-3 5s ease-in-out infinite 1s; }
+
+        @keyframes pulse-slow {
+          0%, 100% { opacity: 0.3; transform: scale(1); }
+          50% { opacity: 0.8; transform: scale(1.1); }
+        }
+        .animate-pulse-slow { animation: pulse-slow 4s ease-in-out infinite; }
+
+        /* Moving Shine Animations - Right to Left */
+        @keyframes logo-shine-sweep {
+          0% { transform: translateX(100%) translateY(-100%) rotate(45deg) scale(150%); }
+          100% { transform: translateX(-100%) translateY(100%) rotate(45deg) scale(150%); }
+        }
+        .animate-logo-shine-sweep { 
+          animation: logo-shine-sweep 3s ease-in-out infinite; 
+        }
+
+        @keyframes text-shine-sweep {
+          0% { transform: translateX(100%) translateY(-100%) rotate(45deg) scale(150%); }
+          100% { transform: translateX(-100%) translateY(100%) rotate(45deg) scale(150%); }
+        }
+        .animate-text-shine-sweep { 
+          animation: text-shine-sweep 4s ease-in-out infinite 0.5s; 
+        }
+
+        @keyframes tagline-shine-sweep {
+          0% { transform: translateX(100%) translateY(-100%) rotate(45deg) scale(150%); }
+          100% { transform: translateX(-100%) translateY(100%) rotate(45deg) scale(150%); }
+        }
+        .animate-tagline-shine-sweep { 
+          animation: tagline-shine-sweep 5s ease-in-out infinite 1s; 
+        }
+
+        /* Gradient text support */
+        .bg-clip-text {
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
         
         /* Ensure dropdowns are always on top */

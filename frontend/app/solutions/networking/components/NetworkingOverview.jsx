@@ -11,39 +11,39 @@ export default function NetworkingOverview() {
 
   const features = [
     {
-      icon: Network,
-      title: "High-Performance Networks",
-      description: "Enterprise-grade networking with 10Gbps+ speeds and ultra-low latency for mission-critical applications.",
+      icon: Wifi,
+      title: "Indoor WiFi Access Points",
+      description: "High-performance indoor WiFi access points with WiFi 6/6E technology for optimal coverage and capacity in office environments.",
       delay: 0.1
     },
     {
-      icon: Shield,
-      title: "Advanced Security",
-      description: "Multi-layered security with firewalls, VPNs, and threat detection to protect your network infrastructure.",
+      icon: Globe,
+      title: "Outdoor WiFi Access Points",
+      description: "Weatherproof outdoor WiFi access points with extended range coverage for outdoor environments and challenging locations.",
       delay: 0.2
     },
     {
-      icon: Zap,
-      title: "Lightning Fast",
-      description: "Optimized routing and switching for maximum throughput and minimal packet loss across your network.",
+      icon: Network,
+      title: "Network Switches",
+      description: "Layer 2 and Layer 3 managed network switches with PoE support for scalable and secure network infrastructure.",
       delay: 0.3
     },
     {
-      icon: Globe,
-      title: "Global Connectivity",
-      description: "Seamless connectivity across multiple locations with intelligent load balancing and failover.",
+      icon: Router,
+      title: "Enterprise Routers",
+      description: "High-performance routers with advanced security features, VPN support, and intelligent traffic management.",
       delay: 0.4
     },
     {
-      icon: Server,
-      title: "Scalable Infrastructure",
-      description: "Flexible architecture that grows with your business needs and handles increasing network demands.",
+      icon: Shield,
+      title: "Network Security",
+      description: "Comprehensive security features including firewalls, VLAN support, and advanced threat protection for secure networking.",
       delay: 0.5
     },
     {
-      icon: Cpu,
-      title: "Smart Management",
-      description: "AI-powered network monitoring and automated optimization for peak performance and reliability.",
+      icon: Zap,
+      title: "Performance Optimization",
+      description: "Advanced QoS, load balancing, and traffic optimization for maximum network performance and reliability.",
       delay: 0.6
     }
   ];
@@ -64,13 +64,13 @@ export default function NetworkingOverview() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Enterprise Networking
-            <span className="block text-blue-600">Redefined</span>
+            Comprehensive Network
+            <span className="block text-blue-600">Infrastructure Solutions</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Our comprehensive networking solutions combine cutting-edge technology with 
-            proven expertise to deliver the performance, security, and reliability your 
-            business demands in today's interconnected world.
+            Our comprehensive networking solutions provide indoor and outdoor WiFi Access Points, 
+            network switches, and routers designed to deliver enterprise-grade performance, 
+            security, and reliability for modern business environments.
           </p>
         </motion.div>
 
@@ -102,9 +102,9 @@ export default function NetworkingOverview() {
           className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-12 mb-16"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Network Architecture</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Network Infrastructure Components</h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Our multi-layered approach ensures optimal performance, security, and scalability
+              Our comprehensive approach ensures optimal performance, security, and scalability with industry-leading products
             </p>
           </div>
           
@@ -113,29 +113,29 @@ export default function NetworkingOverview() {
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Wifi className="w-8 h-8 text-white" />
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Access Layer</h4>
-              <p className="text-sm text-gray-600">End-user connectivity</p>
+              <h4 className="font-semibold text-gray-900 mb-2">WiFi Access Points</h4>
+              <p className="text-sm text-gray-600">Indoor & Outdoor coverage</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Router className="w-8 h-8 text-white" />
+                <Network className="w-8 h-8 text-white" />
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Distribution Layer</h4>
-              <p className="text-sm text-gray-600">Traffic management</p>
+              <h4 className="font-semibold text-gray-900 mb-2">Network Switches</h4>
+              <p className="text-sm text-gray-600">Layer 2 & Layer 3</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Server className="w-8 h-8 text-white" />
+                <Router className="w-8 h-8 text-white" />
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Core Layer</h4>
-              <p className="text-sm text-gray-600">High-speed backbone</p>
+              <h4 className="font-semibold text-gray-900 mb-2">Enterprise Routers</h4>
+              <p className="text-sm text-gray-600">High-performance routing</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-8 h-8 text-white" />
+                <Shield className="w-8 h-8 text-white" />
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Internet Layer</h4>
-              <p className="text-sm text-gray-600">External connectivity</p>
+              <h4 className="font-semibold text-gray-900 mb-2">Security Features</h4>
+              <p className="text-sm text-gray-600">Advanced protection</p>
             </div>
           </div>
         </motion.div>

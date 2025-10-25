@@ -7,51 +7,51 @@ export default function WirelessCapabilities() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Wireless <span className="text-blue-600">Capabilities</span>
+            Enterprise WiFi <span className="text-blue-600">Solutions</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our comprehensive wireless solutions cover every aspect of modern connectivity, 
-            ensuring your business stays ahead in the digital transformation journey.
+            We provide comprehensive WiFi solutions from leading manufacturers, offering WiFi 5, WiFi 6, and WiFi 7 
+            technologies tailored for different business environments and requirements.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              icon: '📶',
-              title: '5G Network Solutions',
-              description: 'Deploy cutting-edge 5G networks with ultra-low latency and massive connectivity for IoT applications.',
-              features: ['Network Planning', 'Infrastructure Setup', 'Performance Optimization']
+              icon: '🏢',
+              title: 'NETGEAR Business WiFi',
+              description: 'Best overall enterprise Wi-Fi solution with high-speed connectivity up to 6 Gbps and comprehensive management features.',
+              features: ['WiFi 6 Technology', 'WPA3 Encryption', 'Remote Management', 'Advanced Analytics']
             },
             {
               icon: '🌐',
-              title: 'WiFi 6 Technology',
-              description: 'Implement next-generation WiFi 6 for faster speeds, better coverage, and improved device handling.',
-              features: ['Access Point Deployment', 'Channel Optimization', 'Security Implementation']
-            },
-            {
-              icon: '📡',
-              title: 'Satellite Communications',
-              description: 'Reliable satellite connectivity solutions for remote locations and disaster recovery scenarios.',
-              features: ['VSAT Installation', 'Bandwidth Management', 'Redundancy Planning']
-            },
-            {
-              icon: '🔗',
-              title: 'IoT Connectivity',
-              description: 'Seamless IoT device connectivity with LPWAN, cellular, and mesh network solutions.',
-              features: ['Device Integration', 'Network Management', 'Data Analytics']
-            },
-            {
-              icon: '🔄',
-              title: 'Mesh Networks',
-              description: 'Self-healing mesh network solutions for robust and scalable wireless coverage.',
-              features: ['Network Design', 'Automatic Failover', 'Load Balancing']
+              title: 'Ubiquiti UniFi',
+              description: 'Best for small to medium businesses with license-free software and extensive hardware selection.',
+              features: ['License-free Software', 'Visual Management', 'Scalable Architecture', 'Cost-effective']
             },
             {
               icon: '🛡️',
-              title: 'Wireless Security',
-              description: 'Advanced security protocols and encryption for protecting wireless communications.',
-              features: ['Encryption Standards', 'Access Control', 'Threat Detection']
+              title: 'Sophos Wireless',
+              description: 'Best for mixed device environments with adaptive nature and seamless integration capabilities.',
+              features: ['Mixed Device Support', 'Centralized Management', 'Fast Transition', 'Security Integration']
+            },
+            {
+              icon: '⚡',
+              title: 'Cisco Meraki MR',
+              description: 'Best for challenging enterprise environments with self-configuring deployment and advanced security.',
+              features: ['Self-configuring', '802.11ax MU-MIMO', 'Advanced Security', 'AI/ML Analytics']
+            },
+            {
+              icon: '🔄',
+              title: 'HPE Aruba WLAN',
+              description: 'Best for hybrid environments with Wi-Fi 6/6E support and AI-powered network operations.',
+              features: ['WiFi 6/6E Support', 'AI-powered Operations', 'Cloud Management', 'IoT Ready']
+            },
+            {
+              icon: '📊',
+              title: 'WiFi Technology Standards',
+              description: 'Comprehensive support for WiFi 5, WiFi 6, and WiFi 7 technologies across all solutions.',
+              features: ['WiFi 5 (802.11ac)', 'WiFi 6 (802.11ax)', 'WiFi 7 (802.11be)', 'Future-proof Technology']
             }
           ].map((capability, index) => (
             <div 

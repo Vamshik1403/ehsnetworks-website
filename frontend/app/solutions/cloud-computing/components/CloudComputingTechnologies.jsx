@@ -35,10 +35,10 @@ export default function CloudComputingTechnologies() {
                   specs: ['Docker Containers', 'Kubernetes', 'Microservices', 'Orchestration']
                 },
                 {
-                  icon: '🔄',
-                  title: 'DevOps Tools',
-                  description: 'CI/CD pipelines and automation tools for continuous deployment.',
-                  specs: ['CI/CD Pipelines', 'GitOps', 'Infrastructure as Code', 'Automation']
+                  icon: '💾',
+                  title: 'Data Management',
+                  description: 'Comprehensive data storage, backup, and management solutions for business continuity.',
+                  specs: ['Data Backup', 'Storage Solutions', 'Data Recovery', 'Database Management']
                 }
               ].map((tech, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 shadow-md border border-gray-100">

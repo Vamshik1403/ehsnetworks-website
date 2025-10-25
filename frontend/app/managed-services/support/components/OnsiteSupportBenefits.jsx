@@ -52,7 +52,7 @@ export default function OnsiteSupportBenefits() {
     { number: "2-4hrs", label: "Response Time" },
     { number: "100%", label: "Issue Resolution" },
     { number: "24/7", label: "Emergency Support" },
-    { number: "50+", label: "Cities Covered" }
+    { number: "5+", label: "Cities Covered" }
   ];
 
   return (
@@ -140,7 +140,7 @@ export default function OnsiteSupportBenefits() {
         </motion.div>
 
         {/* Service Guarantee */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -155,7 +155,7 @@ export default function OnsiteSupportBenefits() {
               We guarantee that all onsite support issues will be resolved during our visit, or we'll return at no additional cost until the problem is completely solved.
             </p>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

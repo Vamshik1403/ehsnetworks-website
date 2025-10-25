@@ -7,51 +7,51 @@ export default function WirelessUseCases() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Wireless <span className="text-blue-600">Use Cases</span>
+            WiFi <span className="text-blue-600">Use Cases</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how our wireless solutions are transforming businesses across various industries 
-            and creating new opportunities for growth and innovation.
+            Discover how our enterprise WiFi solutions are transforming businesses across various industries 
+            with reliable, high-performance wireless connectivity for modern applications.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
+              icon: '🏢',
+              title: 'Enterprise Offices',
+              description: 'High-density WiFi solutions for corporate offices with seamless roaming and enterprise security.',
+              benefits: ['Seamless Roaming', 'High Density', 'Enterprise Security', 'Guest Access']
+            },
+            {
               icon: '🏭',
-              title: 'Manufacturing',
-              description: 'Smart factory solutions with wireless IoT sensors for predictive maintenance and quality control.',
-              benefits: ['Real-time monitoring', 'Predictive maintenance', 'Quality assurance']
+              title: 'Manufacturing Facilities',
+              description: 'Robust WiFi networks for industrial environments with IoT device connectivity and real-time monitoring.',
+              benefits: ['Industrial Grade', 'IoT Connectivity', 'Real-time Monitoring', 'Reliable Coverage']
             },
             {
               icon: '🏥',
-              title: 'Healthcare',
-              description: 'Wireless medical device connectivity and patient monitoring systems for improved care delivery.',
-              benefits: ['Patient monitoring', 'Medical device integration', 'Emergency response']
+              title: 'Healthcare Facilities',
+              description: 'HIPAA-compliant WiFi solutions for hospitals with medical device connectivity and patient monitoring.',
+              benefits: ['HIPAA Compliance', 'Medical Device Support', 'Patient Monitoring', 'Emergency Systems']
             },
             {
-              icon: '🏢',
-              title: 'Smart Buildings',
-              description: 'Intelligent building management with wireless sensors for energy optimization and security.',
-              benefits: ['Energy management', 'Security systems', 'Climate control']
-            },
-            {
-              icon: '🚛',
-              title: 'Logistics',
-              description: 'Fleet tracking and supply chain visibility through advanced wireless connectivity solutions.',
-              benefits: ['Real-time tracking', 'Route optimization', 'Inventory management']
+              icon: '🏫',
+              title: 'Educational Institutions',
+              description: 'Campus-wide WiFi solutions for schools and universities with student device management and content filtering.',
+              benefits: ['Campus Coverage', 'Device Management', 'Content Filtering', 'Student Access']
             },
             {
               icon: '🏪',
-              title: 'Retail',
-              description: 'Enhanced customer experience with wireless POS systems and inventory management.',
-              benefits: ['Mobile payments', 'Inventory tracking', 'Customer analytics']
+              title: 'Retail Environments',
+              description: 'Customer-focused WiFi solutions for retail stores with analytics, guest access, and POS integration.',
+              benefits: ['Customer Analytics', 'Guest WiFi', 'POS Integration', 'Inventory Management']
             },
             {
-              icon: '🌾',
-              title: 'Agriculture',
-              description: 'Precision farming with wireless sensors for soil monitoring and crop management.',
-              benefits: ['Soil monitoring', 'Irrigation control', 'Crop optimization']
+              icon: '🏗️',
+              title: 'Construction Sites',
+              description: 'Temporary WiFi solutions for construction projects with mobile access and project management tools.',
+              benefits: ['Temporary Setup', 'Mobile Access', 'Project Management', 'Team Communication']
             }
           ].map((useCase, index) => (
             <div 

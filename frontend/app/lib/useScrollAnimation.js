@@ -1,57 +1,87 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 
 export const useScrollAnimation = () => {
   const [isVisible, setIsVisible] = useState({});
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    // Small delay to ensure DOM is ready
+    const timer = setTimeout(() => {
+      const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -100px 0px'
+      };
 
-    const sections = document.querySelectorAll('[data-animate]');
-
-    // Make sections that are already in the viewport visible immediately
-    const initiallyVisible = {};
-    sections.forEach((s) => {
-      const rect = s.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        if (s.id) initiallyVisible[s.id] = true;
-      }
-    });
-    if (Object.keys(initiallyVisible).length > 0) {
-      setIsVisible(prev => ({ ...prev, ...initiallyVisible }));
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
+      const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            if (entry.target.id) setIsVisible(prev => ({ ...prev, [entry.target.id]: true }));
+            const sectionId = entry.target.id;
+            if (sectionId) {
+              setIsVisible(prev => ({
+                ...prev,
+                [sectionId]: true
+              }));
+            }
           }
         });
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      }
-    );
+      }, observerOptions);
 
-    sections.forEach((section) => {
-      observer.observe(section);
+      // Observe all sections with data-animate attribute
+      const sections = document.querySelectorAll('[data-animate]');
+      sections.forEach((section) => {
+        if (section.id) {
+          observer.observe(section);
+        }
+      });
+
+      // Cleanup function
+      return () => {
+        sections.forEach((section) => {
+          observer.unobserve(section);
+        });
+      };
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return isVisible;
+};
+
+// Advanced animation hook for staggered effects
+export const useAdvancedScrollAnimation = () => {
+  const [animatedElements, setAnimatedElements] = useState(new Set());
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.15,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const elementId = entry.target.id;
+          if (elementId) {
+            setAnimatedElements(prev => new Set([...prev, elementId]));
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Observe all elements with animation classes
+    const elements = document.querySelectorAll('[data-animate], .animate-on-scroll');
+    elements.forEach((element) => {
+      observer.observe(element);
     });
 
-    // Safety: if IntersectionObserver doesn't fire for some reason, reveal after short timeout
-    const revealTimeout = setTimeout(() => {
-      sections.forEach((s) => {
-        if (s.id) setIsVisible(prev => ({ ...prev, [s.id]: true }));
-      });
-    }, 2500);
-
     return () => {
-      clearTimeout(revealTimeout);
-      sections.forEach((section) => {
-        observer.unobserve(section);
+      elements.forEach((element) => {
+        observer.unobserve(element);
       });
     };
   }, []);
 
-  return isVisible;
+  return animatedElements;
 };

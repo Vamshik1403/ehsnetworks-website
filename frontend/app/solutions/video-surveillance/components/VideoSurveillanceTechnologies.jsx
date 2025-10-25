@@ -7,38 +7,38 @@ export default function VideoSurveillanceTechnologies() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Video Surveillance <span className="text-blue-600">Technologies</span>
+            CMS & VMS <span className="text-blue-600">Technologies</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We leverage the latest surveillance technologies and standards to deliver cutting-edge 
-            solutions that meet the most demanding security requirements.
+            We leverage advanced CMS and VMS technologies to deliver comprehensive video surveillance management 
+            solutions that meet the most demanding security and operational requirements.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
             <h3 className="text-3xl font-bold text-gray-900 mb-6">
-              Core Technologies
+              CMS & VMS Core Technologies
             </h3>
             <div className="space-y-6">
               {[
                 {
-                  icon: '📹',
-                  title: 'IP Camera Systems',
-                  description: 'High-definition IP cameras with advanced compression and network protocols.',
-                  specs: ['4K Resolution', 'H.265 Compression', 'PoE Support', 'Night Vision']
+                  icon: '🏢',
+                  title: 'Central Management System (CMS)',
+                  description: 'Advanced CMS technology for centralized control of multiple video surveillance servers and locations.',
+                  specs: ['Multi-server Management', 'Centralized Control', 'Unified Dashboard', 'Scalable Architecture']
                 },
                 {
-                  icon: '🎥',
-                  title: 'Recording Solutions',
-                  description: 'Advanced DVR/NVR systems with intelligent storage and backup capabilities.',
-                  specs: ['RAID Storage', 'Cloud Backup', 'Smart Recording', 'Multiple Formats']
+                  icon: '📹',
+                  title: 'Video Management System (VMS)',
+                  description: 'Professional VMS with TRASSIR interface for comprehensive video surveillance management.',
+                  specs: ['TRASSIR Interface', 'Live Monitoring', 'Video Recording', 'Professional Tools']
                 },
                 {
                   icon: '🌐',
-                  title: 'Network Infrastructure',
-                  description: 'Robust network solutions for reliable video transmission and management.',
-                  specs: ['Gigabit Ethernet', 'WiFi 6 Support', 'VPN Access', 'Bandwidth Management']
+                  title: 'Web & Mobile Access',
+                  description: 'User-friendly web interface and mobile applications for remote access and monitoring.',
+                  specs: ['Web Interface', 'Mobile Apps', 'Remote Access', '24/7 Monitoring']
                 }
               ].map((tech, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
@@ -65,27 +65,27 @@ export default function VideoSurveillanceTechnologies() {
 
           <div className="space-y-8">
             <h3 className="text-3xl font-bold text-gray-900 mb-6">
-              Advanced Features
+              Advanced CMS & VMS Features
             </h3>
             <div className="space-y-6">
               {[
                 {
-                  icon: '🔍',
-                  title: 'AI Analytics',
-                  description: 'Intelligent video analytics for automated detection and monitoring.',
-                  features: ['Motion Detection', 'Object Recognition', 'Behavior Analysis', 'Alert Systems']
-                },
-                {
-                  icon: '🔒',
-                  title: 'Security Protocols',
-                  description: 'Enterprise-grade security with encryption and access control.',
-                  features: ['Data Encryption', 'User Authentication', 'Access Control', 'Audit Logs']
-                },
-                {
                   icon: '📊',
-                  title: 'Management Systems',
-                  description: 'Centralized management with real-time monitoring and reporting.',
-                  features: ['Centralized Control', 'Real-time Monitoring', 'Performance Reports', 'Remote Access']
+                  title: 'System Monitoring & Reporting',
+                  description: 'Continuous monitoring of video surveillance system status with comprehensive reporting capabilities.',
+                  features: ['Status Monitoring', 'Performance Reports', 'Alert Systems', 'Health Checks']
+                },
+                {
+                  icon: '👥',
+                  title: 'Unified User Management',
+                  description: 'Centralized user management with LDAP integration for secure access control across all systems.',
+                  features: ['User Management', 'LDAP Integration', 'Role-based Access', 'Security Controls']
+                },
+                {
+                  icon: '🔄',
+                  title: 'Direct Camera Connection',
+                  description: 'Connect cameras directly to CMS without requiring NVR, simplifying system architecture.',
+                  features: ['Direct Connection', 'Simplified Setup', 'Reduced Hardware', 'Cost Efficiency']
                 }
               ].map((feature, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 shadow-md border border-gray-100">

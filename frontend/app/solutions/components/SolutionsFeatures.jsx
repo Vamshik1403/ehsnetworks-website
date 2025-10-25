@@ -158,7 +158,7 @@ const SolutionsFeatures = () => {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
-                { number: '500+', label: 'Enterprise Clients' },
+                { number: '100+', label: 'Enterprise Clients' },
                 { number: '99.9%', label: 'Uptime SLA' },
                 { number: '24/7', label: 'Support Coverage' },
                 { number: '15+', label: 'Years Experience' }
