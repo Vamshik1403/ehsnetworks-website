@@ -104,7 +104,7 @@ export default function OnsiteSupportBenefits() {
         </div>
 
         {/* Statistics Section */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -137,7 +137,7 @@ export default function OnsiteSupportBenefits() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Service Guarantee */}
         {/* <motion.div

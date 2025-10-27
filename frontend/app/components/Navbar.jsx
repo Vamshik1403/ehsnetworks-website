@@ -58,11 +58,10 @@ const menu = [
     dropdown: [
       { label: "Laptops, Desktops & Mobile", href: "/end-points/laptops-desktops-mobile" },
       { label: "IoT Security", href: "/end-points/iot-security" },
-      { label: "ENPL's IoT Physical Security", href: "/end-points/galaxys-iot-physical-security-services" },
       ]
   },
 
-  { label: "Careers", href: "/careers" },
+  // { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" }
   
 ];
@@ -200,14 +199,14 @@ export default function Navbar() {
   return (
     <>
     <nav className="w-full bg-gradient-to-r from-white via-blue-50 to-pink-50 shadow-lg border-b border-gray-100 sticky top-0 z-50">
-      <div className="flex items-center justify-between px-4 sm:px-6 md:px-8 py-3 md:py-4">
+      <div className="flex items-center justify-between px-2 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-3 md:py-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 sm:gap-4 group/logo cursor-pointer select-none">
-          <div className="relative">
+        <Link href="/" className="flex items-center gap-1.5 sm:gap-2 md:gap-3 lg:gap-4 group/logo cursor-pointer select-none flex-shrink-0 max-w-[45%] md:max-w-none">
+          <div className="relative flex-shrink-0">
             <img
               src="/icons/Enpl-logo.jpeg"
               alt="ENPL Logo"
-              className="h-10 sm:h-12 w-10 sm:w-12 drop-shadow-lg rounded-full border-2 border-blue-100 group-hover/logo:border-blue-400 group-hover/logo:shadow-xl transition-all duration-300 ease-in-out group-hover/logo:scale-110 group-hover/logo:rotate-3"
+              className="h-10 w-10 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-8 lg:w-8 xl:h-10 xl:w-10 2xl:h-12 2xl:w-12 drop-shadow-lg rounded-full border-2 border-blue-100 group-hover/logo:border-blue-400 group-hover/logo:shadow-xl transition-all duration-300 ease-in-out group-hover/logo:scale-110 group-hover/logo:rotate-3"
               style={{ boxShadow: '0 4px 16px 0 rgba(30,64,175,0.08)' }}
             />
             {/* Real-time shine effect */}
@@ -215,20 +214,20 @@ export default function Navbar() {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -skew-x-12 animate-logo-shine-sweep"></div>
             </div>
           </div>
-          <div>
+          <div className="min-w-0">
             <span
-              className="font-extrabold text-xl sm:text-2xl tracking-tight bg-gradient-to-r from-blue-900 via-blue-500 to-pink-500 bg-clip-text text-transparent group-hover/logo:from-pink-600 group-hover/logo:to-blue-700 group-hover/logo:scale-110 group-hover/logo:drop-shadow-lg transition-all duration-300 ease-in-out animate-gradient-x block"
+              className="font-extrabold text-xl sm:text-xl md:text-2xl lg:text-sm xl:text-lg 2xl:text-2xl tracking-tight bg-gradient-to-r from-blue-900 via-blue-500 to-pink-500 bg-clip-text text-transparent group-hover/logo:from-pink-600 group-hover/logo:to-blue-700 group-hover/logo:scale-110 group-hover/logo:drop-shadow-lg transition-all duration-300 ease-in-out animate-gradient-x block truncate"
               style={{ letterSpacing: '0.02em' }}
             >
               Electrohelps Networks
             </span>
-            <p className="text-sm sm:text-sm text-gray-600 group-hover/logo:text-gray-700 transition-colors duration-300">
+            <p className="text-[10px] sm:text-[10px] md:text-xs lg:text-[9px] xl:text-sm text-gray-600 group-hover/logo:text-gray-700 transition-colors duration-300 truncate">
               Solution | Cloud | Consulting | Assist
             </p>
           </div>
         </Link>
         {/* Desktop Menu */}
-        <div className="hidden lg:flex gap-1 xl:gap-2 2xl:gap-4 items-center flex-1 justify-end ml-4 xl:ml-6 2xl:ml-8 min-w-0">
+        <div className="hidden lg:flex gap-2 xl:gap-3 2xl:gap-4 items-center flex-1 justify-end ml-4 xl:ml-6 2xl:ml-8 min-w-0">
           {menu.map((item, idx) =>
             item.dropdown ? (
               <div
@@ -300,6 +299,26 @@ export default function Navbar() {
               <div className="absolute -top-2 right-6 w-4 h-4 bg-white border-l border-t border-gray-100 transform rotate-45"></div>
               
               <div className="p-6 space-y-6">
+                {/* General Contact Phone */}
+                <div className="group/phone">
+                  <div className="flex items-center space-x-3 mb-3">
+                    <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-purple-600 rounded-lg flex items-center justify-center shadow-lg group-hover/phone:scale-110 transition-transform duration-300">
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-800 group-hover/phone:text-purple-600 transition-colors duration-300">Phone</h3>
+                  </div>
+                  <div className="ml-11 space-y-2">
+                    <a href="tel:+912240244440" className="flex items-center space-x-2 text-gray-600 hover:text-purple-600 transition-colors duration-300 group-hover/phone:translate-x-1 cursor-pointer">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      <span className="text-sm font-semibold">022 4024 4440</span>
+                    </a>
+                  </div>
+                </div>
+
                 {/* Sales Section */}
                 <div className="group/sales">
                   <div className="flex items-center space-x-3 mb-3">

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function SoftwaresCTA() {
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white relative overflow-hidden">
+    <section className="py-10 md:py-12 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 blur-3xl animate-pulse-slow" />
@@ -16,16 +16,16 @@ export default function SoftwaresCTA() {
       <div className="relative z-10 px-4">
         <div className="max-w-6xl mx-auto text-center">
           {/* Subtitle */}
-          <div className="mb-8">
-            <h3 className="text-lg font-medium text-yellow-400 mb-2 tracking-wider uppercase">
+          <div className="mb-3">
+            <h3 className="text-sm md:text-base font-medium text-yellow-400 mb-1 tracking-wider uppercase">
               Ready to Build Your Software Solution?
             </h3>
             <div className="w-16 h-0.5 bg-yellow-400 mx-auto rounded-full" />
           </div>
           
           {/* Main Heading */}
-          <div className="mb-8">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <div className="mb-3">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 leading-tight">
               LET'S BUILD THE FUTURE OF
               <span className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
                 SOFTWARE DEVELOPMENT
@@ -34,15 +34,15 @@ export default function SoftwaresCTA() {
           </div>
           
           {/* Description */}
-          <div className="mb-12">
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <div className="mb-4">
+            <p className="text-sm md:text-base text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Our expert team is ready to help you create cutting-edge software solutions that will 
               revolutionize your business operations and drive unprecedented growth and innovation.
             </p>
           </div>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
             <Link href="/contact">
               <button className="group relative bg-white text-gray-900 px-10 py-5 rounded-2xl shadow-2xl hover:shadow-yellow-400/25 transition-all duration-500 font-bold text-lg border-2 border-yellow-400 hover:bg-yellow-400 hover:text-gray-900 transform hover:scale-110 hover:-translate-y-1">
                 {/* Button Background Glow */}
@@ -71,8 +71,8 @@ export default function SoftwaresCTA() {
           </div>
           
           {/* Additional Info */}
-          <div className="mt-12 pt-8 border-t border-white/20">
-            <p className="text-gray-400 text-sm">
+          <div className="mt-6 pt-4 border-t border-white/20">
+            <p className="text-gray-400 text-xs md:text-sm">
               Join hundreds of businesses that have already transformed their operations with our custom software solutions.
             </p>
           </div>

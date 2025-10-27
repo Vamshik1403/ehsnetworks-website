@@ -9,6 +9,7 @@ const solutions = [
   {
     title: 'Wireless',
     icon: '/solutions/wifi.png',
+    link: '/solutions/wireless',
     services: [
       'Wireless LAN (Indoor/Outdoor Wi-Fi)',
       'Wireless Mesh Networks',
@@ -23,6 +24,7 @@ const solutions = [
   {
     title: 'Networking',
     icon: '/solutions/networking.png',
+    link: '/solutions/networking',
     services: [
       'Routing & Switching (LAN/WAN)',
       'Firewall & UTM Solutions',
@@ -39,6 +41,7 @@ const solutions = [
   {
     title: 'Telephony',
     icon: '/solutions/mobile.png',
+    link: '/solutions/telephony',
     services: [
       'IP Telephony & VoIP Solutions',
       'On-Premise & Cloud PBX',
@@ -54,6 +57,7 @@ const solutions = [
   {
     title: 'Video Surveillance(CCTV)',
     icon: '/solutions/cctv.png',
+    link: '/solutions/video-surveillance',
     services: [
       'CCTV (Analog & IP) Solutions',
       'Video Analytics & AI-Powered Monitoring',
@@ -68,6 +72,7 @@ const solutions = [
   {
     title: 'Access Control',
     icon: '/solutions/password-code.png',
+    link: '/solutions/access-controls',
     services: [
       'Biometric Authentication Systems',
       'RFID & Smart Card Solutions',
@@ -85,6 +90,7 @@ const solutions = [
   {
     title: 'Cloud & Computing',
     icon: '/solutions/cloud-server.png',
+    link: '/solutions/cloud-computing',
     services: [
       'Cloud Infrastructure (IaaS, PaaS, SaaS)',
       'Virtualization & Hyperconverged Solutions',
@@ -101,6 +107,7 @@ const solutions = [
   {
     title: 'Softwares',
     icon: '/solutions/app-development.png',
+    link: '/solutions/softwares',
     services: [
       'ERP & CRM Solutions',
       'Inventory & Supply Chain Management',
@@ -118,6 +125,7 @@ const solutions = [
   {
     title: 'Computers & Peripherals',
     icon: '/solutions/computers.png',
+    link: '/end-points/laptops-desktops-mobile',
     services: [
       'Laptops & Desktop Computers',
       'Workstations & Servers',
@@ -134,6 +142,7 @@ const solutions = [
   {
     title: 'Industrial Automation',
     icon: '/solutions/automation.png',
+    link: '/solutions/industrial-automation',
     services: [
       'PLC & SCADA Systems',
       'Industrial IoT (IIoT) Solutions',
@@ -171,11 +180,11 @@ const Solutions = () => {
   return (
     <section className="w-full bg-gradient-to-r from-blue-50 via-white to-blue-50 py-16 pb-20">
       <div className="w-full px-0">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 animate-fade-in-up text-glow premium-hover">
+        <div className="text-center mb-16 px-4">
+          <h2 className="text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 animate-fade-in-up text-glow premium-hover">
             Best in class Solutions and Services for your business ...
           </h2>
-          <p className="text-lg text-gray-600 animate-fade-in-up delay-200">
+          <p className="text-base md:text-lg text-gray-600 animate-fade-in-up delay-200">
             Explore what else we can do for you
           </p>
         </div>
