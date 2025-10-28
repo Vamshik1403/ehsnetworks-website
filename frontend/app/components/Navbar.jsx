@@ -22,42 +22,32 @@ const menu = [
 
   {
     label: "Solutions",
-    dropdown: [
-      { label: "Wireless", href: "/solutions/wireless" },
-      { label: "Networking", href: "/solutions/networking" },
-      { label: "Telephony", href: "/solutions/telephony" },
-      { label: "Video Surveillance", href: "/solutions/video-surveillance" },
-      { label: "Access Controls", href: "/solutions/access-controls" },
-      { label: "Cloud & Computing", href: "/solutions/cloud-computing" },
-      { label: "Softwares", href: "/solutions/softwares" },
-    ],
+    href: "/solutions"
   },
 
 
 
   {
-    label: "Consulting",
+    label: "Services",
     dropdown: [
       { label: "IT Consulting", href: "/consulting/it" },
-      { label: "Software & Automation Consulting", href: "/consulting/software-automation" },
+      // { label: "Software & Automation Consulting", href: "/consulting/software-automation" },
+      { label: "Managed Services", href: "/managed-services/support/onsite" },
     ],
   },
 
 
 
   {
-    label: "Managed Services",
-    dropdown: [
-      { label: "Support Services", href: "/managed-services/support/onsite" },
-      { label: "Cloud Services", href: "/managed-services/cloud/network" },
-    ]
+    label: "Software Solutions",
+    href: "/solutions/softwares"
   },
   
   {
     label: "End Points",
     dropdown: [
-      { label: "Laptops, Desktops & Mobile", href: "/end-points/laptops-desktops-mobile" },
-      { label: "IoT Security", href: "/end-points/iot-security" },
+      { label: "Endpoint Devices", href: "/end-points/laptops-desktops-mobile" },
+      { label: "Endpoint Protection", href: "/end-points/iot-security" },
       ]
   },
 
