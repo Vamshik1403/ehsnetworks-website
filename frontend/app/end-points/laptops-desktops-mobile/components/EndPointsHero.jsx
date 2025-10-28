@@ -5,7 +5,7 @@ import { Monitor, Laptop, Smartphone, Shield, Zap, Award } from 'lucide-react';
 
 export default function EndPointsHero() {
   return (
-    <section className="relative py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+    <section className="relative py-6 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 blur-3xl" />
@@ -47,7 +47,7 @@ export default function EndPointsHero() {
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Main Content */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -70,7 +70,7 @@ export default function EndPointsHero() {
                 Laptops, Desktops
               </span>
               <br />
-              <span className="text-white">& Mobile Devices</span>
+              <span className="text-white"></span>
             </motion.h1>
             
             {/* Subtitle */}
@@ -115,7 +115,7 @@ export default function EndPointsHero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12"
           >
             {[
               {

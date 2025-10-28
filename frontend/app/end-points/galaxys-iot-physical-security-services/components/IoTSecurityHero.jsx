@@ -5,7 +5,7 @@ import { Shield, Lock, Wifi, Zap } from 'lucide-react';
 
 export default function IoTSecurityHero() {
   return (
-    <section className="relative py-24 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 text-white overflow-hidden">
+    <section className="relative py-12 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 text-white overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 blur-3xl" />
@@ -47,7 +47,7 @@ export default function IoTSecurityHero() {
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Main Content */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -56,7 +56,7 @@ export default function IoTSecurityHero() {
               className="inline-flex items-center px-6 py-3 bg-indigo-500/20 backdrop-blur-sm border border-indigo-400/30 rounded-full text-indigo-300 text-sm font-semibold mb-8"
             >
               <Shield size={16} className="mr-2" />
-              ENTERPRISE IoT & PHYSICAL SECURITY
+              ENDPOINT PROTECTION & SECURITY
             </motion.div>
             
             {/* Main Heading */}
@@ -64,13 +64,13 @@ export default function IoTSecurityHero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight"
             >
               <span className="bg-gradient-to-r from-white via-indigo-200 to-purple-200 bg-clip-text text-transparent">
-                IoT & Physical
+                Endpoint Protection
               </span>
               <br />
-              <span className="text-white">Security Services</span>
+              <span className="text-white">Services</span>
             </motion.h1>
             
             {/* Subtitle */}
@@ -78,9 +78,9 @@ export default function IoTSecurityHero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl md:text-2xl text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl text-indigo-100 mb-8 max-w-4xl mx-auto leading-relaxed px-4"
             >
-              Comprehensive IoT and physical security solutions to protect your business infrastructure and ensure seamless connectivity across all your devices.
+              Protect your digital perimeter with our comprehensive endpoint protection solutions. Safeguard your devices, data, and users from evolving cyber threats.
             </motion.p>
             
             {/* CTA Buttons */}
@@ -113,7 +113,7 @@ export default function IoTSecurityHero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8"
           >
             {[
               {

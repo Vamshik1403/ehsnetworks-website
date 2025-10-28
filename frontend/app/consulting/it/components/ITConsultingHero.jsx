@@ -15,11 +15,11 @@ export default function ITConsultingHero() {
       <div className="absolute top-40 right-20 w-16 h-16 bg-cyan-200 rounded-full opacity-20 animate-float-slow" style={{ animationDelay: '2s' }} />
       <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-200 rounded-full opacity-20 animate-float-slow" style={{ animationDelay: '4s' }} />
       
-      <div className="relative z-10 px-4 py-24">
+      <div className="relative z-10 px-4 pt-8 pb-16">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <div className="space-y-8">
+            <div className="space-y-6">
               {/* Badge */}
               <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
                 <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
@@ -27,8 +27,8 @@ export default function ITConsultingHero() {
               </div>
               
               {/* Main Heading */}
-              <div className="space-y-6">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
+              <div className="space-y-4">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                   Strategic Technology Solutions &
                   <span className="block bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
                     Business Growth
@@ -37,8 +37,8 @@ export default function ITConsultingHero() {
               </div>
               
               {/* Description */}
-              <div className="space-y-6">
-                <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
+              <div className="space-y-4">
+                <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
                   Expert IT consulting services to help your business leverage cutting-edge technology, 
                   optimize infrastructure, and drive digital transformation for sustainable growth and competitive advantage.
                 </p>

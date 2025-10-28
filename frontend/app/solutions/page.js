@@ -171,7 +171,7 @@ export default function SolutionsPage() {
       {/* Hero Banner - Premium Style */}
       <section 
         ref={heroRef}
-        className="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900"
+        className="relative min-h-[89vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 py-12"
       >
         {/* Animated Background Elements */}
         <div className="absolute inset-0">

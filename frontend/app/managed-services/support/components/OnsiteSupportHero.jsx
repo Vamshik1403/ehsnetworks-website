@@ -16,7 +16,7 @@ export default function OnsiteSupportHero() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    <section ref={ref} className="relative py-24 bg-gradient-to-br from-purple-900 via-indigo-900 to-pink-900 text-white overflow-hidden">
+    <section ref={ref} className="relative py-16 bg-gradient-to-br from-purple-900 via-indigo-900 to-pink-900 text-white overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-indigo-400 to-pink-400 blur-3xl" />
@@ -44,7 +44,7 @@ export default function OnsiteSupportHero() {
             
             {/* Main Heading */}
             <div className="space-y-6">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Professional
                 <span className="block bg-gradient-to-r from-purple-400 via-indigo-400 to-pink-400 bg-clip-text text-transparent">
                   Onsite Support
@@ -54,7 +54,7 @@ export default function OnsiteSupportHero() {
             
             {/* Description */}
             <div className="space-y-6">
-              <p className="text-xl text-purple-100 leading-relaxed">
+              <p className="text-lg text-purple-100 leading-relaxed">
                 Professional on-site technical support and maintenance services. Our expert engineers visit your location to provide hands-on assistance 
                 and ensure your IT infrastructure operates at peak performance with minimal downtime.
               </p>

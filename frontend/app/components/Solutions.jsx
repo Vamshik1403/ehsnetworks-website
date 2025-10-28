@@ -1,9 +1,10 @@
 'use client';
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
+import Link from 'next/link';
 
 const solutions = [
   {
@@ -175,7 +176,23 @@ const solutions = [
 
 const Solutions = () => {
   const swiperRef = useRef(null);
-  const [hoveredCard, setHoveredCard] = useState(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Handle mouse enter - pause autoplay
+  const handleMouseEnter = () => {
+    setIsPaused(true);
+    if (swiperRef.current && swiperRef.current.autoplay) {
+      swiperRef.current.autoplay.stop();
+    }
+  };
+
+  // Handle mouse leave - resume autoplay
+  const handleMouseLeave = () => {
+    setIsPaused(false);
+    if (swiperRef.current && swiperRef.current.autoplay) {
+      swiperRef.current.autoplay.start();
+    }
+  };
 
   return (
     <section className="w-full bg-gradient-to-r from-blue-50 via-white to-blue-50 py-8">
@@ -189,7 +206,11 @@ const Solutions = () => {
           </p>
         </div>
         
-        <div className="relative mb-4 pb-8">
+        <div 
+          className="relative mb-4 pb-8"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <Swiper
             onSwiper={swiper => (swiperRef.current = swiper)}
             spaceBetween={24}
@@ -203,19 +224,18 @@ const Solutions = () => {
                1280: { slidesPerView: 4, spaceBetween: 24 },
                1536: { slidesPerView: 5, spaceBetween: 24 },
              }}
-            autoplay={{ delay: 4000, disableOnInteraction: false }}
+            autoplay={{ delay: 2000, disableOnInteraction: false, pauseOnMouseEnter: true }}
             pagination={{ clickable: true, el: '.solutions-swiper-pagination' }}
             modules={[Autoplay, Pagination]}
             className="w-full pb-8"
           >
                          {solutions.map((sol, i) => (
                <SwiperSlide key={sol.title} className="mx-0 sm:mx-1 mb-8">
-                <div
-                  className="group relative bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 h-[480px] sm:h-[530px] md:h-[580px] w-full transition-all duration-700 animate-sol-fade-in-up overflow-hidden hover:z-20 cursor-pointer premium-card"
-                  style={{ animationDelay: `${0.2 + i * 0.15}s` }}
-                  onMouseEnter={() => setHoveredCard(i)}
-                  onMouseLeave={() => setHoveredCard(null)}
-                >
+                <Link href="/solutions">
+                  <div
+                    className="group relative bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 h-[480px] sm:h-[530px] md:h-[580px] w-full transition-all duration-700 animate-sol-fade-in-up overflow-hidden hover:z-20 cursor-pointer premium-card"
+                    style={{ animationDelay: `${0.2 + i * 0.15}s` }}
+                  >
                   {/* Subtle glass highlight on hover (premium look) */}
                   <div className="absolute inset-0 rounded-3xl bg-white/0 group-hover:bg-white/5 backdrop-blur-sm pointer-events-none transition-all duration-500" />
 
@@ -268,7 +288,8 @@ const Solutions = () => {
                   <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-60 transition-opacity duration-700">
                     <div className="absolute -left-24 top-0 w-40 h-full transform -skew-x-12 bg-gradient-to-r from-white/12 via-white/6 to-transparent opacity-0 group-hover:opacity-100 animate-shine" />
                   </div>
-                </div>
+                  </div>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>
