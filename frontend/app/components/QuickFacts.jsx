@@ -5,60 +5,15 @@ import React, { useState } from 'react';
 const QuickFacts = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
-  const serviceCards = [
-    {
-      id: 'excellence',
-      title: 'Service Excellence',
-      icon: '/icons/enpl-section/service.png',
-      description: 'Comprehensive IT consultancy and expert installation services tailored to your business needs.',
-      features: [
-        'Strategic IT Consulting',
-        'Expert Installation Services',
-        'Tailored Business Solutions',
-        'Professional Support'
-      ]
-    },
-    {
-      id: 'cloud',
-      title: 'Cloud Solutions',
-      icon: '/icons/enpl-section/cloud.png',
-      description: 'Advanced cloud infrastructure, migration, and optimization services for modern enterprises.',
-      features: [
-        'Cloud Infrastructure',
-        'Migration Services',
-        'Optimization Solutions',
-        'Enterprise Support'
-      ]
-    },
-    {
-      id: 'custom',
-      title: 'Custom Solutions',
-      icon: '/icons/enpl-section/custom-solutions.png',
-      description: 'Tailored IT solutions designed specifically for your unique business requirements and challenges.',
-      features: [
-        'Tailored IT Solutions',
-        'Business Requirements Analysis',
-        'Custom Development',
-        'Scalable Architecture'
-      ]
-    }
-  ];
+  const serviceCards = [];
 
   return (
-    <section className="w-full bg-gradient-to-r from-blue-50 via-white to-blue-50 py-20">
+    <section className="w-full bg-gradient-to-r from-blue-50 via-white to-blue-50 py-8">
       <div className="w-full px-0">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 animate-fade-in-up text-glow premium-hover">
-            ENPL - Your Technology
-            <span className="block text-blue-600">Transformation Partner</span>
-          </h2>
-          <p className="text-lg text-gray-600 animate-fade-in-up delay-200">
-            We focus on bringing exceptional value and solve complex business challenges through modern IT services
-          </p>
-      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 mb-16">
-          {serviceCards.map((card, index) => (
+        {serviceCards.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 mb-16">
+            {serviceCards.map((card, index) => (
             <div
               key={card.id}
               className="group relative bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 h-[380px] sm:h-[420px] md:h-[450px] w-full transition-all duration-700 animate-sol-fade-in-up overflow-hidden hover:z-20 cursor-pointer premium-card"
@@ -127,45 +82,40 @@ const QuickFacts = () => {
               </div>
             </div>
           ))}
-        </div>
+          </div>
+        )}
 
         {/* Enhanced Description Section */}
-        <div className="px-4">
-          <div className="max-w-7xl mx-auto">
+        <div className="px-2 sm:px-4">
+          <div className="max-w-[98%] sm:max-w-[95%] mx-auto">
             {/* Main Description Card - Clean & Materialistic Design */}
-            <div className="group relative bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl p-8 sm:p-10 md:p-12 mb-8 overflow-hidden">
-              {/* Subtle glass highlight on hover */}
-              <div className="absolute inset-0 rounded-3xl bg-white/0 group-hover:bg-white/5 backdrop-blur-sm pointer-events-none transition-all duration-500" />
-              
-              {/* Soft border */}
-              <div className="absolute inset-0 rounded-3xl border border-transparent group-hover:border-white/20 pointer-events-none transition-all duration-500" />
-              
-              {/* Faint particle accents */}
-              <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-600">
-                <div className="particle" style={{ top: '8%', right: '6%', width: 8, height: 8 }} />
-                <div className="particle" style={{ bottom: '12%', left: '8%', width: 6, height: 6 }} />
-                <div className="particle" style={{ top: '60%', right: '15%', width: 10, height: 10 }} />
-              </div>
-
+            <div className="relative bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl p-6 sm:p-8 md:p-10 lg:p-12 mb-8 overflow-hidden">
               <div className="relative z-10">
-                {/* Clean Header */}
+                {/* Main Branding Header */}
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 animate-fade-in-up text-glow premium-hover inline-block">
+                    ENPL - Your Technology <span className="text-blue-600">Transformation Partner</span>
+                  </h2>
+                </div>
+
+                {/* Sub Header */}
+                <div className="text-center mb-8">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-3">
                     Comprehensive IT Excellence
                   </h3>
-                  <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+                  <div className="w-20 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
                 </div>
 
                 {/* Main Content - Single Column Layout */}
-                <div className="max-w-4xl mx-auto">
+                <div className="w-full px-4 sm:px-6">
                   <div className="text-center mb-8">
                     <p className="text-lg sm:text-xl text-gray-700 leading-relaxed font-medium">
                       We provide a comprehensive range of <span className="text-blue-600 font-semibold">Information Technology services</span> designed to maximize business productivity and drive digital transformation.
                     </p>
                   </div>
                   
-                  {/* Feature Highlights */}
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+                  {/* Feature Highlights - Full Width Grid */}
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-8 mt-8">
                     {[
                       { icon: '🎯', title: 'Strategic Consultancy', desc: 'Expert guidance for your IT strategy' },
                       { icon: '⚡', title: 'Expert Implementation', desc: 'Professional deployment services' },
@@ -174,20 +124,23 @@ const QuickFacts = () => {
                     ].map((item, index) => (
                       <div
                         key={index}
-                        className="text-center p-4 rounded-xl bg-gray-50/50 hover:bg-gray-100/50 transition-all duration-300 group/item"
+                        className="text-center p-6 sm:p-7 lg:p-8 rounded-xl bg-gray-50/50 hover:bg-gray-100/50 transition-all duration-300 group/item"
                       >
-                        <div className="text-3xl mb-3 group-hover/item:scale-110 transition-transform duration-300">
+                        <div className="text-5xl mb-5 group-hover/item:scale-110 transition-transform duration-300">
                           {item.icon}
                         </div>
-                        <h4 className="font-semibold text-gray-900 mb-2 text-sm">
+                        <h4 className="font-semibold text-gray-900 mb-3 text-lg sm:text-xl">
                           {item.title}
                         </h4>
-                        <p className="text-xs text-gray-600 leading-relaxed">
+                        <p className="text-base text-gray-600 leading-relaxed">
                           {item.desc}
                         </p>
                       </div>
                     ))}
+                  </div>
                 </div>
+
+                <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
                   {/* Bottom Description */}
                   <div className="mt-8 text-center">
@@ -197,37 +150,8 @@ const QuickFacts = () => {
                   </div>
                 </div>
               </div>
-
-              {/* Subtle hover sheen */}
-              <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-60 transition-opacity duration-700">
-                <div className="absolute -left-24 top-0 w-40 h-full transform -skew-x-12 bg-gradient-to-r from-white/12 via-white/6 to-transparent opacity-0 group-hover:opacity-100 animate-shine" />
-              </div>
             </div>
 
-            {/* Key Benefits Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-              {[
-                { icon: '🚀', title: 'Digital Transformation', desc: 'Modern solutions for business growth' },
-                { icon: '⚡', title: 'Expert Implementation', desc: 'Professional deployment services' },
-                { icon: '🔧', title: 'Custom Solutions', desc: 'Tailored to your unique needs' },
-                { icon: '📈', title: 'Scalable Growth', desc: 'Solutions that grow with you' }
-              ].map((benefit, index) => (
-                <div
-                  key={index}
-                  className="group/benefit bg-white rounded-xl shadow-md p-4 sm:p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-                >
-                  <div className="text-2xl mb-3 group-hover/benefit:scale-110 transition-transform duration-300">
-                    {benefit.icon}
-                  </div>
-                  <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">
-                    {benefit.title}
-                  </h4>
-                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                    {benefit.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>

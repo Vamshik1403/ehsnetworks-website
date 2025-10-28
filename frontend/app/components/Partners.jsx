@@ -70,8 +70,8 @@ const Partners = () => {
   ];
 
   return (
-    <section className="w-full bg-gradient-to-r from-gray-50 via-white to-gray-50 py-20">
-      <div className="w-full px-0">
+    <section className="w-full bg-gradient-to-r from-gray-50 via-white to-gray-50 py-8 pt-4">
+      <div className="w-full px-0 px-2 py-6">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-4 animate-fade-in-up">

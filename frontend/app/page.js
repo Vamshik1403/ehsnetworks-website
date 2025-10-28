@@ -5,7 +5,6 @@ import VideoBanner from "./components/VideoBanner"
 import QuickFacts from "./components/QuickFacts"
 import Solutions from "./components/Solutions"
 import ConsultingServices from "./components/ConsultingServices"
-import ServiceCards from "./components/ServiceCards"
 import Partners from "./components/Partners"
 import Clients from "./components/Clients"
 import Footer from "./components/Footer"
@@ -61,17 +60,6 @@ export default function Home() {
         }`}
       >
         <ConsultingServices />
-      </section>
-      
-      {/* Service Cards Section */}
-      <section 
-        id="service-cards-section"
-        data-animate="premium-fade-in-right"
-        className={`animate-on-scroll ${
-          isVisible['service-cards-section'] ? 'opacity-100' : 'opacity-0'
-        }`}
-      >
-        <ServiceCards />
       </section>
       
       {/* Partners Section */}

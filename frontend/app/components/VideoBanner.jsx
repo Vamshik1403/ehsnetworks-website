@@ -128,10 +128,10 @@ const VideoBanner = () => {
            {/* Premium Description */}
            <div className="relative mb-12">
               <p className="text-lg sm:text-xl lg:text-2xl text-white max-w-2xl mx-auto leading-relaxed font-medium">
-               <span className="text-white font-semibold">Empowering businesses</span> with 
-               <span className="text-white font-semibold"> cutting-edge networking solutions</span>, 
-               <span className="text-white font-semibold"> software development</span>, and 
-               <span className="text-white font-semibold"> comprehensive IT services</span> for the digital age.
+               <span className="text-white font-semibold">We help businesses</span> with 
+               <span className="text-white font-semibold"> IT transformation</span>, 
+               <span className="text-white font-semibold"> to stay secure</span>,
+               <span className="text-white font-semibold"> Start getting the support you need</span> Let us handle IT for you.
              </p>
              
              {/* Description background glow */}

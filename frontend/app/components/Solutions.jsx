@@ -178,18 +178,18 @@ const Solutions = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   return (
-    <section className="w-full bg-gradient-to-r from-blue-50 via-white to-blue-50 py-16 pb-20">
+    <section className="w-full bg-gradient-to-r from-blue-50 via-white to-blue-50 py-8">
       <div className="w-full px-0">
-        <div className="text-center mb-16 px-4">
+        <div className="text-center mb-4 px-4">
           <h2 className="text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 animate-fade-in-up text-glow premium-hover">
-            Best in class Solutions and Services for your business ...
+            Best in class Solutions and Services for your business
           </h2>
           <p className="text-base md:text-lg text-gray-600 animate-fade-in-up delay-200">
             Explore what else we can do for you
           </p>
         </div>
         
-        <div className="relative mb-16 pb-8">
+        <div className="relative mb-4 pb-8">
           <Swiper
             onSwiper={swiper => (swiperRef.current = swiper)}
             spaceBetween={24}
@@ -274,7 +274,7 @@ const Solutions = () => {
           </Swiper>
           
           {/* Enhanced Pagination */}
-          <div className="solutions-swiper-pagination flex justify-center mt-12 mb-16" />
+          <div className="solutions-swiper-pagination flex justify-center mt-12 mb-4" />
         </div>
         
         {/* CTA Button */}

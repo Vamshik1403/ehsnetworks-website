@@ -198,7 +198,7 @@ export default function Navbar() {
   };
   return (
     <>
-    <nav className="w-full bg-gradient-to-r from-white via-blue-50 to-pink-50 shadow-lg border-b border-gray-100 sticky top-0 z-50">
+    <nav className="w-full bg-gradient-to-r from-white via-blue-50 to-pink-50 shadow-lg border-b border-gray-100 sticky top-0 z-50 overflow-x-hidden md:overflow-visible">
       <div className="flex items-center justify-between px-2 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-3 md:py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-1.5 sm:gap-2 md:gap-3 lg:gap-4 group/logo cursor-pointer select-none flex-shrink-0 max-w-[45%] md:max-w-none">
@@ -222,7 +222,7 @@ export default function Navbar() {
               Electrohelps Networks
             </span>
             <p className="text-[10px] sm:text-[10px] md:text-xs lg:text-[9px] xl:text-sm text-gray-600 group-hover/logo:text-gray-700 transition-colors duration-300 truncate">
-              Solution | Cloud | Consulting | Assist
+              Solution | Cloud | Consult | Assist
             </p>
           </div>
         </Link>
@@ -275,18 +275,19 @@ export default function Navbar() {
           )}
         </div>
         {/* Actions: Contact Dropdown - always visible */}
-        <div className="flex items-center gap-4 sm:gap-6 ml-4">
+        <div className="flex items-center gap-2 sm:gap-4 xl:gap-6 ml-2 sm:ml-4">
           {/* Contact Dropdown */}
           <div className="relative group/contact">
             <button
-              className="bg-gradient-to-r from-blue-900 via-blue-500 to-pink-500 text-white px-3 xl:px-4 py-2 rounded-lg shadow-lg transition-all duration-500 text-xs xl:text-sm font-semibold whitespace-nowrap flex-shrink-0 hover:from-pink-600 hover:to-blue-700 hover:shadow-2xl hover:scale-110 focus:outline-none focus:ring-2 focus:ring-pink-300  group-hover/contact:shadow-blue-200 group-hover/contact:ring-4 group-hover/contact:ring-blue-300/30 transform hover:-translate-y-1"  
+              className="bg-gradient-to-r from-blue-900 via-blue-500 to-pink-500 text-white px-2 sm:px-3 xl:px-4 py-2 rounded-lg shadow-lg transition-all duration-500 text-[10px] sm:text-xs xl:text-sm font-semibold whitespace-nowrap flex-shrink-0 hover:from-pink-600 hover:to-blue-700 hover:shadow-2xl hover:scale-110 focus:outline-none focus:ring-2 focus:ring-pink-300  group-hover/contact:shadow-blue-200 group-hover/contact:ring-4 group-hover/contact:ring-blue-300/30 transform hover:-translate-y-1"  
               style={{ backgroundSize: '200% 200%' }}
             >
               <div className="flex items-center space-x-2">
                 <svg className="w-4 h-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span>Get in Touch</span>
+                <span className="sm:hidden">Contact</span>
+                <span className="hidden sm:inline">Get in Touch</span>
                 <svg className="w-3 h-3 transition-transform duration-300 group-hover/contact:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                 </svg>
@@ -294,12 +295,12 @@ export default function Navbar() {
             </button>
             
             {/* Dropdown Menu */}
-            <div className="absolute right-0 top-full mt-2 w-80 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover/contact:opacity-100 group-hover/contact:visible transition-all duration-500 transform scale-95 group-hover/contact:scale-100 translate-y-2 group-hover/contact:translate-y-0 z-[9999]">
+            <div className="absolute right-0 top-full mt-2 w-72 sm:w-80 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover/contact:opacity-100 group-hover/contact:visible transition-all duration-500 transform scale-95 group-hover/contact:scale-100 translate-y-2 group-hover/contact:translate-y-0 z-[99999]">
               {/* Arrow */}
               <div className="absolute -top-2 right-6 w-4 h-4 bg-white border-l border-t border-gray-100 transform rotate-45"></div>
               
               <div className="p-6 space-y-6">
-                {/* General Contact Phone */}
+                {/* Phone Number Section */}
                 <div className="group/phone">
                   <div className="flex items-center space-x-3 mb-3">
                     <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-purple-600 rounded-lg flex items-center justify-center shadow-lg group-hover/phone:scale-110 transition-transform duration-300">
@@ -310,37 +311,11 @@ export default function Navbar() {
                     <h3 className="text-lg font-bold text-gray-800 group-hover/phone:text-purple-600 transition-colors duration-300">Phone</h3>
                   </div>
                   <div className="ml-11 space-y-2">
-                    <a href="tel:+912240244440" className="flex items-center space-x-2 text-gray-600 hover:text-purple-600 transition-colors duration-300 group-hover/phone:translate-x-1 cursor-pointer">
+                    <a href="tel:02240244440" className="flex items-center space-x-2 text-gray-600 hover:text-purple-600 transition-colors duration-300 group-hover/phone:translate-x-1 cursor-pointer">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
-                      <span className="text-sm font-semibold">022 4024 4440</span>
-                    </a>
-                  </div>
-                </div>
-
-                {/* Sales Section */}
-                <div className="group/sales">
-                  <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-green-600 rounded-lg flex items-center justify-center shadow-lg group-hover/sales:scale-110 transition-transform duration-300">
-                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                      </svg>
-                    </div>
-                    <h3 className="text-lg font-bold text-gray-800 group-hover/sales:text-green-600 transition-colors duration-300">Sales</h3>
-                  </div>
-                  <div className="ml-11 space-y-2">
-                    <a href="mailto:sales@ehsnetworks.in" className="flex items-center space-x-2 text-gray-600 hover:text-green-600 transition-colors duration-300 group-hover/sales:translate-x-1 cursor-pointer">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                      <span className="text-sm">sales@ehsnetworks.in</span>
-                    </a>
-                    <a href="tel:+917718811771" className="flex items-center space-x-2 text-gray-600 hover:text-green-600 transition-colors duration-300 group-hover/sales:translate-x-1 cursor-pointer">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                      <span className="text-sm font-semibold">+91 771-8811-771</span>
+                      <span className="text-sm font-semibold">022-4024-4440</span>
                     </a>
                   </div>
                 </div>

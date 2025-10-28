@@ -60,7 +60,7 @@ export default function AboutUs() {
       >
         <div className="px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               {/* Left Side - Text Content */}
               <div className="space-y-8 animate-fade-in-left">
                 <div className="space-y-2">

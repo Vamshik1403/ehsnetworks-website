@@ -86,7 +86,7 @@ const Clients = () => {
   ];
 
   return (
-    <section className="w-full bg-gradient-to-r from-blue-50 via-white to-purple-50 py-20">
+    <section className="w-full bg-gradient-to-r from-blue-50 via-white to-purple-50 py-8 pt-4">
       <div className="w-full px-0">
         {/* Header */}
         <div className="text-center mb-16">
