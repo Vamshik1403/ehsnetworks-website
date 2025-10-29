@@ -44,7 +44,7 @@ const VideoBanner = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-[70vh] lg:h-[89vh] overflow-hidden">
+    <section className="relative w-full h-[90vh] sm:h-[80vh] md:h-[80vh] lg:h-[89vh] overflow-hidden">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900/20 via-blue-900/30 to-purple-900/20 z-10" />
       

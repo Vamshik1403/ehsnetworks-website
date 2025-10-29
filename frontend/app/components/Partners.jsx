@@ -63,6 +63,14 @@ const Partners = () => {
       name: 'TP-Link',
       logo: '/partners/partner14.png'
     },
+    {
+      name: 'HP',
+      logo: '/partners/HP.svg'
+    },
+    {
+      name: 'Commscope',
+      logo: '/partners/commscope.png'
+    }
     // {
     //   name: 'Cisco',
     //   logo: '/partners/partner15.png'
