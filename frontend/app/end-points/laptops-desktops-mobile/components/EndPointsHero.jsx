@@ -65,10 +65,10 @@ export default function EndPointsHero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+              className="text-5xl md:text-5xl lg:text-5xl font-bold mb-6 leading-tight"
             >
               <span className="bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
-                Servers, Workstations & Laptops
+                Enterprise Servers, Workstations & Laptops
               </span>
               <br />
               <span className="text-white"></span>
@@ -78,10 +78,20 @@ export default function EndPointsHero() {
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.35 }}
+              className="text-xl md:text-2xl text-blue-100 mb-6 max-w-4xl mx-auto leading-relaxed font-semibold"
+            >
+              Trusted IT Hardware Partner for Business Performance & Security
+            </motion.p>
+            
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl md:text-2xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed"
             >
-              Best Endpoints reseller in India. We provide comprehensive enterprise computing solutions to help your business optimize performance, ensure security, and drive growth.
+              Electrohelps Networks is India's trusted enterprise IT hardware and endpoint reseller. We deliver high-performance servers, professional workstations, and business-grade laptops designed to improve efficiency, enhance data security, and support digital growth.
             </motion.p>
             
             {/* CTA Buttons */}
@@ -124,17 +134,17 @@ export default function EndPointsHero() {
               {
                 icon: Shield,
                 title: "Enterprise Security",
-                description: "Built-in security features for business protection"
+                description: "Built-in protection and encryption features for secure business operations."
               },
               {
                 icon: Zap,
                 title: "High Performance",
-                description: "Latest processors for optimal productivity"
+                description: "Optimized with the latest Intel® and AMD processors for maximum productivity and reliability."
               },
               {
                 icon: Award,
                 title: "Certified Quality",
-                description: "Premium brands with warranty support"
+                description: "Authorized partner for premium brands with complete warranty and post-sales support."
               }
             ].map((feature, index) => (
               <motion.div

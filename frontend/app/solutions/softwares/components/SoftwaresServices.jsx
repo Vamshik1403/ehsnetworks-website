@@ -9,79 +9,95 @@ export default function SoftwaresServices() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Our Software <span className="text-blue-600">Services</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From initial consultation to ongoing support, we provide end-to-end software development solutions 
-            that transform your business operations and drive innovation.
-          </p>
+          <div className="text-xl text-gray-600 max-w-3xl mx-auto space-y-2">
+            <p className="font-semibold">
+              From Idea to Execution — Complete Software Development Expertise
+            </p>
+            <p>
+              From initial consultation to post-deployment support, Electrohelps Networks delivers end-to-end software development solutions that transform your business operations, improve efficiency, and drive measurable growth.              Our software services cover every stage of modern application development — from ideation to implementation — ensuring that your business has the technology foundation needed to scale with confidence.
+
+            </p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <h3 className="text-3xl font-bold text-gray-900">
-                Comprehensive Software Solutions
-              </h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Our software services encompass every aspect of modern application development, ensuring your business 
-                has the tools needed to streamline operations and drive growth.
-              </p>
-            </div>
+        <div className="space-y-12">
+          {/* <div className="text-center">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Comprehensive Software Solutions
+            </h3>
+            <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+              Our software services cover every stage of modern application development — from ideation to implementation — ensuring that your business has the technology foundation needed to scale with confidence.
+            </p>
+          </div> */}
 
-            <div className="space-y-6">
-              {[
-                {
-                  icon: '🔍',
-                  title: 'Requirements Analysis',
-                  description: 'Comprehensive analysis of your business needs and software requirements.'
-                },
-                {
-                  icon: '📐',
-                  title: 'Design & Planning',
-                  description: 'Custom software architecture and development strategy aligned with your objectives.'
-                },
-                {
-                  icon: '🚀',
-                  title: 'Development & Testing',
-                  description: 'Professional software development with comprehensive testing and quality assurance.'
-                },
-                {
-                  icon: '🔄',
-                  title: 'Deployment & Support',
-                  description: 'Seamless deployment and ongoing support for optimal software performance.'
-                }
-              ].map((service, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-2xl">{service.icon}</span>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">{service.title}</h4>
-                    <p className="text-gray-600">{service.description}</p>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: '🔍',
+                title: 'Requirements Analysis',
+                description: 'Detailed assessment of your business needs to identify technical goals, system architecture, and functionality requirements.',
+                features: [
+                  'Process mapping and requirement documentation',
+                  'Feasibility and risk assessment',
+                  'Stakeholder analysis'
+                ]
+              },
+              {
+                icon: '🧭',
+                title: 'Design & Planning',
+                description: 'Strategic blueprinting for software design and architecture aligned with your business objectives.',
+                features: [
+                  'UI/UX design and prototyping',
+                  'System architecture & database modeling',
+                  'Agile sprint planning'
+                ]
+              },
+              {
+                icon: '⚙️',
+                title: 'Development & Testing',
+                description: 'Robust, scalable, and secure application development using the latest frameworks and testing methodologies.',
+                features: [
+                  'Full-stack development (Frontend, Backend, APIs)',
+                  'Unit, integration & performance testing',
+                  'Continuous Integration / Deployment (CI/CD)'
+                ]
+              },
+              {
+                icon: '🚀',
+                title: 'Deployment & Support',
+                description: 'Seamless deployment across environments with reliable post-launch maintenance and technical assistance.',
+                features: [
+                  'Cloud deployment (AWS / Azure / GCP)',
+                  'System monitoring and version control',
+                  '24×7 maintenance and feature updates'
+                ]
+              }
+            ].map((service, index) => (
+              <div 
+                key={index} 
+                className="group bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-3xl">{service.icon}</span>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6">Why Choose Our Software Solutions?</h3>
-              <div className="space-y-4">
-                {[
-                  'Industry-leading expertise in modern technologies',
-                  'Proven track record of successful deployments',
-                  'Agile development methodology',
-                  'Scalable solutions that grow with your business',
-                  'Comprehensive testing and quality assurance',
-                  'Ongoing support and maintenance services'
-                ].map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <span className="w-2 h-2 bg-white rounded-full"></span>
-                    <span>{benefit}</span>
-                  </div>
-                ))}
+                <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                  {service.title}
+                </h4>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  {service.description}
+                </p>
+                {service.features && (
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start text-sm text-gray-600">
+                        <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 mt-1.5 flex-shrink-0"></span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

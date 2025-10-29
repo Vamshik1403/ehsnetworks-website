@@ -78,7 +78,7 @@ export default function ContactUs() {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Phone Number</h3>
                       <a href="tel:+917718811771" className="text-green-600 hover:text-green-700 font-semibold text-lg">
-                        +91 771-8811-771
+                        022-4024-4440
                       </a>
                             </div>
                           </div>

@@ -39,13 +39,13 @@ export default function SoftwaresHero() {
 
       {/* Floating Software Icons */}
       <div className="absolute top-32 left-32 text-6xl text-blue-300 opacity-30 animate-float-slow">
-        💾
+        💻
       </div>
       <div className="absolute top-48 right-48 text-5xl text-purple-300 opacity-30 animate-float-slow animation-delay-1000">
-        🖥️
+        📱
       </div>
       <div className="absolute bottom-32 left-1/3 text-4xl text-indigo-300 opacity-30 animate-float-slow animation-delay-3000">
-        🔧
+        ⚙️
       </div>
 
       <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
@@ -54,23 +54,25 @@ export default function SoftwaresHero() {
         }`}>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
-              Softwares
+              Software Solutions
             </span>
-            <br />
-            <span className="text-white">Solutions</span>
           </h1>
           
+          <p className="text-xl md:text-2xl text-blue-200 mb-6 max-w-4xl mx-auto leading-relaxed font-semibold">
+            Innovative Software. Simplified Business.
+          </p>
+          
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Empower your business with cutting-edge software solutions. From enterprise applications to 
-            custom development, we deliver software that streamlines operations and drives innovation.
+            Empower your business with custom-built software solutions designed to optimize operations and accelerate growth.
+            From enterprise applications to mobile platforms, we deliver reliable, scalable, and secure software that adapts to your business goals.
           </p>
 
 
           {/* Software Capabilities Preview */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
             {[
-              { icon: '💾', label: 'Enterprise Apps', color: 'from-blue-400 to-blue-600' },
-              { icon: '🖥️', label: 'Custom Development', color: 'from-purple-400 to-purple-600' },
+              { icon: '💼', label: 'Enterprise Applications', color: 'from-blue-400 to-blue-600' },
+              { icon: '🧩', label: 'Custom Development', color: 'from-purple-400 to-purple-600' },
               { icon: '🔧', label: 'System Integration', color: 'from-indigo-400 to-indigo-600' },
               { icon: '📱', label: 'Mobile Applications', color: 'from-cyan-400 to-cyan-600' }
             ].map((capability, index) => (

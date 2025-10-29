@@ -51,7 +51,7 @@ export default function EndpointProtectionOverview() {
             </div>
 
             <Link href="/contact">
-              <button className="mt-6 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-lg rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+              <button className="mt-20 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-lg rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                 GET APPOINTMENT
               </button>
             </Link>

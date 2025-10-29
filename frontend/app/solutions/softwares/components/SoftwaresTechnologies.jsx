@@ -6,20 +6,27 @@ export default function SoftwaresTechnologies() {
     {
       icon: '🌐',
       title: 'Web Technologies',
-      description: 'We specialize in building fast, secure, and scalable web applications using the latest technologies. From intuitive front-end interfaces to high-performance backend systems, our expertise ensures seamless user experiences across all devices. Our team leverages cutting-edge frameworks like React.js and Next.js for dynamic UI, while Node.js and TypeScript provide a robust foundation for modern web solutions.',
-      specs: ['React.js', 'Next.js', 'Node.js', 'TypeScript']
+      description: 'We build fast, secure, and scalable web applications using industry-leading frameworks. From dynamic frontends to high-performance backend systems, we deliver responsive and user-friendly solutions optimized for all devices.',
+      specs: ['React.js', 'Next.js', 'Node.js', 'TypeScript', 'NestJS', 'Express.js', 'GraphQL'],
+      expertise: 'Expertise in: React.js, Next.js, Node.js, TypeScript, NestJS, Express.js, GraphQL',
+      specialties: 'Specialties: Responsive UI/UX, RESTful APIs, Server-Side Rendering (SSR), Progressive Web Apps (PWA)'
     },
     {
       icon: '📱',
       title: 'Mobile Development',
-      description: 'Delivering powerful and responsive mobile apps that engage users wherever they are. Whether it’s native iOS and Android development or cross-platform solutions using React Native and Flutter, we focus on performance, scalability, and intuitive user interfaces. Our apps are optimized for speed, reliability, and smooth user experiences — from concept to deployment.',
-      specs: ['React Native', 'Flutter', 'iOS Development', 'Android Development']
+      description: 'We design and develop cross-platform mobile apps that deliver smooth performance, engaging interfaces, and native capabilities. Whether for Android or iOS, our apps are optimized for speed, usability, and security.',
+      specs: ['React Native', 'Flutter', 'Kotlin', 'Swift', 'Ionic'],
+      frameworks: 'Frameworks: React Native, Flutter, Kotlin, Swift, Ionic',
+      capabilities: 'Capabilities: Offline Mode, Real-Time Sync, Push Notifications, Device Integration (Camera, GPS, NFC)'
     },
     {
       icon: '☁️',
       title: 'Cloud Integration',
-      description: 'We design and deploy cloud-native applications that scale effortlessly and run efficiently in modern cloud environments. Our solutions integrate seamlessly with AWS, Azure, and other cloud platforms, utilizing containerization and orchestration technologies like Docker and Kubernetes. From CI/CD pipelines to automated deployments, we ensure secure, high-availability systems that grow with your business.',
-      specs: ['AWS Services', 'Azure Integration', 'Docker', 'Kubernetes']
+      description: 'Our experts design and deploy cloud-native applications that scale efficiently and operate reliably in multi-cloud environments. We specialize in cloud migration, serverless architecture, and automated deployments.',
+      specs: ['AWS', 'Azure', 'Google Cloud', 'DigitalOcean', 'Docker', 'Kubernetes', 'Terraform', 'CI/CD Pipelines'],
+      platforms: 'Platforms: AWS, Azure, Google Cloud, DigitalOcean',
+      tools: 'Tools: Docker, Kubernetes, Terraform, CI/CD Pipelines',
+      features: 'Features: Auto Scaling, Load Balancing, Cloud Security, API Gateway Setup'
     }
   ];
 
@@ -27,20 +34,38 @@ export default function SoftwaresTechnologies() {
     {
       icon: '🔒',
       title: 'Security & Testing',
-      description: 'Enterprise-grade security measures and comprehensive testing protocols.',
-      features: ['Security Audits', 'Penetration Testing', 'Code Reviews', 'Quality Assurance']
+      description: 'We implement enterprise-grade security measures and automated testing at every stage of development to ensure your systems remain resilient against vulnerabilities.',
+      features: [
+        'Security Audits & Penetration Testing',
+        'Static & Dynamic Code Analysis',
+        'Vulnerability Management',
+        'Quality Assurance (Manual & Automated)',
+        'Compliance with ISO 27001 / GDPR'
+      ]
     },
     {
       icon: '📊',
       title: 'Analytics & Monitoring',
-      description: 'Advanced analytics and real-time monitoring for application performance.',
-      features: ['Performance Monitoring', 'User Analytics', 'Error Tracking', 'Real-time Alerts']
+      description: 'Comprehensive performance tracking and user analytics to help businesses make data-driven decisions.',
+      features: [
+        'Real-Time Application Monitoring',
+        'Error Tracking & Alerting',
+        'User Analytics & Heatmaps',
+        'Performance Benchmarking',
+        'Predictive Insights with AI'
+      ]
     },
     {
-      icon: '🔧',
+      icon: '🔗',
       title: 'System Integration',
-      description: 'Seamless integration with existing systems and third-party applications.',
-      features: ['API Development', 'Data Migration', 'System Compatibility', 'Real-time Sync']
+      description: 'Seamless integration with existing enterprise software, APIs, and third-party applications to ensure smooth interoperability.',
+      features: [
+        'API Development & Management',
+        'Data Migration & Transformation',
+        'Workflow Automation',
+        'Real-Time Data Sync',
+        'ERP/CRM Integration (SAP, Salesforce, Zoho, Odoo)'
+      ]
     }
   ];
 
@@ -51,10 +76,15 @@ export default function SoftwaresTechnologies() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Software <span className="text-blue-600">Technologies</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We leverage the latest software development technologies and frameworks to deliver cutting-edge 
-            solutions that meet the most demanding business requirements.
-          </p>
+          <div className="text-xl text-gray-600 max-w-3xl mx-auto space-y-2">
+            <p className="font-semibold">
+              Empowering Innovation with Modern Tools & Proven Frameworks
+            </p>
+            <p>
+              We leverage the latest software technologies, frameworks, and cloud infrastructures to deliver reliable, scalable, and future-ready digital solutions.
+              Our expertise covers the full technology spectrum—from web and mobile development to automation, analytics, and enterprise integration.
+            </p>
+          </div>
         </div>
 
         <div className="space-y-12">
@@ -78,6 +108,27 @@ export default function SoftwaresTechnologies() {
                     <div className="flex-1 flex flex-col">
                       <h4 className="text-xl font-semibold text-gray-900 mb-2">{tech.title}</h4>
                       <p className="text-gray-600 mb-4 flex-grow">{tech.description}</p>
+                      {tech.expertise && (
+                        <p className="text-sm text-gray-700 mb-2 font-medium">{tech.expertise}</p>
+                      )}
+                      {tech.specialties && (
+                        <p className="text-sm text-gray-700 mb-3">{tech.specialties}</p>
+                      )}
+                      {tech.frameworks && (
+                        <p className="text-sm text-gray-700 mb-2 font-medium">{tech.frameworks}</p>
+                      )}
+                      {tech.capabilities && (
+                        <p className="text-sm text-gray-700 mb-3">{tech.capabilities}</p>
+                      )}
+                      {tech.platforms && (
+                        <p className="text-sm text-gray-700 mb-2 font-medium">{tech.platforms}</p>
+                      )}
+                      {tech.tools && (
+                        <p className="text-sm text-gray-700 mb-2">{tech.tools}</p>
+                      )}
+                      {tech.features && (
+                        <p className="text-sm text-gray-700 mb-3">{tech.features}</p>
+                      )}
                       <div className="flex flex-wrap gap-2">
                         {tech.specs.map((spec, specIndex) => (
                           <span key={specIndex} className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">

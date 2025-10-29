@@ -7,51 +7,51 @@ export default function SoftwaresCapabilities() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Softwares <span className="text-blue-600">Capabilities</span>
+            Software <span className="text-blue-600">Capabilities</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our comprehensive software solutions cover every aspect of modern business applications, 
-            ensuring your business has the tools needed to streamline operations and drive innovation.
+            Comprehensive Software Expertise for Modern Businesses. Our cutting-edge software capabilities span across enterprise systems, integrations, mobile platforms, and web technologies.
+            We ensure your business operates efficiently, securely, and seamlessly — from backend infrastructure to user experience.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              icon: '💾',
+              icon: '💼',
               title: 'Enterprise Applications',
-              description: 'Custom enterprise software solutions tailored to your business requirements.',
-              features: ['Custom Development', 'Business Logic', 'User Management', 'Reporting Systems']
+              description: 'Custom-built enterprise software designed to streamline business processes and improve productivity.',
+              features: ['Business Logic Automation', 'User & Role Management', 'Advanced Reporting Systems', 'ERP & CRM Integration', 'Workflow Management']
             },
             {
-              icon: '🖥️',
+              icon: '🧩',
               title: 'Custom Development',
-              description: 'Tailored software development with modern technologies and best practices.',
-              features: ['Modern Frameworks', 'Best Practices', 'Code Quality', 'Performance Optimization']
+              description: 'Tailored application development built using the latest frameworks and industry best practices.',
+              features: ['Modern Frameworks (React, NestJS, Node.js, .NET)', 'API-Driven Architecture', 'Code Quality Assurance', 'Performance Optimization', 'Scalable Infrastructure']
             },
             {
               icon: '🔧',
               title: 'System Integration',
-              description: 'Seamless integration with existing systems and third-party applications.',
-              features: ['API Development', 'Data Migration', 'System Compatibility', 'Real-time Sync']
+              description: 'Seamless integration between legacy systems, modern APIs, and third-party platforms.',
+              features: ['API Development & Management', 'Data Migration & Synchronization', 'Cloud & On-Premise Interoperability', 'System Compatibility Checks', 'Real-Time Sync']
             },
             {
               icon: '📱',
               title: 'Mobile Applications',
-              description: 'Cross-platform mobile apps with native performance and modern UI/UX.',
-              features: ['iOS & Android', 'Responsive Design', 'Offline Capability', 'Push Notifications']
+              description: 'Cross-platform mobile apps built with native performance and responsive design for enhanced user engagement.',
+              features: ['Android & iOS App Development', 'Progressive Web Apps (PWAs)', 'UI/UX Design & Branding', 'Offline Functionality', 'Push Notifications & Analytics']
             },
             {
               icon: '🌐',
               title: 'Web Applications',
-              description: 'Modern web applications with responsive design and cloud deployment.',
-              features: ['Responsive Design', 'Cloud Deployment', 'SEO Optimization', 'Performance Monitoring']
+              description: 'Modern, responsive, and cloud-ready web applications that deliver speed, scalability, and great user experiences.',
+              features: ['Responsive & Adaptive Design', 'Cloud Deployment (AWS / Azure / GCP)', 'SEO Optimization & Analytics', 'Multi-Tenant Architecture', 'Performance & Load Monitoring']
             },
             {
-              icon: '🛡️',
+              icon: '🔒',
               title: 'Security & Testing',
-              description: 'Comprehensive security measures and thorough testing protocols.',
-              features: ['Security Audits', 'Penetration Testing', 'Code Reviews', 'Quality Assurance']
+              description: 'Comprehensive testing and cybersecurity practices to ensure robust, compliant, and risk-free deployments.',
+              features: ['Security Audits & Vulnerability Scans', 'Penetration Testing', 'Code Review & Version Control', 'Quality Assurance (Manual & Automated)', 'Compliance with ISO 27001 / GDPR']
             }
           ].map((capability, index) => (
             <div 

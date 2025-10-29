@@ -1,8 +1,8 @@
 "use client";
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Monitor, Laptop, Smartphone, Zap } from 'lucide-react';
-import Link from 'next/link';
+import React from "react";
+import { motion } from "framer-motion";
+import { Monitor, Laptop, Smartphone, Zap } from "lucide-react";
+import Link from "next/link";
 
 export default function ProductOverview() {
   return (
@@ -16,11 +16,12 @@ export default function ProductOverview() {
             transition={{ duration: 0.8 }}
             className="relative flex items-center justify-center"
           >
-            <div className="w-full max-w-md">
-              {/* Large Simple Icon */}
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl p-16 shadow-2xl flex items-center justify-center">
-                <Monitor size={120} className="text-blue-600" />
-              </div>
+            <div className="max-w-2xl">
+              <img
+                src="/main-images/endpoints-img.png"
+                alt="Laptops, Desktops, and Mobile Devices"
+                className="w-full h-auto rounded-xl ml-10"
+              />
             </div>
           </motion.div>
 
@@ -32,21 +33,27 @@ export default function ProductOverview() {
             className="space-y-6"
           >
             <div>
-              <h2 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8">
-                ENDPOINTS
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Endpoints for Every Business
               </h2>
-              
-              <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                From the lightest laptops, desktops, the most powerful workstations to mini PC's, 
-                you have a wide variety of choices. We help you choose the right business computer, 
-                matching devices to user needs, applications, and style—ensuring productivity and 
-                cost-effectiveness for your business.
+
+              <p className="text-gray-600 text-xl font-semibold mb-6 leading-relaxed">
+                Empowering Productivity with Smart Business Devices
               </p>
-              
+
+              <p className="text-gray-700 text-lg leading-relaxed mb-4">
+                From ultra-light laptops and high-performance desktops to
+                powerful workstations and compact mini PCs — we offer the
+                perfect device for every business need. Our experts help you
+                choose the right computing solution tailored to your team's
+                applications, performance requirements, and workspace design —
+                ensuring productivity, reliability, and long-term value.
+              </p>
+
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                We are Platinum, Gold & Silver partners of Major IT Brands & have a broad 
-                assortment of business computers that give individual workers the tools they 
-                need to stay productive & connected.
+                As Platinum, Gold & Silver Partners of leading global IT brands,
+                we deliver a broad range of enterprise-grade computers designed
+                to keep your workforce connected, efficient, and secure.
               </p>
             </div>
 
@@ -61,4 +68,3 @@ export default function ProductOverview() {
     </section>
   );
 }
-
