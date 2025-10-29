@@ -7,51 +7,51 @@ export default function ITConsultingServices() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Our IT Consulting <span className="text-blue-600">Services</span>
+            <span className="text-2xl mr-2"></span>
+            Our IT Consulting Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From initial consultation to ongoing support, we provide comprehensive IT consulting 
-            services that transform your technology infrastructure and drive business success.
+            From initial evaluation to sustained performance improvement, our consulting services cover every stage of your IT journey.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              icon: '🛡️',
-              title: 'Security Assessment',
-              description: 'Comprehensive security evaluation to identify vulnerabilities, assess risks, and implement robust security measures.',
-              features: ['Vulnerability Assessment', 'Risk Analysis', 'Security Implementation', 'Compliance Review']
+              icon: '⚙️',
+              title: 'Infrastructure Optimization',
+              description: 'Optimize your infrastructure for efficiency, scalability, and cost-effectiveness.',
+              features: ['Structured Cabling & Rack Design Audit', 'Power & Cooling Optimization Guidance', 'Network Segmentation & Resource Planning', 'Lifecycle Replacement Planning']
             },
             {
               icon: '🌐',
               title: 'Network Assessment',
-              description: 'Detailed analysis of your network infrastructure, performance metrics, and optimization opportunities.',
-              features: ['Network Analysis', 'Performance Metrics', 'Infrastructure Review', 'Optimization Planning']
+              description: 'Comprehensive network evaluation to identify optimization opportunities and improve performance.',
+              features: ['LAN/WAN Audit & Optimization', 'Bandwidth Utilization Analysis', 'Routing & Switching Review', 'Wireless & Passive Infra Validation']
             },
             {
-              icon: '🏗️',
-              title: 'Infrastructure Optimization',
-              description: 'Consolidation and optimization of data center infrastructure for improved agility and reduced TCO.',
-              features: ['Data Center Consolidation', 'Server Optimization', 'Storage Management', 'Cost Reduction']
+              icon: '📶',
+              title: 'Wi-Fi Heatmapping & Site Survey',
+              description: 'Professional wireless planning and analysis for optimal coverage and performance.',
+              features: ['Predictive & Physical Survey', 'Access Point Planning & Signal Validation', 'Channel Interference & Capacity Review', 'Coverage Maps & Implementation Report']
             },
             {
               icon: '📊',
               title: 'Application Performance',
-              description: 'Tools and strategies to manage and monitor dynamic applications in complex datacenter environments.',
-              features: ['Performance Monitoring', 'Application Management', 'Quality Assurance', 'User Experience']
+              description: 'Monitor and optimize application performance for better user experience and availability.',
+              features: ['Server & App Monitoring', 'Log Analysis & Performance Metrics', 'User Experience Tracking', 'Availability & SLA Optimization']
             },
             {
-              icon: '🔄',
-              title: 'Disaster Recovery',
-              description: 'Comprehensive data center recovery solutions for business continuity and minimal disruption.',
-              features: ['Recovery Planning', 'Business Continuity', 'Backup Solutions', 'Minimal Disruption']
+              icon: '🧱',
+              title: 'Disaster Recovery & Backup',
+              description: 'Protect your business operations with comprehensive backup and recovery strategies.',
+              features: ['Risk Assessment & Policy Planning', 'Data Protection & Retention Strategy', 'Cloud/Local Backup Solutions', 'Minimal Downtime Assurance']
             },
             {
-              icon: '⚡',
-              title: 'Data Center Optimization',
-              description: 'Address data center challenges to deliver optimal IT service levels and reduce operational costs.',
-              features: ['Service Level Optimization', 'Cost Management', 'Operational Efficiency', 'Performance Tuning']
+              icon: '🔒',
+              title: 'Security Assessment',
+              description: 'Comprehensive security evaluation to protect your infrastructure and ensure compliance.',
+              features: ['Vulnerability Assessment & Risk Analysis', 'Firewall & Network Policy Review', 'Security Implementation & Training', 'Compliance Readiness (ISO, SOC, GDPR)']
             }
           ].map((service, index) => (
             <div 

@@ -8,16 +8,17 @@ import LetsGetInTouch from '../components/LetsGetInTouch';
 import Link from 'next/link';
 
 const solutions = [
-  {
-    title: 'Wireless',
-    icon: '/solutions/wifi.png',
+    {
+    title: 'Wireless Solutions',
+      icon: '/solutions/wifi.png',
     link: '/solutions/wireless',
+    description: 'Reliable, high-speed wireless connectivity for enterprise and industrial applications.',
     services: [
       'Wireless LAN (Indoor/Outdoor Wi-Fi)',
-      'Wireless Mesh Networks',
-      'Hotspot & Captive Portal Solutions',
-      'Managed Wi-Fi for Enterprises',
-      'WiFi Solutions for Industrial IoT'
+      'Wireless Mesh & Hotspot Solutions',
+      'Captive Portal & Voucher-based Access',
+      'Managed Wi-Fi for Businesses',
+      'Industrial IoT Wi-Fi Deployments'
     ],
     color: 'from-blue-500 to-blue-600',
     bgColor: 'from-blue-50 to-blue-100',
@@ -25,16 +26,17 @@ const solutions = [
   },
   {
     title: 'Networking',
-    icon: '/solutions/networking.png',
+      icon: '/solutions/networking.png',
     link: '/solutions/networking',
+    description: 'End-to-end enterprise network design, management, and optimization.',
     services: [
       'Routing & Switching (LAN/WAN)',
-      'Firewall & UTM Solutions',
+      'Firewall, IDS & UTM Solutions',
       'WAN Optimization & Load Balancing',
-      'Virtual Private Networks (VPNs)',
-      'Network Monitoring & Management (NMS)',
-      'Network Access Control (NAC)',
-      'Software Defined Networking (SDN)'
+      'VPN (Site-to-Site & Remote Access)',
+      'Network Monitoring (NMS)',
+      'Software-Defined Networking (SDN)',
+      'Zero-Trust Network Access (ZTNA)'
     ],
     color: 'from-purple-500 to-purple-600',
     bgColor: 'from-purple-50 to-purple-100',
@@ -42,30 +44,33 @@ const solutions = [
   },
   {
     title: 'Telephony',
-    icon: '/solutions/mobile.png',
+      icon: '/solutions/mobile.png',
     link: '/solutions/telephony',
+    description: 'Unified communication systems for modern enterprises.',
     services: [
-      'IP Telephony & VoIP Solutions',
-      'On-Premise & Cloud PBX',
-      'Unified Communications (UC)',
+      'IP PBX & VoIP Solutions',
+      'On-Premises & Cloud PBX',
       'SIP Trunking & Gateway Integration',
-      'Video Conferencing Solutions',
-      'IVR Systems & Auto Attendant'
+      'Video & Audio Conferencing',
+      'IVR & Auto-Attendant Systems',
+      'Call Recording & Reporting Analytics'
     ],
     color: 'from-blue-500 to-blue-600',
     bgColor: 'from-blue-50 to-blue-100',
     iconBg: 'from-blue-400 to-blue-500'
   },
   {
-    title: 'Video Surveillance(CCTV)',
-    icon: '/solutions/cctv.png',
+    title: 'Video Surveillance (CCTV)',
+      icon: '/solutions/cctv.png',
     link: '/solutions/video-surveillance',
+    description: 'AI-powered video monitoring and analytics for safety and intelligence.',
     services: [
-      'CCTV (Analog & IP) Solutions',
-      'Video Analytics & AI-Powered Monitoring',
-      'Remote Monitoring & Cloud Storage',
-      'Integrated Security Solutions',
-      'Access Control & Intrusion Integration'
+      'Analog & IP CCTV Solutions',
+      'Video Analytics with AI/ML',
+      'Cloud-Based Remote Monitoring',
+      'NVR/DVR Configuration & Backup',
+      'Integrated Access & Alarm Control',
+      'Smart Perimeter Security'
     ],
     color: 'from-green-500 to-green-600',
     bgColor: 'from-green-50 to-green-100',
@@ -73,17 +78,16 @@ const solutions = [
   },
   {
     title: 'Access Control',
-    icon: '/solutions/password-code.png',
+      icon: '/solutions/password-code.png',
     link: '/solutions/access-controls',
+    description: 'Intelligent security and attendance automation for enterprises.',
     services: [
-      'Biometric Authentication Systems',
-      'RFID & Smart Card Solutions',
-      'Face Recognition Terminals',
-      'Multi-Door Access Control Panels',
-      'Elevator & Parking Access Solutions',
-      'Time & Attendance Systems',
-      'Visitor Management Solutions',
-      'Integration with HR/Payroll Systems'
+      'RFID & Smart Card Systems',
+      'Biometric Authentication (Face, Fingerprint, Palm)',
+      'Elevator & Parking Access Control',
+      'Visitor Management Systems',
+      'Time & Attendance Tracking',
+      'HR/Payroll Integration'
     ],
     color: 'from-indigo-500 to-indigo-600',
     bgColor: 'from-indigo-50 to-indigo-100',
@@ -91,15 +95,15 @@ const solutions = [
   },
   {
     title: 'Cloud & Computing',
-    icon: '/solutions/cloud-server.png',
+      icon: '/solutions/cloud-server.png',
     link: '/solutions/cloud-computing',
+    description: 'Enterprise-grade cloud infrastructure and virtualization services.',
     services: [
       'Cloud Infrastructure (IaaS, PaaS, SaaS)',
-      'Virtualization & Hyperconverged Solutions',
+      'Virtualization & High-Performance Servers',
       'Cloud Migration & Optimization',
-      'Hybrid & Multi-Cloud Architecture',
-      'Backup & Disaster Recovery (DRaaS)',
-      'High-Performance Servers & Storage',
+      'Backup & Disaster Recovery',
+      'Hybrid & Multi-Cloud Deployments',
       'Managed Cloud Services'
     ],
     color: 'from-cyan-500 to-cyan-600',
@@ -107,18 +111,17 @@ const solutions = [
     iconBg: 'from-cyan-400 to-cyan-500'
   },
   {
-    title: 'Softwares',
-    icon: '/solutions/app-development.png',
+    title: 'Software Solutions',
+      icon: '/solutions/app-development.png',
     link: '/solutions/softwares',
+    description: 'Custom business software to streamline operations and drive growth.',
     services: [
-      'ERP & CRM Solutions',
-      'Inventory & Supply Chain Management',
-      'HR & Payroll Software',
-      'Wi-Fi & Network Management Portals',
-      'Security & Surveillance Software',
-      'Shipping & Logistics Applications',
-      'Mobile & Web App Development',
-      'Custom Software Development'
+      'ERP & CRM Software',
+      'HRMS & Payroll Management',
+      'Inventory & Supply Chain Solutions',
+      'Web & Mobile App Development',
+      'Security & Compliance Software',
+      'Custom SaaS Solutions'
     ],
     color: 'from-orange-500 to-orange-600',
     bgColor: 'from-orange-50 to-orange-100',
@@ -128,14 +131,14 @@ const solutions = [
     title: 'Computers & Peripherals',
     icon: '/solutions/computers.png',
     link: '/end-points/laptops-desktops-mobile',
+    description: 'Reliable, high-performance hardware for professional environments.',
     services: [
-      'Laptops & Desktop Computers',
-      'Workstations & Servers',
-      'High-Performance Computing Solutions',
-      'Computer Accessories & Peripherals',
-      'Storage Devices & Backup Solutions',
+      'Laptops, Desktops & Workstations',
+      'Enterprise Servers & Storage Solutions',
       'Networking Equipment & Cables',
-      'Professional Audio/Video Equipment',
+      'Printers, UPS & Accessories',
+      'Professional Audio/Video Systems',
+      'IT Infrastructure Setup & AMC'
     ],
     color: 'from-emerald-500 to-emerald-600',
     bgColor: 'from-emerald-50 to-emerald-100',
@@ -203,16 +206,18 @@ export default function SolutionsPage() {
           }`}>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
-                Technology
+                IT Solutions
               </span>
-              <br />
-              <span className="text-white">Solutions & Services</span>
-            </h1>
+          </h1>
             
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your business with our comprehensive technology solutions. From wireless networking, server solutions, 
-              cloud computing to software development and software services, we provide enterprise-grade solutions and services 
-              from leading manufacturers for optimal performance and reliability.
+            <p className="text-xl md:text-2xl text-blue-100 mb-4 max-w-4xl mx-auto leading-relaxed font-semibold">
+              Innovative Infrastructure. Smarter Networks. Reliable Performance.
+            </p>
+            
+            <p className="text-lg md:text-xl text-blue-200 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Transform your business with comprehensive technology solutions designed for scalability, performance, and reliability.
+              From wireless networking and telephony to cloud infrastructure, cybersecurity, and enterprise software,
+              we deliver end-to-end solutions that keep your business connected, secure, and future-ready.
             </p>
 
           </div>
@@ -224,13 +229,13 @@ export default function SolutionsPage() {
         <div className="w-full px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 animate-fade-in-up">
-              Best in class Solutions and Services for your business
+              Best-in-Class Solutions and Services for Your Business
             </h2>
             <p className="text-lg md:text-xl text-gray-600 animate-fade-in-up delay-200">
-              Explore what else we can do for you
+              Explore the full suite of technology solutions designed to simplify operations and enhance productivity.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {solutions.map((sol, i) => (
               <Link key={sol.title} href={sol.link}>
@@ -241,14 +246,14 @@ export default function SolutionsPage() {
                   <div className="absolute inset-0 rounded-3xl bg-white/0 group-hover:bg-white/5 backdrop-blur-sm pointer-events-none transition-all duration-500" />
 
                   {/* Soft border */}
-                  <div className="absolute inset-0 rounded-3xl border border-transparent group-hover:border-white/20 pointer-events-none transition-all duration-500" />
+                <div className="absolute inset-0 rounded-3xl border border-transparent group-hover:border-white/20 pointer-events-none transition-all duration-500" />
 
                   {/* Faint particle accents */}
-                  <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-600">
-                    <div className="particle" style={{ top: '6%', right: '4%', width: 10, height: 10 }} />
-                    <div className="particle" style={{ bottom: '8%', left: '6%', width: 6, height: 6 }} />
-                    <div className="particle" style={{ top: '48%', right: '12%', width: 8, height: 8 }} />
-                  </div>
+                <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-600">
+                  <div className="particle" style={{ top: '6%', right: '4%', width: 10, height: 10 }} />
+                  <div className="particle" style={{ bottom: '8%', left: '6%', width: 6, height: 6 }} />
+                  <div className="particle" style={{ top: '48%', right: '12%', width: 8, height: 8 }} />
+                </div>
 
                   {/* Icon Container */}
                   <div className="relative z-10 mb-6">
@@ -258,16 +263,16 @@ export default function SolutionsPage() {
                         alt={sol.title}
                         className="w-12 h-12 object-contain transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105"
                       />
-                    </div>
                   </div>
+                </div>
 
                   {/* Title */}
                   <div className="relative z-10 mb-4">
                     <h3 className="text-lg md:text-xl font-bold text-center text-gray-800 transition-transform duration-300">
                       {sol.title}
-                      <span className="block h-0.5 bg-gradient-to-r from-black/10 to-black/20 w-10 mx-auto mt-2 rounded-full transition-all duration-500 group-hover:w-24" />
-                    </h3>
-                  </div>
+                    <span className="block h-0.5 bg-gradient-to-r from-black/10 to-black/20 w-10 mx-auto mt-2 rounded-full transition-all duration-500 group-hover:w-24" />
+                  </h3>
+                </div>
 
                   {/* Services List */}
                   <div className="relative z-10 space-y-2">
@@ -283,13 +288,13 @@ export default function SolutionsPage() {
                         </span>
                       </div>
                     ))}
-                  </div>
-
-                  {/* Subtle hover sheen */}
-                  <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-60 transition-opacity duration-700">
-                    <div className="absolute -left-24 top-0 w-40 h-full transform -skew-x-12 bg-gradient-to-r from-white/12 via-white/6 to-transparent opacity-0 group-hover:opacity-100 animate-shine" />
-                  </div>
                 </div>
+
+                {/* Subtle hover sheen */}
+                <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-60 transition-opacity duration-700">
+                  <div className="absolute -left-24 top-0 w-40 h-full transform -skew-x-12 bg-gradient-to-r from-white/12 via-white/6 to-transparent opacity-0 group-hover:opacity-100 animate-shine" />
+                </div>
+              </div>
               </Link>
             ))}
           </div>
@@ -299,20 +304,20 @@ export default function SolutionsPage() {
       {/* Partners Section */}
       <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
         <Partners />
-      </div>
-
+        </div>
+        
       {/* Clients Section */}
       <div className="animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
         <Clients />
-      </div>
-
+            </div>
+            
       {/* Let's Get in Touch Section */}
       <div className="animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
         <LetsGetInTouch />
-      </div>
+            </div>
 
       <Footer />
-
+      
       <style jsx global>{`
         @keyframes sol-fade-in-up {
           0% { opacity: 0; transform: translateY(60px) scale(0.9); }
@@ -337,7 +342,7 @@ export default function SolutionsPage() {
         .animate-fade-in-up {
           animation: fade-in-up 1s cubic-bezier(0.23, 1, 0.32, 1);
         }
-
+        
         /* Enhanced animation for delayed fade-in-up */
         @keyframes fade-in-up-delayed {
           0% { opacity: 0; transform: translateY(40px); }

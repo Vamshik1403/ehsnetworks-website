@@ -157,7 +157,15 @@ const VideoBanner = () => {
 
       {/* Premium Scroll Indicator */}
       <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 z-20">
-        <div className="flex flex-col items-center group cursor-pointer">
+        <div 
+          className="flex flex-col items-center group cursor-pointer"
+          onClick={() => {
+            const nextSection = document.getElementById('quick-facts-section');
+            if (nextSection) {
+              nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }}
+        >
           {/* Animated Text */}
           <div className="relative mb-4">
             <span className="text-sm font-medium text-white/80 group-hover:text-white transition-colors duration-300">

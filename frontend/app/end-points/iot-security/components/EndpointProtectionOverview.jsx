@@ -6,19 +6,7 @@ import Link from 'next/link';
 
 export default function EndpointProtectionOverview() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 text-white relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 blur-3xl" />
-      </div>
-
-      {/* Animated Grid Background */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'linear-gradient(rgba(99, 102, 241, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(99, 102, 241, 0.5) 1px, transparent 1px)',
-          backgroundSize: '50px 50px'
-        }} />
-      </div>
+    <section className="py-20 bg-white text-gray-900 relative overflow-hidden">
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -29,11 +17,11 @@ export default function EndpointProtectionOverview() {
             transition={{ duration: 0.8 }}
             className="space-y-6 px-4 md:px-8"
           >
-            <h2 className="text-6xl md:text-7xl font-bold mb-6">
+            <h2 className="text-6xl md:text-7xl font-bold mb-6 text-gray-900">
               ENDPOINT PROTECTION
             </h2>
             
-            <p className="text-indigo-100 text-lg leading-relaxed">
+            <p className="text-gray-700 text-lg leading-relaxed">
               Protect your digital perimeter with our comprehensive endpoint protection solutions. 
               Safeguard your devices, data, and users from evolving cyber threats including malware, 
               ransomware, phishing attacks, and unauthorized access.
@@ -43,7 +31,7 @@ export default function EndpointProtectionOverview() {
               {['Malware Protection', 'Real-time Monitoring', 'Threat Detection', 'Data Encryption'].map((feature, index) => (
                 <div
                   key={index}
-                  className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-sm font-medium"
+                  className="px-4 py-2 bg-gray-50 rounded-full border border-gray-300 text-sm font-medium text-gray-700"
                 >
                   {feature}
                 </div>
@@ -64,7 +52,7 @@ export default function EndpointProtectionOverview() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative h-[500px] rounded-3xl overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10">
+            <div className="relative h-[500px] rounded-3xl overflow-hidden bg-gray-50 border border-gray-200">
               {/* Central Shield */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 <div className="w-32 h-32 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl">
@@ -74,10 +62,10 @@ export default function EndpointProtectionOverview() {
 
               {/* Network Lines */}
               <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 1 }}>
-                <line x1="50%" y1="50%" x2="20%" y2="30%" stroke="rgba(255,255,255,0.3)" strokeWidth="2" />
-                <line x1="50%" y1="50%" x2="80%" y2="25%" stroke="rgba(255,255,255,0.3)" strokeWidth="2" />
-                <line x1="50%" y1="50%" x2="15%" y2="70%" stroke="rgba(255,255,255,0.3)" strokeWidth="2" />
-                <line x1="50%" y1="50%" x2="85%" y2="75%" stroke="rgba(255,255,255,0.3)" strokeWidth="2" />
+                <line x1="50%" y1="50%" x2="20%" y2="30%" stroke="rgba(99, 102, 241, 0.3)" strokeWidth="2" />
+                <line x1="50%" y1="50%" x2="80%" y2="25%" stroke="rgba(99, 102, 241, 0.3)" strokeWidth="2" />
+                <line x1="50%" y1="50%" x2="15%" y2="70%" stroke="rgba(99, 102, 241, 0.3)" strokeWidth="2" />
+                <line x1="50%" y1="50%" x2="85%" y2="75%" stroke="rgba(99, 102, 241, 0.3)" strokeWidth="2" />
               </svg>
 
               {/* Devices */}

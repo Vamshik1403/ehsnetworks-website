@@ -229,7 +229,7 @@ export default function Navbar() {
               >
                 <button
                   className={`px-2 xl:px-3 py-2 font-semibold text-xs xl:text-sm 2xl:text-base rounded-lg transition-all duration-300 bg-transparent border border-transparent flex items-center whitespace-nowrap relative
-                    ${activeDropdown === idx ? "text-purple-600" : "text-gray-900"}
+                    ${activeDropdown === idx || isDropdownActive(item.dropdown) ? "text-purple-600" : "text-gray-900"}
                     hover:text-purple-600
                     focus:outline-none focus:ring-2 focus:ring-purple-300`}
                 >
@@ -241,6 +241,10 @@ export default function Navbar() {
                       <path d="M6 8L10 12L14 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </span>
+                  {/* Clean underline effect for dropdown links when active */}
+                  <span className={`absolute bottom-0 left-2 xl:left-3 right-2 xl:right-3 h-0.5 bg-purple-600 transform transition-all duration-300 ${
+                    isDropdownActive(item.dropdown) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                  }`}></span>
                 </button>
                 {activeDropdown === idx && (
                   <div className="absolute top-full left-0 z-[9999] navbar-dropdown">

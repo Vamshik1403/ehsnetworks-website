@@ -69,8 +69,8 @@ export default function ITConsultingHero() {
           
           {/* Description */}
           <p className="text-xl md:text-2xl text-blue-100 mb-6 max-w-4xl mx-auto leading-relaxed">
-            Expert IT consulting services to help your business leverage cutting-edge technology, 
-            optimize infrastructure, and drive digital transformation for sustainable growth and competitive advantage.
+            We provide strategic IT consulting designed to help your organization optimize infrastructure, enhance connectivity, and accelerate digital transformation.
+            Our experts bridge the gap between technology and business needs—ensuring seamless performance, security, and scalability.
           </p>
           
           {/* CTA Button */}

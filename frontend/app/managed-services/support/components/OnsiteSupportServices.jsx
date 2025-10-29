@@ -74,11 +74,11 @@ export default function OnsiteSupportServices() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Onsite Support <span className="text-purple-600">Services</span>
+       <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Our Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional technical support delivered directly to your location by certified engineers with comprehensive expertise and modern tools.
+            Professional technical support delivered remotely and directly to your location by certified engineers with comprehensive expertise and modern tools.
           </p>
         </motion.div>
 

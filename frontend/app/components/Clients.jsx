@@ -99,7 +99,7 @@ const Clients = () => {
         </div>
 
         {/* Clients Carousel */}
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden clients-wrapper">
           <Swiper
             spaceBetween={40}
             slidesPerView={1}
@@ -110,19 +110,23 @@ const Clients = () => {
               1024: { slidesPerView: 5, spaceBetween: 40 },
               1280: { slidesPerView: 6, spaceBetween: 40 },
             }}
-            autoplay={{ delay: 0, disableOnInteraction: false }}
+            autoplay={{ 
+              delay: 0, 
+              disableOnInteraction: false,
+              reverseDirection: false
+            }}
             speed={3000}
             modules={[Autoplay]}
-            className="w-full"
+            className="w-full clients-swiper"
             loop={true}
           >
             {clients.map((client, index) => (
               <SwiperSlide key={`${client.name}-${index}`} className="mx-0">
-                <div className="flex flex-col items-center justify-center p-8 space-y-6">
+                <div className="flex flex-col items-center justify-center p-8 space-y-6 clients-slide-content">
                   <img 
                     src={client.logo} 
                     alt={client.name} 
-                    className="w-50 h-32 object-contain transition-all duration-300 hover:scale-110"
+                    className="w-64 h-40 object-contain transition-all duration-300 hover:scale-110"
                   />
                 </div>
               </SwiperSlide>
@@ -140,7 +144,15 @@ const Clients = () => {
           animation: fade-in-up 1s cubic-bezier(0.23, 1, 0.32, 1);
         }
         
-        .swiper-wrapper {
+        .clients-wrapper {
+          transform: scaleX(-1);
+        }
+        
+        .clients-slide-content {
+          transform: scaleX(-1);
+        }
+        
+        .clients-swiper .swiper-wrapper {
           transition-timing-function: linear !important;
         }
       `}</style>

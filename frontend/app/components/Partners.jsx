@@ -102,11 +102,11 @@ const Partners = () => {
           >
             {partners.map((partner, index) => (
               <SwiperSlide key={`${partner.name}-${index}`} className="mx-0">
-                <div className="flex flex-col items-center justify-center p-8 space-y-6">
+                <div className="flex flex-col items-center justify-center p-2 space-y-2">
                   <img 
                     src={partner.logo} 
                     alt={partner.name} 
-                    className="w-50 h-32 object-contain transition-all duration-300"
+                    className="w-80 h-48 object-contain transition-all duration-300"
                   />
                   {/* <span className="text-base font-medium text-gray-700 text-center">
                     {partner.name}
