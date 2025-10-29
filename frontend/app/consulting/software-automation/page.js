@@ -16,7 +16,7 @@ export default function SoftwareAutomationPage() {
       <SoftwareAutomationOverview />
       <SoftwareAutomationServices />
       <SoftwareAutomationBenefits />
-      <Partners />
+      {/* <Partners /> */}
       <SoftwareAutomationCTA />
       <Footer />
     </>

@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import EndPointsHero from './components/EndPointsHero';
 import ProductOverview from './components/ProductOverview';
 import BenefitsSection from './components/BenefitsSection';
-import Partners from '../../components/Partners';
+import EndpointDevicesPartners from '../../components/EndpointDevicesPartners';
 import LetsGetInTouch from '../../components/LetsGetInTouch';
 
 export default function LaptopsDesktopsMobilePage() {
@@ -14,7 +14,7 @@ export default function LaptopsDesktopsMobilePage() {
       <EndPointsHero />
       <ProductOverview />
       <BenefitsSection />
-      <Partners />
+      <EndpointDevicesPartners />
       <LetsGetInTouch />
       <Footer />
     </>

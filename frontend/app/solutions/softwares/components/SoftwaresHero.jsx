@@ -71,10 +71,10 @@ export default function SoftwaresHero() {
           {/* Software Capabilities Preview */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
             {[
-              { icon: '💼', label: 'Enterprise Applications', color: 'from-blue-400 to-blue-600' },
-              { icon: '🧩', label: 'Custom Development', color: 'from-purple-400 to-purple-600' },
-              { icon: '🔧', label: 'System Integration', color: 'from-indigo-400 to-indigo-600' },
-              { icon: '📱', label: 'Mobile Applications', color: 'from-cyan-400 to-cyan-600' }
+              { icon: '💼', label: 'Enterprise Applications', description: 'End-to-end business management systems for large-scale operations.', color: 'from-blue-400 to-blue-600' },
+              { icon: '🧩', label: 'Custom Development', description: 'Tailored software designed specifically for your workflow and goals.', color: 'from-purple-400 to-purple-600' },
+              { icon: '🔧', label: 'System Integration', description: 'Seamless connectivity between platforms for unified data management.', color: 'from-indigo-400 to-indigo-600' },
+              { icon: '📱', label: 'Mobile Applications', description: 'Intuitive apps for Android and iOS to enhance accessibility and engagement.', color: 'from-cyan-400 to-cyan-600' }
             ].map((capability, index) => (
               <div 
                 key={index}
@@ -84,7 +84,8 @@ export default function SoftwaresHero() {
                 <div className="text-4xl mb-3 group-hover:scale-125 transition-transform duration-300">
                   {capability.icon}
                 </div>
-                <div className="font-semibold text-sm">{capability.label}</div>
+                <div className="font-semibold text-sm mb-2">{capability.label}</div>
+                <div className="text-xs opacity-90 leading-tight">{capability.description}</div>
               </div>
             ))}
           </div>

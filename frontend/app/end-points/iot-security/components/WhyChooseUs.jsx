@@ -41,7 +41,9 @@ export default function WhyChooseUs() {
     "Complete Endpoint Security Overview",
     "Protection from Malicious Software",
     "Secure Access Control",
-    "Professional Support When Needed"
+    "Professional Support When Needed",
+    "Real-Time Threat Detection & Response",
+    "Automated Security Updates & Patches",
   ];
 
   return (

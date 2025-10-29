@@ -6,7 +6,7 @@ import EndpointProtectionOverview from './components/EndpointProtectionOverview'
 import KeyFeatures from './components/KeyFeatures';
 import WhyChooseUs from './components/WhyChooseUs';
 import OurProcess from './components/OurProcess';
-import Partners from '../../components/Partners';
+import EndpointProtectionPartners from '../../components/EndpointPartners';
 import LetsGetInTouch from '../../components/LetsGetInTouch';
 
 export default function IoTSecurityPage() {
@@ -18,7 +18,7 @@ export default function IoTSecurityPage() {
       <KeyFeatures />
       <WhyChooseUs />
       <OurProcess />
-      <Partners />
+      <EndpointProtectionPartners />
       <LetsGetInTouch />
       <Footer />
     </>

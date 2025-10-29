@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function EndPointsHero() {
   return (
-    <section className="relative py-6 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+    <section className="relative py-10 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 blur-3xl" />
@@ -95,20 +95,20 @@ export default function EndPointsHero() {
             </motion.p>
             
             {/* CTA Buttons */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex justify-center"
             >
-              {/* <button className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-lg rounded-2xl shadow-2xl hover:shadow-blue-500/50 transition-all duration-500 transform hover:scale-105 hover:-translate-y-1">
+              <button className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-lg rounded-2xl shadow-2xl hover:shadow-blue-500/50 transition-all duration-500 transform hover:scale-105 hover:-translate-y-1">
                 <span className="flex items-center justify-center space-x-3">
                   <span>Explore Products</span>
                   <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </span>
-              </button> */}
+              </button>
               
               <Link href="/contact">
                 <button className="group px-8 py-4 border-2 border-blue-400 text-blue-400 font-bold text-lg rounded-2xl hover:bg-blue-400 hover:text-white transition-all duration-500 transform hover:scale-105 hover:-translate-y-1">
@@ -120,7 +120,7 @@ export default function EndPointsHero() {
                   </span>
                 </button>
               </Link>
-            </motion.div>
+            </motion.div> */}
           </div>
           
           {/* Feature Cards */}

@@ -16,7 +16,7 @@ export default function ITConsultingPage() {
       <ITConsultingOverview />
       <ITConsultingServices />
       <ITConsultingBenefits />
-      <Partners />
+      {/* <Partners /> */}
       <ITConsultingCTA />
       <Footer />
     </>
