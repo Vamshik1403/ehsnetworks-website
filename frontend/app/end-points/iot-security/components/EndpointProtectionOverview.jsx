@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Smartphone, Laptop, Server, Cloud } from 'lucide-react';
+import Link from 'next/link';
 
 export default function EndpointProtectionOverview() {
   return (
@@ -49,9 +50,11 @@ export default function EndpointProtectionOverview() {
               ))}
             </div>
 
-            <button className="mt-6 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-lg rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-              GET APPOINTMENT
-            </button>
+            <Link href="/contact">
+              <button className="mt-6 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-lg rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                GET APPOINTMENT
+              </button>
+            </Link>
           </motion.div>
 
           {/* Right Side - Visual Network */}

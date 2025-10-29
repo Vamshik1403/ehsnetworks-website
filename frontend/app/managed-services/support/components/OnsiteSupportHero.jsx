@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { Shield, CheckCircle, TrendingUp, Users, Database, Server, MapPin, Clock } from 'lucide-react';
+import Link from 'next/link';
 
 export default function OnsiteSupportHero() {
   const ref = useRef(null);
@@ -62,23 +63,16 @@ export default function OnsiteSupportHero() {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="group relative bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-purple-500/25 transition-all duration-500 transform hover:scale-110 hover:-translate-y-1">
-                <span className="relative flex items-center space-x-3">
-                  <span>Schedule Onsite Visit</span>
-                  <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </span>
-              </button>
-              
-              <button className="group px-8 py-4 border-2 border-purple-400 text-purple-400 font-bold text-lg rounded-2xl hover:bg-purple-400 hover:text-white transition-all duration-500 transform hover:scale-110 hover:-translate-y-1">
-                <span className="flex items-center space-x-3">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  <span>Call Now</span>
-                </span>
-              </button>
+              <Link href="/contact">
+                <button className="group relative bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-purple-500/25 transition-all duration-500 transform hover:scale-110 hover:-translate-y-1">
+                  <span className="relative flex items-center space-x-3">
+                    <span>Know More</span>
+                    <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
+                </button>
+              </Link>
             </div>
             
             {/* Stats */}

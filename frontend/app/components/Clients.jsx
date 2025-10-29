@@ -31,10 +31,10 @@ const Clients = () => {
       name: 'Client 5',
       logo: '/client/client_logo (5).png'
     },
-    {
-      name: 'Client 6',
-      logo: '/client/client_logo (6).png'
-    },
+    // {
+    //   name: 'Client 6',
+    //   logo: '/client/client_logo (6).png'
+    // },
     {
       name: 'Client 7',
       logo: '/client/client_logo (7).png'

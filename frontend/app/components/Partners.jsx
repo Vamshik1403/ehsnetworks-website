@@ -51,10 +51,10 @@ const Partners = () => {
       name: 'Sophos',
       logo: '/partners/partner11.png'
     },
-    {
-      name: 'Synology',
-      logo: '/partners/partner12.png'
-    },
+    // {
+    //   name: 'Synology',
+    //   logo: '/partners/partner12.png'
+    // },
     {
       name: 'Syntel',
       logo: '/partners/partner13.png'
@@ -63,10 +63,10 @@ const Partners = () => {
       name: 'TP-Link',
       logo: '/partners/partner14.png'
     },
-    {
-      name: 'Cisco',
-      logo: '/partners/partner15.png'
-    }
+    // {
+    //   name: 'Cisco',
+    //   logo: '/partners/partner15.png'
+    // }
   ];
 
   return (

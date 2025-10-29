@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Monitor, Laptop, Smartphone, Zap } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ProductOverview() {
   return (
@@ -49,9 +50,11 @@ export default function ProductOverview() {
               </p>
             </div>
 
-            <button className="px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 text-white font-bold text-lg rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-              GET APPOINTMENT
-            </button>
+            <Link href="/contact">
+              <button className="px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 text-white font-bold text-lg rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                GET APPOINTMENT
+              </button>
+            </Link>
           </motion.div>
         </div>
       </div>

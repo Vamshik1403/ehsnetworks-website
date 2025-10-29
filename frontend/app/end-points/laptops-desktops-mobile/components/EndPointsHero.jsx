@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Monitor, Laptop, Smartphone, Shield, Zap, Award } from 'lucide-react';
+import Link from 'next/link';
 
 export default function EndPointsHero() {
   return (
@@ -67,7 +68,7 @@ export default function EndPointsHero() {
               className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
             >
               <span className="bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
-                Laptops, Desktops
+                Servers, Workstations & Laptops
               </span>
               <br />
               <span className="text-white"></span>
@@ -80,7 +81,7 @@ export default function EndPointsHero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl md:text-2xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed"
             >
-              Best Laptops and Desktops reseller in India. We provide comprehensive enterprise computing solutions to help your business optimize performance, ensure security, and drive growth.
+              Best Endpoints reseller in India. We provide comprehensive enterprise computing solutions to help your business optimize performance, ensure security, and drive growth.
             </motion.p>
             
             {/* CTA Buttons */}
@@ -88,25 +89,27 @@ export default function EndPointsHero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex justify-center"
             >
-              <button className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-lg rounded-2xl shadow-2xl hover:shadow-blue-500/50 transition-all duration-500 transform hover:scale-105 hover:-translate-y-1">
+              {/* <button className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-lg rounded-2xl shadow-2xl hover:shadow-blue-500/50 transition-all duration-500 transform hover:scale-105 hover:-translate-y-1">
                 <span className="flex items-center justify-center space-x-3">
                   <span>Explore Products</span>
                   <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </span>
-              </button>
+              </button> */}
               
-              <button className="group px-8 py-4 border-2 border-blue-400 text-blue-400 font-bold text-lg rounded-2xl hover:bg-blue-400 hover:text-white transition-all duration-500 transform hover:scale-105 hover:-translate-y-1">
-                <span className="flex items-center justify-center space-x-3">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  <span>Contact Sales</span>
-                </span>
-              </button>
+              <Link href="/contact">
+                <button className="group px-8 py-4 border-2 border-blue-400 text-blue-400 font-bold text-lg rounded-2xl hover:bg-blue-400 hover:text-white transition-all duration-500 transform hover:scale-105 hover:-translate-y-1">
+                  <span className="flex items-center justify-center space-x-3">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <span>Contact Sales</span>
+                  </span>
+                </button>
+              </Link>
             </motion.div>
           </div>
           
