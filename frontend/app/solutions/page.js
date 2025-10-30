@@ -238,10 +238,7 @@ export default function SolutionsPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {solutions.map((sol, i) => (
-              <Link key={sol.title} href={sol.link}>
-                <div className="group relative bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl px-6 md:px-8 py-6 md:py-8 transition-all duration-700 animate-sol-fade-in-up overflow-hidden hover:z-20 cursor-pointer premium-card h-full"
-                  style={{ animationDelay: `${0.2 + i * 0.1}s` }}
-                >
+                <div key={sol.title} className="group relative bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl px-6 md:px-8 py-6 md:py-8 transition-all duration-700 animate-sol-fade-in-up overflow-hidden hover:z-20 cursor-pointer premium-card h-full">
                   {/* Subtle glass highlight on hover */}
                   <div className="absolute inset-0 rounded-3xl bg-white/0 group-hover:bg-white/5 backdrop-blur-sm pointer-events-none transition-all duration-500" />
 
@@ -295,7 +292,6 @@ export default function SolutionsPage() {
                   <div className="absolute -left-24 top-0 w-40 h-full transform -skew-x-12 bg-gradient-to-r from-white/12 via-white/6 to-transparent opacity-0 group-hover:opacity-100 animate-shine" />
                 </div>
               </div>
-              </Link>
             ))}
           </div>
         </div>

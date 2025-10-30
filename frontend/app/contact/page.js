@@ -13,11 +13,33 @@ export default function ContactUs() {
     phone: '',
     message: ''
   });
+  const [submitting, setSubmitting] = useState(false);
+  const [status, setStatus] = useState(null); // 'success' | 'error' | null
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    if (submitting) return;
+    setSubmitting(true);
+    setStatus(null);
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) throw new Error('Request failed');
+      const data = await res.json();
+      if (!data?.success) throw new Error('Send failed');
+
+      setStatus('success');
+      setFormData({ name: '', company: '', email: '', phone: '', message: '' });
+    } catch (err) {
+      setStatus('error');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -206,10 +228,18 @@ export default function ContactUs() {
                 
                   <button 
                     type="submit" 
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                    disabled={submitting}
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                  Send Message
+                  {submitting ? 'Sending...' : 'Send Message'}
                   </button>
+
+                  {status === 'success' && (
+                    <p className="text-green-600 text-sm mt-2">Your message has been sent successfully.</p>
+                  )}
+                  {status === 'error' && (
+                    <p className="text-red-600 text-sm mt-2">Failed to send. Please try again later.</p>
+                  )}
               </form>
             </div>
           </div>
