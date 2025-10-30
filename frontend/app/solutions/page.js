@@ -371,7 +371,10 @@ export default function SolutionsPage() {
         }
 
         .group:hover { 
-          transform: translateY(-10px) scale(1.02); 
+          /* no-op: avoid global group hover side effects */
+        }
+        .premium-card:hover {
+          transform: translateY(-10px) scale(1.02);
         }
 
         /* Premium gradient animation */

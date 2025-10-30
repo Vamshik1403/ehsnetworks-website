@@ -204,7 +204,7 @@ const QuickFacts = () => {
         .animate-pulse-slow { animation: pulse-slow 3.5s ease-in-out infinite; }
         
         /* Enhanced hover effects (premium glass + lift) */
-        .group:hover { transform: translateY(-10px) scale(1.02); }
+        .premium-card:hover { transform: translateY(-10px) scale(1.02); }
 
         /* particle style */
         .particle {

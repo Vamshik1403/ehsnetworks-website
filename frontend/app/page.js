@@ -10,9 +10,18 @@ import Clients from "./components/Clients"
 import Footer from "./components/Footer"
 import LetsGetInTouch from "./components/LetsGetInTouch"
 import { useScrollAnimation } from "./lib/useScrollAnimation";
+import { useEffect } from "react";
 
 export default function Home() {
   const isVisible = useScrollAnimation();
+
+  // Ensure the page always starts at the top so the video banner is fully visible after refresh
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'scrollRestoration' in window.history) {
+      try { window.history.scrollRestoration = 'manual'; } catch {}
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, []);
 
   return (
     <>
