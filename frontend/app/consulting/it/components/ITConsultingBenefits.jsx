@@ -78,11 +78,11 @@ export default function ITConsultingBenefits() {
                       </li>
                     ))}
                   </ul>
-                </div>
+        </div>
               )}
             </div>
           ))}
-        </div>
+          </div>
       </div>
     </section>
   );
