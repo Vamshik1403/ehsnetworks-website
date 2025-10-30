@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function EndPointsHero() {
   return (
-    <section className="relative py-10 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+    <section className="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 blur-3xl" />
@@ -49,16 +49,6 @@ export default function EndPointsHero() {
         <div className="max-w-7xl mx-auto">
           {/* Main Content */}
           <div className="text-center mb-12">
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center px-6 py-3 bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 rounded-full text-blue-300 text-sm font-semibold mb-8"
-            >
-              <Zap size={16} className="mr-2" />
-              ENTERPRISE-GRADE COMPUTING DEVICES
-            </motion.div>
             
             {/* Main Heading */}
             <motion.h1

@@ -53,16 +53,11 @@ export default function OnsiteSupportHero() {
         <div className={`transform transition-all duration-1000 ease-out ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
         }`}>
-          {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 bg-purple-500/20 backdrop-blur-sm text-purple-100 rounded-full text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
-            IT Support
-          </div>
           
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-purple-400 via-indigo-400 to-pink-400 bg-clip-text text-transparent">
-              IT Support Service
+              Managed IT Services
             </span>
           </h1>
           

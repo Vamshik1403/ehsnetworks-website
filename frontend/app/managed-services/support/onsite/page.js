@@ -14,7 +14,6 @@ export default function OnsiteSupportPage() {
       <OnsiteSupportHero />
       <OnsiteSupportServices />
       <OnsiteSupportBenefits />
-      <Partners />
       <OnsiteSupportLetsGetInTouch />
       <Footer />
     </>

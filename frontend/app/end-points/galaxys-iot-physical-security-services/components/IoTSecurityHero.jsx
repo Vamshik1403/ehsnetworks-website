@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function IoTSecurityHero() {
   return (
-    <section className="relative py-14 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 text-white overflow-hidden">
+    <section className="relative py-24 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 text-white overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 blur-3xl" />
@@ -63,16 +63,6 @@ export default function IoTSecurityHero() {
         <div className="max-w-7xl mx-auto">
           {/* Main Content */}
           <div className="text-center mb-8">
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center px-6 py-3 bg-indigo-500/20 backdrop-blur-sm border border-indigo-400/30 rounded-full text-indigo-300 text-sm font-semibold mb-8"
-            >
-              <Shield size={16} className="mr-2" />
-              ENDPOINT PROTECTION & SECURITY
-            </motion.div>
 
             {/* Main Heading */}
             <motion.h1

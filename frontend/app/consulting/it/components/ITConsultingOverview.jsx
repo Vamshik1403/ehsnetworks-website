@@ -41,6 +41,11 @@ export default function ITConsultingOverview() {
               icon: '🔄',
               title: 'Disaster Recovery & Backup Planning',
               description: 'Design robust recovery strategies and backup policies to protect critical business operations.'
+            },
+            {
+              icon:'💻',
+              title:'IT Software Consulting',
+              description:'We provide comprehensive software consulting services to help you optimize your software infrastructure and improve your business operations.'
             }
           ].map((feature, index) => (
             <div 
@@ -58,26 +63,6 @@ export default function ITConsultingOverview() {
               </p>
             </div>
           ))}
-
-          {/* Our Approach Card */}
-          <div className="group bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl p-6 text-white shadow-lg border border-transparent hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-            <h3 className="text-2xl font-bold mb-6">Our Approach</h3>
-            <div className="space-y-4">
-              {[
-                'Assessment & Requirements Analysis',
-                'Strategic Planning & Architecture Design',
-                'Implementation & Optimization',
-                'Security & Compliance Review',
-                'Ongoing Support & Monitoring',
-                'Continuous Improvement & Updates'
-              ].map((step, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-white rounded-full flex-shrink-0"></span>
-                  <span className="text-sm">{step}</span>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </section>

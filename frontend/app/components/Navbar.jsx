@@ -289,9 +289,9 @@ export default function Navbar() {
             </button>
             
             {/* Dropdown Menu */}
-            <div className="absolute right-0 top-full mt-2 w-72 sm:w-80 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover/contact:opacity-100 group-hover/contact:visible transition-all duration-500 transform scale-95 group-hover/contact:scale-100 translate-y-2 group-hover/contact:translate-y-0 z-[99999]">
+            <div className="fixed lg:absolute right-2 lg:right-0 top-14 lg:top-full mt-2 lg:mt-2 w-72 sm:w-80 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover/contact:opacity-100 group-hover/contact:visible transition-all duration-500 transform scale-95 group-hover/contact:scale-100 lg:translate-y-2 lg:group-hover/contact:translate-y-0 z-[100000] max-h-[70vh] overflow-auto">
               {/* Arrow */}
-              <div className="absolute -top-2 right-6 w-4 h-4 bg-white border-l border-t border-gray-100 transform rotate-45"></div>
+              <div className="hidden lg:block absolute -top-2 right-6 w-4 h-4 bg-white border-l border-t border-gray-100 transform rotate-45"></div>
               
               <div className="p-6 space-y-6">
                 {/* Phone Number Section */}

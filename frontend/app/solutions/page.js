@@ -60,7 +60,7 @@ const solutions = [
     iconBg: 'from-blue-400 to-blue-500'
   },
   {
-    title: 'Video Surveillance (CCTV)',
+    title: 'Video Surveillance',
       icon: '/solutions/cctv.png',
     link: '/solutions/video-surveillance',
     description: 'AI-powered video monitoring and analytics for safety and intelligence.',

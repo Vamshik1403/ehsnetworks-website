@@ -26,7 +26,7 @@ export default function ITConsultingHero() {
   return (
     <section 
       ref={heroRef}
-      className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-cyan-900 to-indigo-900 py-9"
+      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-cyan-900 to-indigo-900 py-9"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
@@ -53,17 +53,11 @@ export default function ITConsultingHero() {
         <div className={`transform transition-all duration-1000 ease-out ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
         }`}>
-          {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 backdrop-blur-sm text-blue-100 rounded-full text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-            IT Consulting
-          </div>
           
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">
-              Strategic Technology Solutions &<br />
-              <span className="text-white">Business Growth</span>
+              IT Consulting Services
             </span>
           </h1>
           

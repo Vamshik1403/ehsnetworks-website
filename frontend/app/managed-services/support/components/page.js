@@ -5,7 +5,6 @@ import OnsiteSupportHero from './OnsiteSupportHero';
 import OnsiteSupportServices from './OnsiteSupportServices';
 import OnsiteSupportBenefits from './OnsiteSupportBenefits';
 import OnsiteSupportCTA from './OnsiteSupportCTA';
-import Partners from '../../../components/Partners';
 
 export default function OnsiteSupportPage() {
   return (
@@ -15,7 +14,6 @@ export default function OnsiteSupportPage() {
       <OnsiteSupportServices />
       <OnsiteSupportBenefits />
       <OnsiteSupportCTA />
-      <Partners />
       <Footer />
     </>
   );

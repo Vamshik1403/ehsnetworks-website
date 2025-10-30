@@ -18,7 +18,7 @@ export default function IoTSecurityPage() {
       <KeyFeatures />
       <WhyChooseUs />
       <OurProcess />
-      <EndpointProtectionPartners />
+      {/* <EndpointProtectionPartners /> */}
       <LetsGetInTouch />
       <Footer />
     </>

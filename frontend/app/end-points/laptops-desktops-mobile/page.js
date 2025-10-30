@@ -14,7 +14,7 @@ export default function LaptopsDesktopsMobilePage() {
       <EndPointsHero />
       <ProductOverview />
       <BenefitsSection />
-      <EndpointDevicesPartners />
+      {/* <EndpointDevicesPartners /> */}
       <LetsGetInTouch />
       <Footer />
     </>
