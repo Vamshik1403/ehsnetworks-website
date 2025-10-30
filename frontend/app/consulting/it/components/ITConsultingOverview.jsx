@@ -49,19 +49,19 @@ export default function ITConsultingOverview() {
             }
           ].map((feature, index) => (
             <div 
-              key={index} 
+                  key={index}
               className="group bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2"
-            >
+                >
               <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-3xl">{feature.icon}</span>
-              </div>
+                    </div>
               <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                 {feature.title}
               </h4>
-              <p className="text-gray-600 leading-relaxed">
+                      <p className="text-gray-600 leading-relaxed">
                 {feature.description}
-              </p>
-            </div>
+                      </p>
+                    </div>
           ))}
         </div>
       </div>

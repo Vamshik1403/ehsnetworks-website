@@ -17,7 +17,7 @@ export default function EndpointProtectionOverview() {
             transition={{ duration: 0.8 }}
             className="space-y-6 px-4 md:px-8"
           >
-            <h2 className="text-6xl md:text-7xl font-bold mb-6 text-gray-900">
+            <h2 className="text-3xl xs:text-4xl sm:text-6xl md:text-7xl font-bold mb-6 text-gray-900 break-words leading-tight">
               ENDPOINT PROTECTION
             </h2>
             

@@ -57,10 +57,10 @@ const ConsultingServices = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
-          {consultingServices.map((service, index) => (
+          {consultingServices.slice(0, 2).map((service, index) => (
             <div
               key={service.id}
-              className="group relative bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 h-[380px] sm:h-[420px] md:h-[450px] w-full transition-all duration-700 animate-sol-fade-in-up overflow-hidden hover:z-20 cursor-pointer premium-card"
+              className={`group relative bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 h-[280px] sm:h-[420px] md:h-[450px] w-full transition-all duration-700 animate-sol-fade-in-up overflow-hidden hover:z-20 cursor-pointer premium-card`}
               style={{ animationDelay: `${0.2 + index * 0.15}s` }}
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
@@ -119,6 +119,125 @@ const ConsultingServices = () => {
               </div>
             </div>
           ))}
+
+          {/* Show third card inline in grid only for lg and above */}
+          <div
+            className="hidden lg:block group relative bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 h-[280px] sm:h-[420px] md:h-[450px] w-full transition-all duration-700 animate-sol-fade-in-up overflow-hidden hover:z-20 cursor-pointer premium-card"
+            style={{ animationDelay: `${0.2 + 2 * 0.15}s` }}
+            onMouseEnter={() => setHoveredCard(2)}
+            onMouseLeave={() => setHoveredCard(null)}
+          >
+            {/* Subtle glass highlight on hover (premium look) */}
+            <div className="absolute inset-0 rounded-3xl bg-white/0 group-hover:bg-white/5 backdrop-blur-sm pointer-events-none transition-all duration-500" />
+
+            {/* Soft border + vignette */}
+            <div className="absolute inset-0 rounded-3xl border border-transparent group-hover:border-white/20 pointer-events-none transition-all duration-500" />
+
+            {/* Faint particle accents (desaturated, low opacity) */}
+            <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-600">
+              <div className="particle" style={{ top: '6%', right: '4%', width: 10, height: 10 }} />
+              <div className="particle" style={{ bottom: '8%', left: '6%', width: 6, height: 6 }} />
+              <div className="particle" style={{ top: '48%', right: '12%', width: 8, height: 8 }} />
+            </div>
+
+            {/* Icon Container - elevated ring + lift on hover */}
+            <div className="relative z-10 mb-4 sm:mb-6 md:mb-8">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mx-auto flex items-center justify-center rounded-xl sm:rounded-2xl bg-white shadow-md ring-0 group-hover:ring-1 group-hover:ring-white/20 group-hover:shadow-2xl transition-all duration-500">
+                <img
+                  src={consultingServices[2].icon}
+                  alt={consultingServices[2].title}
+                  className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 object-contain transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105"
+                />
+              </div>
+            </div>
+
+            {/* Title */}
+            <div className="relative z-10 mb-3 sm:mb-4 md:mb-6">
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-center text-gray-800 transition-transform duration-300 text-glow">
+                {consultingServices[2].title}
+                <span className="block h-0.5 bg-gradient-to-r from-black/10 to-black/20 w-10 mx-auto mt-2 rounded-full transition-all duration-500 group-hover:w-24" />
+              </h3>
+            </div>
+            {/* Services List */}
+            <div className="relative z-10 space-y-1.5 sm:space-y-2 md:space-y-3">
+              {consultingServices[2].services.map((item, itemIndex) => (
+                <div
+                  key={item}
+                  className="flex items-start space-x-3 transition-all duration-350 transform group-hover:translate-x-1"
+                  style={{ transitionDelay: `${itemIndex * 40}ms` }}
+                >
+                  <div className="flex-shrink-0 mt-1 w-2 h-2 rounded-full bg-gray-300" />
+                  <span className="text-xs sm:text-sm text-gray-700 group-hover:text-gray-900 font-medium leading-tight">
+                    {item}
+                  </span>
+                </div>
+              ))}
+            </div>
+            {/* Subtle hover sheen */}
+            <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-60 transition-opacity duration-700">
+              <div className="absolute -left-24 top-0 w-40 h-full transform -skew-x-12 bg-gradient-to-r from-white/12 via-white/6 to-transparent opacity-0 group-hover:opacity-100 animate-shine" />
+            </div>
+          </div>
+        </div>
+        {/* Center third card only for md (tablet). Hide on lg+ and show on mobile as block */}
+        <div className="block md:flex lg:hidden justify-center px-4 mt-8">
+          <div
+            className="group relative bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 h-[280px] sm:h-[420px] md:h-[450px] w-full md:max-w-[calc(50%-1rem)] transition-all duration-700 animate-sol-fade-in-up overflow-hidden hover:z-20 cursor-pointer premium-card"
+            style={{ animationDelay: `${0.2 + 2 * 0.15}s` }}
+            onMouseEnter={() => setHoveredCard(2)}
+            onMouseLeave={() => setHoveredCard(null)}
+          >
+            {/* Subtle glass highlight on hover (premium look) */}
+            <div className="absolute inset-0 rounded-3xl bg-white/0 group-hover:bg-white/5 backdrop-blur-sm pointer-events-none transition-all duration-500" />
+
+            {/* Soft border + vignette */}
+            <div className="absolute inset-0 rounded-3xl border border-transparent group-hover:border-white/20 pointer-events-none transition-all duration-500" />
+
+            {/* Faint particle accents (desaturated, low opacity) */}
+            <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-600">
+              <div className="particle" style={{ top: '6%', right: '4%', width: 10, height: 10 }} />
+              <div className="particle" style={{ bottom: '8%', left: '6%', width: 6, height: 6 }} />
+              <div className="particle" style={{ top: '48%', right: '12%', width: 8, height: 8 }} />
+            </div>
+
+            {/* Icon Container - elevated ring + lift on hover */}
+            <div className="relative z-10 mb-4 sm:mb-6 md:mb-8">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mx-auto flex items-center justify-center rounded-xl sm:rounded-2xl bg-white shadow-md ring-0 group-hover:ring-1 group-hover:ring-white/20 group-hover:shadow-2xl transition-all duration-500">
+                <img
+                  src={consultingServices[2].icon}
+                  alt={consultingServices[2].title}
+                  className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 object-contain transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105"
+                />
+              </div>
+            </div>
+
+            {/* Title */}
+            <div className="relative z-10 mb-3 sm:mb-4 md:mb-6">
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-center text-gray-800 transition-transform duration-300 text-glow">
+                {consultingServices[2].title}
+                <span className="block h-0.5 bg-gradient-to-r from-black/10 to-black/20 w-10 mx-auto mt-2 rounded-full transition-all duration-500 group-hover:w-24" />
+              </h3>
+            </div>
+            {/* Services List */}
+            <div className="relative z-10 space-y-1.5 sm:space-y-2 md:space-y-3">
+              {consultingServices[2].services.map((item, itemIndex) => (
+                <div
+                  key={item}
+                  className="flex items-start space-x-3 transition-all duration-350 transform group-hover:translate-x-1"
+                  style={{ transitionDelay: `${itemIndex * 40}ms` }}
+                >
+                  <div className="flex-shrink-0 mt-1 w-2 h-2 rounded-full bg-gray-300" />
+                  <span className="text-xs sm:text-sm text-gray-700 group-hover:text-gray-900 font-medium leading-tight">
+                    {item}
+                  </span>
+                </div>
+              ))}
+            </div>
+            {/* Subtle hover sheen */}
+            <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-60 transition-opacity duration-700">
+              <div className="absolute -left-24 top-0 w-40 h-full transform -skew-x-12 bg-gradient-to-r from-white/12 via-white/6 to-transparent opacity-0 group-hover:opacity-100 animate-shine" />
+            </div>
+          </div>
         </div>
       </div>
       

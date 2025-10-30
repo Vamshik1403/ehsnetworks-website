@@ -233,7 +233,7 @@ const Solutions = () => {
                <SwiperSlide key={sol.title} className="mx-0 sm:mx-1 mb-8">
                 <Link href="/solutions">
                   <div
-                    className="group relative bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 h-[480px] sm:h-[530px] md:h-[580px] w-full transition-all duration-700 animate-sol-fade-in-up overflow-hidden hover:z-20 cursor-pointer premium-card"
+                    className="group relative bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 h-[340px] sm:h-[530px] md:h-[580px] w-full transition-all duration-700 animate-sol-fade-in-up overflow-hidden hover:z-20 cursor-pointer premium-card"
                     style={{ animationDelay: `${0.2 + i * 0.15}s` }}
                   >
                   {/* Subtle glass highlight on hover (premium look) */}

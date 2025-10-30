@@ -13,7 +13,7 @@ export default function OnsiteSupportPage() {
       <OnsiteSupportHero />
       <OnsiteSupportServices />
       <OnsiteSupportBenefits />
-      <OnsiteSupportCTA />
+      <OnsiteSupportLetsGetInTouch />
       <Footer />
     </>
   );

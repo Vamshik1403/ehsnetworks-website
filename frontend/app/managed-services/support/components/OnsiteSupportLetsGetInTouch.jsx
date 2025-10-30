@@ -53,10 +53,7 @@ const OnsiteSupportLetsGetInTouch = () => {
                 </span>
               </button>
             </a>
-            <a 
-              href="tel:02240244440"
-              className="group relative inline-flex items-center"
-            >
+            <a href="tel:02240244440">
               <button className="group relative border-2 border-white text-white px-8 py-4 rounded-2xl hover:bg-white hover:text-gray-900 transition-all duration-500 font-bold text-base md:text-lg transform hover:scale-105 hover:-translate-y-1">
                 <span className="relative flex items-center space-x-3">
                   <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,6 +64,18 @@ const OnsiteSupportLetsGetInTouch = () => {
               </button>
             </a>
           </div>
+      
+          <style jsx>{`
+            @media (max-width: 640px) {
+              .mx-auto.w-auto.max-w-\[260px\] {
+                margin-left: auto;
+                margin-right: auto;
+                width: auto;
+                max-width: 260px;
+                display: block;
+              }
+            }
+          `}</style>
         </div>
       </div>
     </section>
