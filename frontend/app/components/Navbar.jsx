@@ -191,12 +191,12 @@ export default function Navbar() {
     <nav className="w-full bg-gradient-to-r from-white via-blue-50 to-pink-50 shadow-lg border-b border-gray-100 sticky top-0 z-50 overflow-x-hidden md:overflow-visible">
       <div className="flex items-center justify-between px-2 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-3 md:py-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-1.5 sm:gap-2 md:gap-3 lg:gap-4 group/logo cursor-pointer select-none flex-shrink-0 max-w-[45%] md:max-w-none">
+        <Link href="/" className="flex items-center gap-1.5 sm:gap-2 md:gap-3 lg:gap-4 group/logo cursor-pointer select-none flex-shrink-0 max-w-[60%] md:max-w-none">
           <div className="relative flex-shrink-0">
             <img
               src="/icons/Enpl-logo.jpeg"
               alt="ENPL Logo"
-              className="h-10 w-10 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-8 lg:w-8 xl:h-10 xl:w-10 2xl:h-12 2xl:w-12 drop-shadow-lg rounded-full border-2 border-blue-100 group-hover/logo:border-blue-400 group-hover/logo:shadow-xl transition-all duration-300 ease-in-out group-hover/logo:scale-110 group-hover/logo:rotate-3"
+              className="h-6 w-6 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-8 lg:w-8 xl:h-10 xl:w-10 2xl:h-12 2xl:w-12 drop-shadow-lg rounded-full border-2 border-blue-100 group-hover/logo:border-blue-400 group-hover/logo:shadow-xl transition-all duration-300 ease-in-out group-hover/logo:scale-110 group-hover/logo:rotate-3"
               style={{ boxShadow: '0 4px 16px 0 rgba(30,64,175,0.08)' }}
             />
             {/* Real-time shine effect */}
@@ -206,12 +206,12 @@ export default function Navbar() {
           </div>
           <div className="min-w-0">
             <span
-              className="font-extrabold text-xl sm:text-xl md:text-2xl lg:text-sm xl:text-lg 2xl:text-2xl tracking-tight bg-gradient-to-r from-blue-900 via-blue-500 to-pink-500 bg-clip-text text-transparent group-hover/logo:from-pink-600 group-hover/logo:to-blue-700 group-hover/logo:scale-110 group-hover/logo:drop-shadow-lg transition-all duration-300 ease-in-out animate-gradient-x block truncate"
+              className="font-extrabold text-sm sm:text-xl md:text-2xl lg:text-sm xl:text-lg 2xl:text-2xl tracking-tight bg-gradient-to-r from-blue-900 via-blue-500 to-pink-500 bg-clip-text text-transparent group-hover/logo:from-pink-600 group-hover/logo:to-blue-700 group-hover/logo:scale-110 group-hover/logo:drop-shadow-lg transition-all duration-300 ease-in-out animate-gradient-x block whitespace-normal break-words sm:truncate"
               style={{ letterSpacing: '0.02em' }}
             >
               Electrohelps Networks
             </span>
-            <p className="text-[10px] sm:text-[10px] md:text-xs lg:text-[9px] xl:text-sm text-gray-600 group-hover/logo:text-gray-700 transition-colors duration-300 truncate">
+            <p className="text-[8px] sm:text-[10px] md:text-xs lg:text-[9px] xl:text-sm text-gray-600 group-hover/logo:text-gray-700 transition-colors duration-300 truncate">
               Solution | Cloud | Consult | Assist
             </p>
           </div>
@@ -273,16 +273,16 @@ export default function Navbar() {
           {/* Contact Dropdown */}
           <div className="relative group/contact">
             <button
-              className="bg-gradient-to-r from-blue-900 via-blue-500 to-pink-500 text-white px-2 sm:px-3 xl:px-4 py-2 rounded-lg shadow-lg transition-all duration-500 text-[10px] sm:text-xs xl:text-sm font-semibold whitespace-nowrap flex-shrink-0 hover:from-pink-600 hover:to-blue-700 hover:shadow-2xl hover:scale-110 focus:outline-none focus:ring-2 focus:ring-pink-300  group-hover/contact:shadow-blue-200 group-hover/contact:ring-4 group-hover/contact:ring-blue-300/30 transform hover:-translate-y-1"  
+              className="bg-gradient-to-r from-blue-900 via-blue-500 to-pink-500 text-white px-1.5 sm:px-3 xl:px-4 py-1.5 sm:py-2 rounded-lg shadow-lg transition-all duration-500 text-[9px] sm:text-xs xl:text-sm font-semibold whitespace-nowrap flex-shrink-0 hover:from-pink-600 hover:to-blue-700 hover:shadow-2xl hover:scale-110 focus:outline-none focus:ring-2 focus:ring-pink-300  group-hover/contact:shadow-blue-200 group-hover/contact:ring-4 group-hover/contact:ring-blue-300/30 transform hover:-translate-y-1"  
               style={{ backgroundSize: '200% 200%' }}
             >
-              <div className="flex items-center space-x-2">
-                <svg className="w-4 h-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-center space-x-1 sm:space-x-2">
+                <svg className="w-3 h-3 sm:w-4 sm:h-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 <span className="sm:hidden">Contact</span>
                 <span className="hidden sm:inline">Get in Touch</span>
-                <svg className="w-3 h-3 transition-transform duration-300 group-hover/contact:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 transition-transform duration-300 group-hover/contact:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </div>

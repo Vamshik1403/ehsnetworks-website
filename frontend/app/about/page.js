@@ -17,21 +17,34 @@ export default function AboutUs() {
       <section 
         id="hero-banner"
         data-animate="fade-in-up"
-        className={`w-full bg-gradient-to-r from-blue-900 via-purple-900 to-blue-800 text-white py-20 relative overflow-hidden transition-all duration-1000 ${
+        className={`relative min-h-[89vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 py-12 transition-all duration-1000 ${
           isVisible['hero-banner'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 blur-3xl animate-pulse-slow" />
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float-slow"></div>
+          <div className="absolute top-40 right-20 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float-slow animation-delay-2000"></div>
+          <div className="absolute bottom-20 left-1/2 w-80 h-80 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float-slow animation-delay-4000"></div>
         </div>
+
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)',
+          backgroundSize: '40px 40px',
+        }}></div>
+
+        {/* Floating Icons */}
+        <div className="absolute top-32 left-32 text-6xl text-blue-300 opacity-30 animate-float-slow">💼</div>
+        <div className="absolute top-48 right-48 text-5xl text-purple-300 opacity-30 animate-float-slow animation-delay-1000">📊</div>
+        <div className="absolute bottom-32 left-1/3 text-4xl text-indigo-300 opacity-30 animate-float-slow animation-delay-3000">🎯</div>
         
-        <div className="relative z-10 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 animate-fade-in-up">
-              About Us
+        <div className="relative z-10 px-6 max-w-6xl mx-auto text-center">
+          <div className="transform transition-all duration-1000 ease-out translate-y-0 opacity-100">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">About Us</span>
             </h1>
-            <div className="text-lg md:text-xl text-white/90 leading-relaxed max-w-4xl mx-auto space-y-6">
+            <div className="text-lg md:text-xl text-blue-100 leading-relaxed max-w-4xl mx-auto space-y-6">
               <p className="animate-fade-in-up delay-200">
                 Our expertise and domain knowledge of various businesses helped us deliver solutions with the precision to more than 
                 <span className="text-yellow-300 font-bold animate-pulse-slow"> 100+ companies </span>
