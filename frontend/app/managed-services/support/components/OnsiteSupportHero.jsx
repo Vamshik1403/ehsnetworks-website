@@ -91,7 +91,7 @@ export default function OnsiteSupportHero() {
               <div className="text-purple-200 text-sm md:text-base">Response Time</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-pink-400 mb-2">100+</div>
+              <div className="text-4xl md:text-5xl font-bold text-pink-400 mb-2">10,000+</div>
               <div className="text-purple-200 text-sm md:text-base">Onsite Visits</div>
             </div>
           </div>

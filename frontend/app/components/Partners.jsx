@@ -114,7 +114,7 @@ const Partners = () => {
                   <img 
                     src={partner.logo} 
                     alt={partner.name} 
-                    className="w-80 h-48 object-contain transition-all duration-300"
+                    className={`${partner.name === 'HP' ? 'w-48 h-32' : 'w-80 h-48'} object-contain transition-all duration-300`}
                   />
                   {/* <span className="text-base font-medium text-gray-700 text-center">
                     {partner.name}

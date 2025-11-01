@@ -84,7 +84,7 @@ export default function ITConsultingHero() {
           {/* Stats */}
           <div className="flex justify-center gap-20 pt-4">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">100+</div>
+              <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">1000+</div>
               <div className="text-blue-200 text-sm md:text-base">IT Projects</div>
             </div>
             <div className="text-center">
