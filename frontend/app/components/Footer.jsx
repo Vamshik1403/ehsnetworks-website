@@ -56,7 +56,7 @@ const Footer = () => {
           <div className="animate-fade-in-up">
             <h3 className="text-lg font-semibold mb-4 text-white">OUR ADDRESS</h3>
             <div className="space-y-2 text-white/80">
-              <p>509, Ghanshyam Enclave.</p>
+              <p>1203/04, Ghanshyam Enclave.</p>
               <p>Nr. Laljipada Police Chowki</p>
               <p>New Link Road, Kandivali West</p>
               <p>Mumbai MH 400067</p>
@@ -276,7 +276,7 @@ const Footer = () => {
                 Electrohelps Networks
               </h2>
               <p className="text-sm text-white/80 hover:text-white/90 transition-colors duration-300">
-                Solution | Cloud | Consulting | Assist
+                Solution | Cloud | Consult | Assist
               </p>
             </div>
           </div>
