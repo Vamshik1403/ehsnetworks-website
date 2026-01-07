@@ -65,7 +65,7 @@ const Partners = () => {
     },
     {
       name: 'HP',
-      logo: '/partners/HP.svg'
+      logo: '/partners/hp.svg'
     },
     {
       name: 'Commscope',
