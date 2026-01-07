@@ -82,7 +82,7 @@ export default function ContactUs() {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Our Address</h3>
                       <p className="text-gray-600">
-                        509, Ghanshyam Enclave. Nr.<br />
+                        1203/04, Ghanshyam Enclave. Nr.<br />
                         Laljipada Police Chowki<br />
                         New Link Road, Kandivali West<br />
                         Mumbai MH 400067, India
